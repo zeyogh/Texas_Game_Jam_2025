@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bf2qg247nj6w0"
-path="res://.godot/imported/stairs_2.jpg-5afd24f1ec9b775fc0e12187c948a65c.ctex"
+uid="uid://dyhvhgpgbset7"
+path="res://.godot/imported/dummyStartLight.png-d33f56d661fbf953f925b40c815df352.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pictures/stairs_2.jpg"
-dest_files=["res://.godot/imported/stairs_2.jpg-5afd24f1ec9b775fc0e12187c948a65c.ctex"]
+source_file="res://resources/dummy/dummyStartLight.png"
+dest_files=["res://.godot/imported/dummyStartLight.png-d33f56d661fbf953f925b40c815df352.ctex"]
 
 [params]
 

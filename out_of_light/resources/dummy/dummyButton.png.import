@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bf2qg247nj6w0"
-path="res://.godot/imported/stairs_2.jpg-5afd24f1ec9b775fc0e12187c948a65c.ctex"
+uid="uid://2nbb2t4toyjx"
+path="res://.godot/imported/dummyButton.png-a27c42f1eb539887217621bfd7817fe8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pictures/stairs_2.jpg"
-dest_files=["res://.godot/imported/stairs_2.jpg-5afd24f1ec9b775fc0e12187c948a65c.ctex"]
+source_file="res://resources/dummy/dummyButton.png"
+dest_files=["res://.godot/imported/dummyButton.png-a27c42f1eb539887217621bfd7817fe8.ctex"]
 
 [params]
 

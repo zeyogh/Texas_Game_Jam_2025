@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bf2qg247nj6w0"
-path="res://.godot/imported/stairs_2.jpg-5afd24f1ec9b775fc0e12187c948a65c.ctex"
+uid="uid://cacvr4fevkqs1"
+path="res://.godot/imported/dummySwitch.png-842f4861148587f6a3f169f29be84785.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pictures/stairs_2.jpg"
-dest_files=["res://.godot/imported/stairs_2.jpg-5afd24f1ec9b775fc0e12187c948a65c.ctex"]
+source_file="res://resources/dummy/dummySwitch.png"
+dest_files=["res://.godot/imported/dummySwitch.png-842f4861148587f6a3f169f29be84785.ctex"]
 
 [params]
 
