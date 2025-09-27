@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://3crkmmykqfbe"]
 
 [ext_resource type="PackedScene" uid="uid://ct8tdujobt7uy" path="res://scenes/rooms/room_generic.tscn" id="1_y5w4s"]
-[ext_resource type="Texture2D" uid="uid://c18woodft0lrb" path="res://pictures/bathroom_1.jpg" id="2_e0elq"]
+[ext_resource type="Texture2D" uid="uid://b02rys1d1eq6i" path="res://pictures/pictures_cartoon/bathroom_1.jpg" id="2_e0elq"]
 
 [node name="Bathroom" type="Control"]
 layout_mode = 3
@@ -16,6 +16,8 @@ layout_mode = 1
 right_path = "uid://bdechkmpm13jm"
 
 [node name="FrontTexture" parent="RoomGeneric" index="0"]
+offset_right = 1931.0
+offset_bottom = 1092.0
 texture = ExtResource("2_e0elq")
 
 [node name="LeftButton" parent="RoomGeneric" index="2"]

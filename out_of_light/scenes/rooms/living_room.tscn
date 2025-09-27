@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://ce15xsvsvosw0"]
 
 [ext_resource type="PackedScene" uid="uid://ct8tdujobt7uy" path="res://scenes/rooms/room_generic.tscn" id="1_ndxsf"]
-[ext_resource type="Texture2D" uid="uid://dy4tsgjjxxbki" path="res://pictures/living_room_1.jpg" id="2_bmq3m"]
-[ext_resource type="Texture2D" uid="uid://c2nqjoy3l7062" path="res://pictures/living_room_2.jpg" id="3_fbuym"]
+[ext_resource type="Texture2D" uid="uid://dqjfdkma87aqd" path="res://pictures/pictures_cartoon/living_room_1.jpg" id="2_fbuym"]
+[ext_resource type="Texture2D" uid="uid://brt0dxaq7sp4o" path="res://pictures/pictures_cartoon/living_room_2.jpg" id="3_j6grr"]
 
 [node name="LivingRoom" type="Control"]
 layout_mode = 3
@@ -18,9 +18,14 @@ left_path = "uid://bdechkmpm13jm"
 right_path = "uid://dnblgihnphpwh"
 
 [node name="FrontTexture" parent="RoomGeneric" index="0"]
-texture = ExtResource("2_bmq3m")
+offset_right = 1941.0
+offset_bottom = 1094.0
+texture = ExtResource("2_fbuym")
 
 [node name="OppositeTexture" parent="RoomGeneric" index="1"]
-texture = ExtResource("3_fbuym")
+offset_top = -1.0
+offset_right = 1935.0
+offset_bottom = 1095.0
+texture = ExtResource("3_j6grr")
 
 [editable path="RoomGeneric"]
