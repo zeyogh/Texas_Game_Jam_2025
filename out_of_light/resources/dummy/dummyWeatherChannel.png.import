@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bq2edfwua4jq2"
-path="res://.godot/imported/bedroom_2.jpg-4fb9271af8f6816216d64be37a462be3.ctex"
+uid="uid://buogaqvfqt2pf"
+path="res://.godot/imported/dummyWeatherChannel.png-41536d4cf05df2e4ee6cd31a5b099296.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pictures/pictures_watercolor/bedroom_2.jpg"
-dest_files=["res://.godot/imported/bedroom_2.jpg-4fb9271af8f6816216d64be37a462be3.ctex"]
+source_file="res://resources/dummy/dummyWeatherChannel.png"
+dest_files=["res://.godot/imported/dummyWeatherChannel.png-41536d4cf05df2e4ee6cd31a5b099296.ctex"]
 
 [params]
 
