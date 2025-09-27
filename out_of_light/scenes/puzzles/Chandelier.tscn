@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://cq1ple123kp3"]
+
+[ext_resource type="Script" uid="uid://tn2cid5t56ik" path="res://scenes/puzzles/Chandelier.gd" id="1_4585y"]
+[ext_resource type="PackedScene" uid="uid://cydr83whuxj0r" path="res://scenes/puzzles/BreakerSwitch.tscn" id="2_fhbta"]
+
+[node name="Chandelier" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4585y")
+
+[node name="BreakerBox" type="GridContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+columns = 2
+
+[node name="BreakerSwitch" parent="BreakerBox" instance=ExtResource("2_fhbta")]
+layout_mode = 2
+
+[connection signal="button_up" from="BreakerBox/BreakerSwitch" to="BreakerBox/BreakerSwitch" method="_turnBreakerOn"]

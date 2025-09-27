@@ -50,16 +50,16 @@ func PrevLens() -> void :
 	_reloadLens()
 
 func _reloadLens() -> void :
-	$TrackLever/TrackLengthShort.flip_h = true
-	$TrackLever/TrackLengthMed.flip_h = true
-	$TrackLever/TrackLengthLong.flip_h = true
+	$TrackLever/TrackLengthShort.flip_h = false
+	$TrackLever/TrackLengthMed.flip_h = false
+	$TrackLever/TrackLengthLong.flip_h = false
 	match _activeLens.trackLength:
 		1:
-			$TrackLever/TrackLengthShort.flip_h = false
+			$TrackLever/TrackLengthShort.flip_h = true
 		2:
-			$TrackLever/TrackLengthMed.flip_h = false
+			$TrackLever/TrackLengthMed.flip_h = true
 		3:
-			$TrackLever/TrackLengthLong.flip_h = false
+			$TrackLever/TrackLengthLong.flip_h = true
 	var mat : ShaderMaterial = _lensTexture.material
 	mat.set_shader_parameter("color",_lensColorVals[_activeLens.color])
 
