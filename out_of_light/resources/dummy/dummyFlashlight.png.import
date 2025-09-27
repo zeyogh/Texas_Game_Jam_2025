@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpy5gtscju1xq"
-path="res://.godot/imported/observation_deck_2.jpg-e43ed435ed5a065577fa9f963fc9afe4.ctex"
+uid="uid://cpjr5ng2fqrl4"
+path="res://.godot/imported/dummyFlashlight.png-b83109f7e74f612eb3f883f584e61e0b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pictures/observation_deck_2.jpg"
-dest_files=["res://.godot/imported/observation_deck_2.jpg-e43ed435ed5a065577fa9f963fc9afe4.ctex"]
+source_file="res://resources/dummy/dummyFlashlight.png"
+dest_files=["res://.godot/imported/dummyFlashlight.png-b83109f7e74f612eb3f883f584e61e0b.ctex"]
 
 [params]
 
