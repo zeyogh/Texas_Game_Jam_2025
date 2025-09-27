@@ -15,6 +15,13 @@ run/main_scene="uid://c72xudycrtjd3"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+PlayerController="*res://scenes/globals/player_controller.tscn"
+PostItController="*res://scenes/globals/post_it_controller.tscn"
+ProgressController="*res://scenes/globals/progress_controller.tscn"
+RoomsEnum="*res://enums/rooms_enum.gd"
+
 [display]
 
 window/size/viewport_width=1920

@@ -1,0 +1,394 @@
+[
+	  {
+	"room": "Bathroom",
+	"progress": "intro",
+	"dialogue_array": {
+	  "p1": "2 minutes brush, ABCs wash, 15 minutes trim",
+	}
+  },
+  {
+	"room": "Bathroom",
+	"progress": "stage_1",
+	"dialogue_array": {
+	  "p1": "2 minutes brush, ABCs wash, 15 minutes trim",
+	}
+  },
+  {
+	"room": "Bathroom",
+	"progress": "stage_2",
+	"dialogue_array": {
+	  "p1": "2 minutes brush, ABCs wash, 15 minutes trim",
+	}
+  },
+  {
+	"room": "Bathroom",
+	"progress": "stage_3",
+	"dialogue_array": {
+	  "p1": "2 minutes brush, ABCs wash, 15 minutes trim",
+	}
+  },
+  {
+	"room": "Bathroom",
+	"progress": "stage_4",
+	"dialogue_array": {
+	  "p1": "2 minutes brush, ABCs wash, 15 minutes trim",
+	}
+  },
+  {
+	"room": "Bathroom",
+	"progress": "stage_5",
+	"dialogue_array": {
+	  "p1": "When's the last time you held your granddaughter without shaking?",
+	}
+  },
+  {
+	"room": "Bathroom",
+	"progress": "outro",
+	"dialogue_array": {
+	  "p1": "Wash wash wash my hands every single day, father mother brother sister every other day",
+	}
+  },
+  {
+	"room": "Bedroom",
+	"progress": "intro",
+	"dialogue_array": {
+	  "p1": "1. Finish eggs (by Wednesday) 2. Brush teeth 3. Comb 4. Be a handsome feller!",
+	}
+  },
+  {
+	"room": "Bedroom",
+	"progress": "stage_1",
+	"dialogue_array": {
+	  "p1": "Smell in breaker room call for pests XXX-XXXX-XXXX",
+	}
+  },
+  {
+	"room": "Bedroom",
+	"progress": "stage_2",
+	"dialogue_array": {
+	  "p1": "Don't forget new perscription 8/28 - spare LHD",
+	}
+  },
+  {
+	"room": "Bedroom",
+	"progress": "stage_3",
+	"dialogue_array": {
+	  "p1": "No TV in the bedroom - rots your brain",
+	}
+  },
+  {
+	"room": "Bedroom",
+	"progress": "stage_4",
+	"dialogue_array": {
+	  "p1": "Breaker switches jammed, look at sometime (no rats)",
+	}
+  },
+  {
+	"room": "Bedroom",
+	"progress": "stage_5",
+	"dialogue_array": {
+	  "p1": "How time flies! How time flies! How time flies! How time flies! How time flies!",
+	}
+  },
+  {
+	"room": "Bedroom",
+	"progress": "outro",
+	"dialogue_array": {
+	  "p1": "Drink more water",
+	}
+  },
+  {
+	"room": "Kitchen",
+	"progress": "intro",
+	"dialogue_array": {
+	  "p1": "If eggs stink don't eat them",
+	}
+  },
+  {
+	"room": "Kitchen",
+	"progress": "stage_1",
+	"dialogue_array": {
+	  "p1": "Extra matches in first drawer on left, beer on second",
+	}
+  },
+  {
+	"room": "Kitchen",
+	"progress": "stage_2",
+	"dialogue_array": {
+	  "p1": "Junior comes over 8/30 8 am breakfast",
+	}
+  },
+  {
+	"room": "Kitchen",
+	"progress": "stage_3",
+	"dialogue_array": {
+	  "p1": "TV bothering the neighbors (Ha!)",
+	}
+  },
+  {
+	"room": "Kitchen",
+	"progress": "stage_4",
+	"dialogue_array": {
+	  "p1": "Junior comes over 8/30 8 am breakfast",
+	}
+  },
+  {
+	"room": "Kitchen",
+	"progress": "stage_5",
+	"dialogue_array": {
+	  "p1": "Junior dies because the lighthouse can't guide",
+	}
+  },
+  {
+	"room": "Kitchen",
+	"progress": "outro",
+	"dialogue_array": {
+	  "p1": "Junior comes over tomorrow - today!",
+	}
+  },
+  {
+	"room": "LivingRoom",
+	"progress": "intro",
+	"dialogue_array": {
+	  "p1": "Clean up after carving or you'll get splinters",
+	}
+  },
+  {
+	"room": "LivingRoom",
+	"progress": "stage_1",
+	"dialogue_array": {
+	  "p1": "Check kitchen for matches",
+	}
+  },
+  {
+	"room": "LivingRoom",
+	"progress": "stage_2",
+	"dialogue_array": {
+	  "p1": "Buy batteries AA",
+	}
+  },
+  {
+	"room": "LivingRoom",
+	"progress": "stage_3",
+	"dialogue_array": {
+	  "p1": "Channel 156.8 on bad nights",
+	}
+  },
+  {
+	"room": "LivingRoom",
+	"progress": "stage_4",
+	"dialogue_array": {
+	  "p1": "Oil chandelier - sounding a BIT rickety",
+	}
+  },
+  {
+	"room": "LivingRoom",
+	"progress": "stage_5",
+	"dialogue_array": {
+	  "p1": "You're a wicked man and your ship is docked. You try to scream for help when water has already filled your lungs. Only the sea can hear you now!",
+	}
+  },
+  {
+	"room": "LivingRoom",
+	"progress": "outro",
+	"dialogue_array": {
+	  "p1": "Sun too bright get drapes",
+	}
+  },
+  {
+	"room": "StairsLower",
+	"progress": "intro",
+	"dialogue_array": {
+	  "p1": "DO NOT SKIP MAINTENANCE. IF YOU'RE NOT SURE YOU DID IT GO UP AND CHECK.",
+	}
+  },
+  {
+	"room": "StairsLower",
+	"progress": "stage_1",
+	"dialogue_array": {
+	  "p1": "DO NOT SKIP MAINTENANCE. IF YOU'RE NOT SURE YOU DID IT GO UP AND CHECK.",
+	}
+  },
+  {
+	"room": "StairsLower",
+	"progress": "stage_2",
+	"dialogue_array": {
+	  "p1": "DO NOT SKIP MAINTENANCE. IF YOU'RE NOT SURE YOU DID IT GO UP AND CHECK.",
+	}
+  },
+  {
+	"room": "StairsLower",
+	"progress": "stage_3",
+	"dialogue_array": {
+	  "p1": "DO NOT SKIP MAINTENANCE. IF YOU'RE NOT SURE YOU DID IT GO UP AND CHECK.",
+	}
+  },
+  {
+	"room": "StairsLower",
+	"progress": "stage_4",
+	"dialogue_array": {
+	  "p1": "Leave keys downstairs I hate getting them",
+	}
+  },
+  {
+	"room": "StairsLower",
+	"progress": "stage_5",
+	"dialogue_array": {
+	  "p1": "Out of time",
+	}
+  },
+  {
+	"room": "StairsLower",
+	"progress": "outro",
+	"dialogue_array": {
+	  "p1": "DO NOT SKIP MAINTENANCE. IF YOU'RE NOT SURE YOU DID IT GO UP AND CHECK.",
+	}
+  },
+  {
+	"room": "StairsMiddle",
+	"progress": "intro",
+	"dialogue_array": {
+	  "p1": "Inquire into elevator permit 9/10 12 PM appointment",
+	}
+  },
+  {
+	"room": "StairsMiddle",
+	"progress": "stage_1",
+	"dialogue_array": {
+	  "p1": "Inquire into elevator permit 9/10 12 PM appointment",
+	}
+  },
+  {
+	"room": "StairsMiddle",
+	"progress": "stage_2",
+	"dialogue_array": {
+	  "p1": "Inquire into elevator permit 9/10 12 PM appointment",
+	}
+  },
+  {
+	"room": "StairsMiddle",
+	"progress": "stage_3",
+	"dialogue_array": {
+	  "p1": "Inquire into elevator permit 9/10 12 PM appointment",
+	}
+  },
+  {
+	"room": "StairsMiddle",
+	"progress": "stage_4",
+	"dialogue_array": {
+	  "p1": "Inquire into elevator permit 9/10 12 PM appointment",
+	}
+  },
+  {
+	"room": "StairsMiddle",
+	"progress": "stage_5",
+	"dialogue_array": {
+	  "p1": "Out of breath",
+	}
+  },
+  {
+	"room": "StairsMiddle",
+	"progress": "outro",
+	"dialogue_array": {
+	  "p1": "Inquire into elevator permit 9/10 12 PM appointment",
+	}
+  },
+ {
+	"room": "StairsUpper",
+	"progress": "intro",
+	"dialogue_array": {
+	  "p1": "And he lighted upon the place, and tarried there all night, because the sun was set; and he took one of the stones of the place, and put it under his head, and lay down in that place to sleep. ",
+	}
+  },
+  {
+	"room": "StairsUpper",
+	"progress": "stage_1",
+	"dialogue_array": {
+	  "p1": "And he lighted upon the place, and tarried there all night, because the sun was set; and he took one of the stones of the place, and put it under his head, and lay down in that place to sleep. ",
+	}
+  },
+  {
+	"room": "StairsUpper",
+	"progress": "stage_2",
+	"dialogue_array": {
+	  "p1": "And he lighted upon the place, and tarried there all night, because the sun was set; and he took one of the stones of the place, and put it under his head, and lay down in that place to sleep. ",
+	}
+  },
+  {
+	"room": "StairsUpper",
+	"progress": "stage_3",
+	"dialogue_array": {
+	  "p1": "And he lighted upon the place, and tarried there all night, because the sun was set; and he took one of the stones of the place, and put it under his head, and lay down in that place to sleep. ",
+	}
+  },
+  {
+	"room": "StairsUpper",
+	"progress": "stage_4",
+	"dialogue_array": {
+	  "p1": "And he lighted upon the place, and tarried there all night, because the sun was set; and he took one of the stones of the place, and put it under his head, and lay down in that place to sleep. ",
+	}
+  },
+  {
+	"room": "StairsUpper",
+	"progress": "stage_5",
+	"dialogue_array": {
+	  "p1": "Out of light",
+	}
+  },
+  {
+	"room": "StairsUpper",
+	"progress": "outro",
+	"dialogue_array": {
+	  "p1": "And he lighted upon the place, and tarried there all night, because the sun was set; and he took one of the stones of the place, and put it under his head, and lay down in that place to sleep. And he dreamed, and behold a ladder set up on the earth, and the top of it reached to heaven",
+	}
+  },
+ {
+	"room": "ObservationDeck",
+	"progress": "intro",
+	"dialogue_array": {
+	  "p1": "Crown of the castle",
+	}
+  },
+  {
+	"room": "ObservationDeck",
+	"progress": "stage_1",
+	"dialogue_array": {
+	  "p1": "Crown of the castle",
+	}
+  },
+  {
+	"room": "ObservationDeck",
+	"progress": "stage_2",
+	"dialogue_array": {
+	  "p1": "Crown of the castle",
+	}
+  },
+  {
+	"room": "ObservationDeck",
+	"progress": "stage_3",
+	"dialogue_array": {
+	  "p1": "Crown of the castle",
+	}
+  },
+  {
+	"room": "ObservationDeck",
+	"progress": "stage_4",
+	"dialogue_array": {
+	  "p1": "Crown of the castle",
+	}
+  },
+  {
+	"room": "ObservationDeck",
+	"progress": "stage_5",
+	"dialogue_array": {
+	  "p1": "The sun is the best lightkeeper",
+	}
+  },
+  {
+	"room": "ObservationDeck",
+	"progress": "outro",
+	"dialogue_array": {
+	  "p1": "Crown of the castle",
+	}
+  },
+]
