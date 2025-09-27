@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://bl8iaupxogyha"]
+
+[ext_resource type="PackedScene" uid="uid://dwduch42h01mc" path="res://scenes/draggable_item.tscn" id="1_nd71p"]
+[ext_resource type="PackedScene" uid="uid://05dpvsbv0xqt" path="res://scenes/item_slot.tscn" id="2_7ddre"]
+[ext_resource type="PackedScene" uid="uid://dhl7h2dfas7b8" path="res://scenes/clickable_item.tscn" id="3_qjeyg"]
+
+[node name="TestScene" type="Node2D"]
+
+[node name="DraggableItem" parent="." instance=ExtResource("1_nd71p")]
+
+[node name="ItemSlot" parent="." instance=ExtResource("2_7ddre")]
+offset_left = 199.0
+offset_top = 56.0
+offset_right = 239.0
+offset_bottom = 96.0
+
+[node name="ItemSlot2" parent="." instance=ExtResource("2_7ddre")]
+offset_left = 203.0
+offset_top = 264.0
+offset_right = 267.0
+offset_bottom = 328.0
+
+[node name="ClickableItem" parent="." instance=ExtResource("3_qjeyg")]
+offset_left = 24.0
+offset_top = 253.0
+offset_right = 163.0
+offset_bottom = 351.0

@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://05dpvsbv0xqt"]
+
+[ext_resource type="Script" uid="uid://b5mbc0cbewgdt" path="res://scripts/item_slot.gd" id="1_n6cxc"]
+
+[sub_resource type="Gradient" id="Gradient_567tv"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_eqbkm"]
+gradient = SubResource("Gradient_567tv")
+
+[node name="ItemSlot" type="TextureButton"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = SubResource("GradientTexture2D_eqbkm")
+script = ExtResource("1_n6cxc")
