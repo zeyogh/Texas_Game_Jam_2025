@@ -28,6 +28,7 @@ offset_left = 59.0
 offset_top = 370.0
 offset_right = 191.0
 offset_bottom = 431.0
+text = "left"
 
 [node name="RightButton" type="Button" parent="."]
 layout_mode = 0
@@ -35,6 +36,7 @@ offset_left = 950.0
 offset_top = 390.0
 offset_right = 1062.0
 offset_bottom = 433.0
+text = "right"
 
 [node name="CeilingButton" type="Button" parent="."]
 layout_mode = 0
@@ -42,7 +44,27 @@ offset_left = 510.0
 offset_top = 56.0
 offset_right = 676.0
 offset_bottom = 106.0
+text = "ceiling"
+
+[node name="OppositeButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 355.0
+offset_top = 553.0
+offset_right = 541.0
+offset_bottom = 619.0
+text = "opposite"
+
+[node name="FrontButton" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 626.0
+offset_top = 505.0
+offset_right = 862.0
+offset_bottom = 626.0
+text = "front"
 
 [connection signal="pressed" from="LeftButton" to="." method="_on_left_button_pressed"]
 [connection signal="pressed" from="RightButton" to="." method="_on_right_button_pressed"]
 [connection signal="pressed" from="CeilingButton" to="." method="_on_ceiling_button_pressed"]
+[connection signal="pressed" from="OppositeButton" to="." method="_on_opposite_button_pressed"]
+[connection signal="pressed" from="FrontButton" to="." method="_on_front_button_pressed"]
