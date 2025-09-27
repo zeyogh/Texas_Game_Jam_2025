@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwduch42h01mc"]
+
+[ext_resource type="Texture2D" uid="uid://ccq5i2dheda3a" path="res://icon.svg" id="1_a4jc7"]
+[ext_resource type="Script" uid="uid://1bkyq5nty0oc" path="res://scripts/draggable_item.gd" id="2_55gtw"]
+
+[node name="DraggableItem" type="TextureRect"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_a4jc7")
+script = ExtResource("2_55gtw")
