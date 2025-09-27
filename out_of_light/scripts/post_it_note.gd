@@ -1,0 +1,57 @@
+extends TextureButton
+
+var inside = preload("res://scenes/post_it_note_inside.tscn")
+
+var post_it_text: String = ""
+
+func _on_pressed() -> void:
+	if post_it_text.length() == 0:
+		var current_room = PlayerController.current_room
+		var room_as_string = ""
+		
+		var current_phase = ProgressController.current_stage
+		var phase_as_string = ""
+		
+		match current_room:
+			RoomsEnum.Rooms.BATHROOM:
+				room_as_string = "Bathroom"
+			RoomsEnum.Rooms.BEDROOM:
+				room_as_string = "Bedroom"
+			RoomsEnum.Rooms.KITCHEN:
+				room_as_string = "Kitchen"
+			RoomsEnum.Rooms.LIVING_ROOM:
+				room_as_string = "LivingRoom"
+			RoomsEnum.Rooms.STAIRS_BOTTOM:
+				room_as_string = "StairsBottom"
+			RoomsEnum.Rooms.STAIRS_MIDDLE:
+				room_as_string = "StairsMiddle"
+			RoomsEnum.Rooms.STAIRS_UPPER:
+				room_as_string = "StairsUpper"
+			RoomsEnum.Rooms.OBSERVATION_DECK:
+				room_as_string = "ObservationDeck"
+			_:
+				room_as_string = "Bedroom"
+				
+		match current_phase:
+			ProgressEnum.Progress.INTRO:
+				phase_as_string = "intro"
+			ProgressEnum.Progress.STAGE_1:
+				phase_as_string = "phase_1"
+			ProgressEnum.Progress.STAGE_2:
+				phase_as_string = "phase_2"
+			ProgressEnum.Progress.STAGE_3:
+				phase_as_string = "phase_3"
+			ProgressEnum.Progress.STAGE_4:
+				phase_as_string = "phase_4"
+			ProgressEnum.Progress.STAGE_5:
+				phase_as_string = "phase_5"
+			ProgressEnum.Progress.OUTRO:
+				phase_as_string = "outro"
+			_:
+				phase_as_string = "intro"
+			
+		var text = PostItController._call_post_it(room_as_string, phase_as_string)
+		post_it_text = text
+		
+	var instance = inside.instantiate()
+	instance.get_node("Writing").text = post_it_text

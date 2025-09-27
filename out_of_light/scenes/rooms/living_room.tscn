@@ -16,6 +16,7 @@ grow_vertical = 2
 layout_mode = 1
 left_path = "uid://bdechkmpm13jm"
 right_path = "uid://dnblgihnphpwh"
+current_room = 3
 
 [node name="FrontTexture" parent="RoomGeneric" index="0"]
 offset_right = 1941.0

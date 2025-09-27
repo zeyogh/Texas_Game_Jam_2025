@@ -2,9 +2,13 @@ extends Control
 
 @export_file("*.tscn") var left_path: String
 @export_file("*.tscn") var right_path: String
+@export var current_room: RoomsEnum.Rooms
 
 @onready var left_visible: bool = $LeftButton.visible
 @onready var right_visible: bool = $RightButton.visible
+
+func _ready() -> void:
+	PlayerController.current_room = current_room
 
 func _on_left_button_pressed() -> void:
 	get_tree().change_scene_to_file(left_path)
