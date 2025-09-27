@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxqoodx47e4lj"
-path="res://.godot/imported/dummyFuseBlown.jpg-b313c4d7a98dc5eef5a27db9eff14234.ctex"
+uid="uid://d4fj2hqpd2lgm"
+path="res://.godot/imported/dummyMatchbox.jpg-821957d51c9f84e4b3bf0ca6e807825e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/dummy/dummyFuseBlown.jpg"
-dest_files=["res://.godot/imported/dummyFuseBlown.jpg-b313c4d7a98dc5eef5a27db9eff14234.ctex"]
+source_file="res://resources/dummy/dummyMatchbox.jpg"
+dest_files=["res://.godot/imported/dummyMatchbox.jpg-821957d51c9f84e4b3bf0ca6e807825e.ctex"]
 
 [params]
 

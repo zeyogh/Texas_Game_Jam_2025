@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Out_Of_Light"
-run/main_scene="uid://jhaghxdi7w43"
+run/main_scene="uid://c4htc2c63yutg"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 

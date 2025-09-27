@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://c4htc2c63yutg"]
+
+[ext_resource type="Script" uid="uid://bqgwto78ly05h" path="res://scenes/puzzles/Candles.gd" id="1_bvyt8"]
+[ext_resource type="Texture2D" uid="uid://dd375tsu3ouhh" path="res://resources/dummy/dummyMatch.png" id="2_364i8"]
+[ext_resource type="Texture2D" uid="uid://d4fj2hqpd2lgm" path="res://resources/dummy/dummyMatchbox.jpg" id="3_whk3c"]
+[ext_resource type="Texture2D" uid="uid://b46tmipacemxo" path="res://resources/dummy/dummyCandles.png" id="4_0s0dm"]
+
+[node name="Candles" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bvyt8")
+
+[node name="Match" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 171.0
+offset_top = 229.0
+offset_right = 1371.0
+offset_bottom = 1429.0
+texture_normal = ExtResource("2_364i8")
+
+[node name="Matchbox" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 166.0
+offset_top = 227.0
+offset_right = 640.0
+offset_bottom = 531.0
+texture = ExtResource("3_whk3c")
+
+[node name="Candle" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1105.0
+offset_top = 105.0
+offset_right = 1745.0
+offset_bottom = 745.0
+texture_normal = ExtResource("4_0s0dm")
+
+[connection signal="button_down" from="Match" to="." method="GrabMatch"]
+[connection signal="button_down" from="Candle" to="." method="LightCandles"]
