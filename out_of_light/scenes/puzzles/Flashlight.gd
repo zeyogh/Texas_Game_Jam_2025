@@ -22,9 +22,9 @@ func LoadClear() -> void:
 	isBlurry = false
 
 func FlipBattery1() -> void:
-	if abs(battery1.position.x - 475) < 15: battery1.flip_v = !battery1.flip_v
+	if abs(battery1.position.x - 1340) < 15: battery1.flip_v = !battery1.flip_v
 func FlipBattery2() -> void:
-	if abs(battery2.position.x - 600) < 15: battery2.flip_v = !battery2.flip_v
+	if abs(battery2.position.x - 1720) < 15: battery2.flip_v = !battery2.flip_v
 
 func GrabBattery1() -> void:
 	if !isBlurry: grabbingBattery1 = true
@@ -42,11 +42,11 @@ func _process(_delta: float) -> void:
 		if grabbingBattery1 and get_global_mouse_position().x < flashlight.position.x + flashlight.texture.get_width():
 			battery1.visible = false
 		else:
-			battery1.position.x = 475
+			battery1.position.x = 1340
 		if grabbingBattery2 and get_global_mouse_position().x < flashlight.position.x + flashlight.texture.get_width():
 			battery2.visible = false
 		else:
-			battery2.position.x = 600
+			battery2.position.x = 1720
 		grabbingBattery1 = false
 		grabbingBattery2 = false
 		
@@ -58,4 +58,4 @@ func _process(_delta: float) -> void:
 			battery1.visible = true
 			battery2.visible = true
 			battery1.position.x = 475
-			battery2.position.x = 600
+			battery2.position.x = 1720

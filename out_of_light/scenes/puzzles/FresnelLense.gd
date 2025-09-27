@@ -1,5 +1,5 @@
 class_name FresnelLensPuzzle
-extends Node2D
+extends Control
 
 enum LensColor {
 	BLACK,
@@ -26,7 +26,7 @@ var _lenses : Array[FresnelLens] = [
 ]
 var _activeLensIdx : int = 0
 @onready var _activeLens : FresnelLens = _lenses[_activeLensIdx]
-@onready var _lensTexture : TextureRect = $PuzzleFullscreen/LensArea/LensTexture
+@onready var _lensTexture : TextureRect = $LensTexture
 
 func SetColor(NewColor : LensColor) -> void :
 	_activeLens.color = NewColor
@@ -43,22 +43,23 @@ func NextLens() -> void :
 	_reloadLens()
 
 func PrevLens() -> void :
+	print_debug("prev")
 	_activeLensIdx -= 1
 	if _activeLensIdx < 0 : _activeLensIdx = 3
 	_activeLens = _lenses[_activeLensIdx]
 	_reloadLens()
 
 func _reloadLens() -> void :
-	$PuzzleFullscreen/TrackLever/TrackLengthShort.flip_h = true
-	$PuzzleFullscreen/TrackLever/TrackLengthMed.flip_h = true
-	$PuzzleFullscreen/TrackLever/TrackLengthLong.flip_h = true
+	$TrackLever/TrackLengthShort.flip_h = true
+	$TrackLever/TrackLengthMed.flip_h = true
+	$TrackLever/TrackLengthLong.flip_h = true
 	match _activeLens.trackLength:
 		1:
-			$PuzzleFullscreen/TrackLever/TrackLengthShort.flip_h = false
+			$TrackLever/TrackLengthShort.flip_h = false
 		2:
-			$PuzzleFullscreen/TrackLever/TrackLengthMed.flip_h = false
+			$TrackLever/TrackLengthMed.flip_h = false
 		3:
-			$PuzzleFullscreen/TrackLever/TrackLengthLong.flip_h = false
+			$TrackLever/TrackLengthLong.flip_h = false
 	var mat : ShaderMaterial = _lensTexture.material
 	mat.set_shader_parameter("color",_lensColorVals[_activeLens.color])
 

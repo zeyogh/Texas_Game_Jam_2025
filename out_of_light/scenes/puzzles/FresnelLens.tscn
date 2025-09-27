@@ -1,12 +1,17 @@
-[gd_scene load_steps=17 format=3 uid="uid://c72xudycrtjd3"]
+[gd_scene load_steps=22 format=3 uid="uid://c72xudycrtjd3"]
 
 [ext_resource type="Script" uid="uid://bxx4a8sv6552g" path="res://scenes/puzzles/FresnelLense.gd" id="1_1q46n"]
-[ext_resource type="Texture2D" uid="uid://devrggaeffqu7" path="res://resources/dummy/dummyArrow.png" id="2_6ml0m"]
 [ext_resource type="Shader" uid="uid://bnjii8bbdfi2m" path="res://resources/shaders/color_tint.gdshader" id="2_6rvpc"]
-[ext_resource type="Texture2D" uid="uid://c20lwyftmn2lp" path="res://resources/dummy/dummyLantern.png" id="3_iemkg"]
-[ext_resource type="Texture2D" uid="uid://2nbb2t4toyjx" path="res://resources/dummy/dummyButton.png" id="4_mfucn"]
-[ext_resource type="Texture2D" uid="uid://cacvr4fevkqs1" path="res://resources/dummy/dummySwitch.png" id="5_qoa56"]
-[ext_resource type="Texture2D" uid="uid://dyhvhgpgbset7" path="res://resources/dummy/dummyStartLight.png" id="7_qoa56"]
+[ext_resource type="Texture2D" uid="uid://biidlk2pubaf8" path="res://resources/puzzleTextures/rightArrow.png" id="2_wbo87"]
+[ext_resource type="Texture2D" uid="uid://6487bqh1w4qk" path="res://resources/puzzleTextures/FresnelLens.png" id="4_qoa56"]
+[ext_resource type="Texture2D" uid="uid://c623a7utejru6" path="res://resources/puzzleTextures/FresnelLight.png" id="5_wvhdc"]
+[ext_resource type="Texture2D" uid="uid://boyagqrx50hjm" path="res://resources/puzzleTextures/trackSwitch.png" id="6_wvhdc"]
+[ext_resource type="Texture2D" uid="uid://ds3ashc8rma86" path="res://resources/puzzleTextures/grayButton.png" id="7_wbo87"]
+[ext_resource type="Texture2D" uid="uid://cd447vbhityhk" path="res://resources/puzzleTextures/whiteButton.png" id="8_cfixt"]
+[ext_resource type="Texture2D" uid="uid://lbkrge8eomm3" path="res://resources/puzzleTextures/redButton.png" id="9_cgh6e"]
+[ext_resource type="Texture2D" uid="uid://ddi42jqcqpeyx" path="res://resources/puzzleTextures/yellowButton.png" id="10_odjcu"]
+[ext_resource type="Texture2D" uid="uid://dr4i0lcrv3rgj" path="res://resources/puzzleTextures/greenButton.png" id="11_qqskf"]
+[ext_resource type="Texture2D" uid="uid://b1ja0oiuesyqv" path="res://resources/puzzleTextures/onOffSwitch.png" id="12_wbo87"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_mfucn"]
 shader = ExtResource("2_6rvpc")
@@ -22,7 +27,7 @@ func _on_button_down() -> void:
 	flip_h = !flip_h
 	$\"../TrackLengthMed\".flip_h = true
 	$\"../TrackLengthLong\".flip_h = true
-	$\"../../..\".SetTrackLength(1)
+	$\"../..\".SetTrackLength(1)
 "
 
 [sub_resource type="GDScript" id="GDScript_mrysr"]
@@ -33,7 +38,7 @@ func _on_button_down() -> void:
 	flip_h = !flip_h
 	$\"../TrackLengthShort\".flip_h = true
 	$\"../TrackLengthLong\".flip_h = true
-	$\"../../..\".SetTrackLength(2)
+	$\"../..\".SetTrackLength(2)
 "
 
 [sub_resource type="GDScript" id="GDScript_u0u4a"]
@@ -44,7 +49,7 @@ func _on_button_down() -> void:
 	flip_h = !flip_h
 	$\"../TrackLengthShort\".flip_h = true
 	$\"../TrackLengthMed\".flip_h = true
-	$\"../../..\".SetTrackLength(3)
+	$\"../..\".SetTrackLength(3)
 "
 
 [sub_resource type="GDScript" id="GDScript_8fpho"]
@@ -52,7 +57,7 @@ resource_name = "BlackButton"
 script/source = "extends TextureButton
 
 func _on_button_down() -> void:
-	$\"../../..\".SetColor(FresnelLensPuzzle.LensColor.BLACK)
+	$\"../..\".SetColor(FresnelLensPuzzle.LensColor.BLACK)
 "
 
 [sub_resource type="GDScript" id="GDScript_mfucn"]
@@ -60,7 +65,7 @@ resource_name = "WhiteButton"
 script/source = "extends TextureButton
 
 func _on_button_down() -> void:
-	$\"../../..\".SetColor(FresnelLensPuzzle.LensColor.WHITE)
+	$\"../..\".SetColor(FresnelLensPuzzle.LensColor.WHITE)
 "
 
 [sub_resource type="GDScript" id="GDScript_rwxch"]
@@ -68,7 +73,7 @@ resource_name = "RedButton"
 script/source = "extends TextureButton
 
 func _on_button_down() -> void:
-	$\"../../..\".SetColor(FresnelLensPuzzle.LensColor.RED)
+	$\"../..\".SetColor(FresnelLensPuzzle.LensColor.RED)
 "
 
 [sub_resource type="GDScript" id="GDScript_6ml0m"]
@@ -76,7 +81,7 @@ resource_name = "YellowButton"
 script/source = "extends TextureButton
 
 func _on_button_down() -> void:
-	$\"../../..\".SetColor(FresnelLensPuzzle.LensColor.YELLOW)
+	$\"../..\".SetColor(FresnelLensPuzzle.LensColor.YELLOW)
 "
 
 [sub_resource type="GDScript" id="GDScript_qoa56"]
@@ -84,138 +89,159 @@ resource_name = "GreenButton"
 script/source = "extends TextureButton
 
 func _on_button_down() -> void:
-	$\"../../..\".SetColor(FresnelLensPuzzle.LensColor.GREEN)
+	$\"../..\".SetColor(FresnelLensPuzzle.LensColor.GREEN)
 "
 
-[node name="FresnelLens" type="Node2D"]
-script = ExtResource("1_1q46n")
-
-[node name="PuzzleFullscreen" type="Control" parent="."]
+[node name="FresnelLens" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 1151.0
-offset_bottom = 648.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("1_1q46n")
 
-[node name="LensArea" type="HBoxContainer" parent="PuzzleFullscreen"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -448.0
-offset_top = -251.0
-offset_right = 448.0
-offset_bottom = 229.0
-grow_horizontal = 2
-grow_vertical = 2
-alignment = 1
-
-[node name="PrevButton" type="TextureButton" parent="PuzzleFullscreen/LensArea"]
-layout_mode = 2
-size_flags_vertical = 4
-texture_normal = ExtResource("2_6ml0m")
-flip_h = true
-
-[node name="LensTexture" type="TextureRect" parent="PuzzleFullscreen/LensArea"]
-material = SubResource("ShaderMaterial_mfucn")
-layout_mode = 2
-size_flags_vertical = 4
-texture = ExtResource("3_iemkg")
-
-[node name="NextButton" type="TextureButton" parent="PuzzleFullscreen/LensArea"]
-layout_mode = 2
-size_flags_vertical = 4
-texture_normal = ExtResource("2_6ml0m")
-
-[node name="TrackLever" type="VBoxContainer" parent="PuzzleFullscreen"]
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_top = -20.0
-offset_right = 40.0
-offset_bottom = 20.0
-grow_vertical = 2
-
-[node name="TrackLengthShort" type="TextureButton" parent="PuzzleFullscreen/TrackLever"]
-layout_mode = 2
-texture_normal = ExtResource("5_qoa56")
-flip_h = true
-script = SubResource("GDScript_wvhdc")
-
-[node name="TrackLengthMed" type="TextureButton" parent="PuzzleFullscreen/TrackLever"]
-layout_mode = 2
-texture_normal = ExtResource("5_qoa56")
-flip_h = true
-script = SubResource("GDScript_mrysr")
-
-[node name="TrackLengthLong" type="TextureButton" parent="PuzzleFullscreen/TrackLever"]
-layout_mode = 2
-texture_normal = ExtResource("5_qoa56")
-flip_h = true
-script = SubResource("GDScript_u0u4a")
-
-[node name="ColorButtons" type="HBoxContainer" parent="PuzzleFullscreen"]
+[node name="Light" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -44.0
-offset_top = -72.0
-offset_right = 44.0
+offset_left = -604.5
+offset_top = -1080.0
+offset_right = 604.5
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("4_qoa56")
+expand_mode = 1
+
+[node name="LensTexture" type="TextureRect" parent="."]
+z_index = -1
+material = SubResource("ShaderMaterial_mfucn")
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -604.5
+offset_top = -1080.0
+offset_right = 604.5
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 4
+texture = ExtResource("5_wvhdc")
+expand_mode = 1
+
+[node name="PrevButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 475.0
+offset_top = 500.0
+offset_right = 588.0
+offset_bottom = 606.0
+size_flags_vertical = 4
+texture_normal = ExtResource("2_wbo87")
+flip_h = true
+
+[node name="NextButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1300.0
+offset_top = 500.0
+offset_right = 1413.0
+offset_bottom = 606.0
+size_flags_vertical = 4
+texture_normal = ExtResource("2_wbo87")
+
+[node name="TrackLever" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.252
+anchor_top = 0.72700006
+anchor_right = 0.252
+anchor_bottom = 0.72700006
+offset_left = -1.7954712
+offset_top = -4.402832
+offset_right = 141.20456
+offset_bottom = 225.59717
+grow_vertical = 2
+
+[node name="TrackLengthShort" type="TextureButton" parent="TrackLever"]
+layout_mode = 2
+texture_normal = ExtResource("6_wvhdc")
+flip_h = true
+script = SubResource("GDScript_wvhdc")
+
+[node name="TrackLengthMed" type="TextureButton" parent="TrackLever"]
+layout_mode = 2
+texture_normal = ExtResource("6_wvhdc")
+flip_h = true
+script = SubResource("GDScript_mrysr")
+
+[node name="TrackLengthLong" type="TextureButton" parent="TrackLever"]
+layout_mode = 2
+texture_normal = ExtResource("6_wvhdc")
+flip_h = true
+script = SubResource("GDScript_u0u4a")
+
+[node name="ColorButtons" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.38700002
+anchor_top = 0.763
+anchor_right = 0.38700002
+anchor_bottom = 0.763
+offset_left = 42.95996
+offset_top = -5.040039
+offset_right = 418.95996
+offset_bottom = 66.95996
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="BlackButton" type="TextureButton" parent="PuzzleFullscreen/ColorButtons"]
+[node name="BlackButton" type="TextureButton" parent="ColorButtons"]
 layout_mode = 2
-texture_normal = ExtResource("4_mfucn")
+texture_normal = ExtResource("7_wbo87")
 script = SubResource("GDScript_8fpho")
 
-[node name="WhiteButton" type="TextureButton" parent="PuzzleFullscreen/ColorButtons"]
+[node name="WhiteButton" type="TextureButton" parent="ColorButtons"]
 layout_mode = 2
-texture_normal = ExtResource("4_mfucn")
+texture_normal = ExtResource("8_cfixt")
 script = SubResource("GDScript_mfucn")
 
-[node name="RedButton" type="TextureButton" parent="PuzzleFullscreen/ColorButtons"]
+[node name="RedButton" type="TextureButton" parent="ColorButtons"]
 layout_mode = 2
-texture_normal = ExtResource("4_mfucn")
+texture_normal = ExtResource("9_cgh6e")
 script = SubResource("GDScript_rwxch")
 
-[node name="YellowButton" type="TextureButton" parent="PuzzleFullscreen/ColorButtons"]
+[node name="YellowButton" type="TextureButton" parent="ColorButtons"]
 layout_mode = 2
-texture_normal = ExtResource("4_mfucn")
+texture_normal = ExtResource("10_odjcu")
 script = SubResource("GDScript_6ml0m")
 
-[node name="GreenButton" type="TextureButton" parent="PuzzleFullscreen/ColorButtons"]
+[node name="GreenButton" type="TextureButton" parent="ColorButtons"]
 layout_mode = 2
-texture_normal = ExtResource("4_mfucn")
+texture_normal = ExtResource("11_qqskf")
 script = SubResource("GDScript_qoa56")
 
-[node name="StartLightButton" type="TextureButton" parent="PuzzleFullscreen"]
+[node name="StartLightButton" type="TextureButton" parent="."]
 layout_mode = 1
-anchors_preset = 6
+anchors_preset = 3
 anchor_left = 1.0
-anchor_top = 0.5
+anchor_top = 1.0
 anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -66.0
-offset_top = -63.5
-offset_bottom = 63.5
+anchor_bottom = 1.0
+offset_left = -198.0
+offset_top = -382.0
 grow_horizontal = 0
-grow_vertical = 2
-texture_normal = ExtResource("7_qoa56")
+grow_vertical = 0
+texture_normal = ExtResource("12_wbo87")
 
-[connection signal="button_up" from="PuzzleFullscreen/LensArea/PrevButton" to="." method="PrevLens"]
-[connection signal="button_up" from="PuzzleFullscreen/LensArea/NextButton" to="." method="NextLens"]
-[connection signal="button_down" from="PuzzleFullscreen/TrackLever/TrackLengthShort" to="PuzzleFullscreen/TrackLever/TrackLengthShort" method="_on_button_down"]
-[connection signal="button_down" from="PuzzleFullscreen/TrackLever/TrackLengthMed" to="PuzzleFullscreen/TrackLever/TrackLengthMed" method="_on_button_down"]
-[connection signal="button_down" from="PuzzleFullscreen/TrackLever/TrackLengthLong" to="PuzzleFullscreen/TrackLever/TrackLengthLong" method="_on_button_down"]
-[connection signal="button_down" from="PuzzleFullscreen/ColorButtons/BlackButton" to="PuzzleFullscreen/ColorButtons/BlackButton" method="_on_button_down"]
-[connection signal="button_down" from="PuzzleFullscreen/ColorButtons/WhiteButton" to="PuzzleFullscreen/ColorButtons/WhiteButton" method="_on_button_down"]
-[connection signal="button_down" from="PuzzleFullscreen/ColorButtons/RedButton" to="PuzzleFullscreen/ColorButtons/RedButton" method="_on_button_down"]
-[connection signal="button_down" from="PuzzleFullscreen/ColorButtons/YellowButton" to="PuzzleFullscreen/ColorButtons/YellowButton" method="_on_button_down"]
-[connection signal="button_down" from="PuzzleFullscreen/ColorButtons/GreenButton" to="PuzzleFullscreen/ColorButtons/GreenButton" method="_on_button_down"]
-[connection signal="button_up" from="PuzzleFullscreen/StartLightButton" to="." method="StartLight"]
+[connection signal="button_up" from="PrevButton" to="." method="PrevLens"]
+[connection signal="button_up" from="NextButton" to="." method="NextLens"]
+[connection signal="button_down" from="TrackLever/TrackLengthShort" to="TrackLever/TrackLengthShort" method="_on_button_down"]
+[connection signal="button_down" from="TrackLever/TrackLengthMed" to="TrackLever/TrackLengthMed" method="_on_button_down"]
+[connection signal="button_down" from="TrackLever/TrackLengthLong" to="TrackLever/TrackLengthLong" method="_on_button_down"]
+[connection signal="button_down" from="ColorButtons/BlackButton" to="ColorButtons/BlackButton" method="_on_button_down"]
+[connection signal="button_down" from="ColorButtons/WhiteButton" to="ColorButtons/WhiteButton" method="_on_button_down"]
+[connection signal="button_down" from="ColorButtons/RedButton" to="ColorButtons/RedButton" method="_on_button_down"]
+[connection signal="button_down" from="ColorButtons/YellowButton" to="ColorButtons/YellowButton" method="_on_button_down"]
+[connection signal="button_down" from="ColorButtons/GreenButton" to="ColorButtons/GreenButton" method="_on_button_down"]
+[connection signal="button_up" from="StartLightButton" to="." method="StartLight"]
