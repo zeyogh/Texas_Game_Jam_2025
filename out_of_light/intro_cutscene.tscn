@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://begnx00j0asra"]
+
+[ext_resource type="VideoStream" uid="uid://byc5afnpgbpkl" path="res://videos/old_man_wakeup.ogv" id="1_rlq26"]
+
+[node name="IntroCutscene" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
+offset_left = -967.0
+offset_top = -550.0
+offset_right = 972.0
+offset_bottom = 567.0
+ratio = 1.7778
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="AspectRatioContainer"]
+layout_mode = 2
+stream = ExtResource("1_rlq26")
+autoplay = true
+expand = true
