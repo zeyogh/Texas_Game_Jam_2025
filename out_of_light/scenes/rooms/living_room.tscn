@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://ce15xsvsvosw0"]
+
+[ext_resource type="PackedScene" uid="uid://ct8tdujobt7uy" path="res://scenes/rooms/room_generic.tscn" id="1_ndxsf"]
+[ext_resource type="Texture2D" uid="uid://dy4tsgjjxxbki" path="res://pictures/living_room_1.jpg" id="2_bmq3m"]
+[ext_resource type="Texture2D" uid="uid://c2nqjoy3l7062" path="res://pictures/living_room_2.jpg" id="3_fbuym"]
+
+[node name="LivingRoom" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RoomGeneric" parent="." instance=ExtResource("1_ndxsf")]
+layout_mode = 1
+left_path = "uid://bdechkmpm13jm"
+right_path = "uid://dnblgihnphpwh"
+
+[node name="FrontTexture" parent="RoomGeneric" index="0"]
+texture = ExtResource("2_bmq3m")
+
+[node name="OppositeTexture" parent="RoomGeneric" index="1"]
+texture = ExtResource("3_fbuym")
+
+[editable path="RoomGeneric"]

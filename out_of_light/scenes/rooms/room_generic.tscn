@@ -16,11 +16,20 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_4oogr")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="FrontTexture" type="TextureRect" parent="."]
 layout_mode = 0
 offset_right = 1301.0
 offset_bottom = 694.0
 texture = SubResource("GradientTexture2D_03jwg")
+expand_mode = 1
+
+[node name="OppositeTexture" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1301.0
+offset_bottom = 694.0
+texture = SubResource("GradientTexture2D_03jwg")
+expand_mode = 1
 
 [node name="LeftButton" type="Button" parent="."]
 layout_mode = 0
@@ -37,14 +46,6 @@ offset_top = 390.0
 offset_right = 1062.0
 offset_bottom = 433.0
 text = "right"
-
-[node name="CeilingButton" type="Button" parent="."]
-layout_mode = 0
-offset_left = 510.0
-offset_top = 56.0
-offset_right = 676.0
-offset_bottom = 106.0
-text = "ceiling"
 
 [node name="OppositeButton" type="Button" parent="."]
 layout_mode = 0
@@ -65,6 +66,5 @@ text = "front"
 
 [connection signal="pressed" from="LeftButton" to="." method="_on_left_button_pressed"]
 [connection signal="pressed" from="RightButton" to="." method="_on_right_button_pressed"]
-[connection signal="pressed" from="CeilingButton" to="." method="_on_ceiling_button_pressed"]
 [connection signal="pressed" from="OppositeButton" to="." method="_on_opposite_button_pressed"]
 [connection signal="pressed" from="FrontButton" to="." method="_on_front_button_pressed"]

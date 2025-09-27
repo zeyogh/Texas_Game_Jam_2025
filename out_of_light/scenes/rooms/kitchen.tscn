@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://dnblgihnphpwh"]
+
+[ext_resource type="PackedScene" uid="uid://ct8tdujobt7uy" path="res://scenes/rooms/room_generic.tscn" id="1_3w07q"]
+[ext_resource type="Texture2D" uid="uid://cm8tha4gsebt2" path="res://pictures/kitchen_1.jpg" id="2_sqdrw"]
+[ext_resource type="Texture2D" uid="uid://b5ykw721kajvx" path="res://pictures/kitchen_2.jpg" id="3_2812u"]
+
+[node name="Kitchen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RoomGeneric" parent="." instance=ExtResource("1_3w07q")]
+layout_mode = 1
+left_path = "uid://ce15xsvsvosw0"
+right_path = "uid://ww3kl5xkl30f"
+
+[node name="FrontTexture" parent="RoomGeneric" index="0"]
+offset_right = 1157.0
+offset_bottom = 656.0
+texture = ExtResource("2_sqdrw")
+
+[node name="OppositeTexture" parent="RoomGeneric" index="1"]
+visible = true
+offset_right = 1176.0
+offset_bottom = 666.0
+texture = ExtResource("3_2812u")
+expand_mode = 1
+
+[editable path="RoomGeneric"]

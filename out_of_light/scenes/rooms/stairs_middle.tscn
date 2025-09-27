@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://dya248rgdtcs6"]
+
+[ext_resource type="PackedScene" uid="uid://ct8tdujobt7uy" path="res://scenes/rooms/room_generic.tscn" id="1_iyapy"]
+[ext_resource type="Texture2D" uid="uid://bf2qg247nj6w0" path="res://pictures/stairs_2.jpg" id="2_257ar"]
+
+[node name="StairsMiddle" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RoomGeneric" parent="." instance=ExtResource("1_iyapy")]
+layout_mode = 1
+left_path = "uid://ww3kl5xkl30f"
+right_path = "uid://cn1uiwv1oiqfu"
+
+[node name="FrontTexture" parent="RoomGeneric" index="0"]
+offset_right = 1160.0
+offset_bottom = 653.0
+texture = ExtResource("2_257ar")
+expand_mode = 1
+
+[node name="OppositeButton" parent="RoomGeneric" index="4"]
+visible = false
+
+[editable path="RoomGeneric"]

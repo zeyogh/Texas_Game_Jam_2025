@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://dnxcgrjiwd8bv"]
+
+[ext_resource type="PackedScene" uid="uid://ct8tdujobt7uy" path="res://scenes/rooms/room_generic.tscn" id="1_1tr8l"]
+[ext_resource type="Texture2D" uid="uid://bp74a20gjlq6f" path="res://pictures/obversation_deck_1.jpg" id="2_xjxii"]
+[ext_resource type="Texture2D" uid="uid://cpy5gtscju1xq" path="res://pictures/observation_deck_2.jpg" id="3_xtdw6"]
+
+[node name="ObservationDeck" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RoomGeneric" parent="." instance=ExtResource("1_1tr8l")]
+layout_mode = 1
+left_path = "uid://cn1uiwv1oiqfu"
+
+[node name="FrontTexture" parent="RoomGeneric" index="0"]
+offset_right = 1157.0
+offset_bottom = 663.0
+texture = ExtResource("2_xjxii")
+expand_mode = 1
+
+[node name="OppositeTexture" parent="RoomGeneric" index="1"]
+offset_right = 1165.0
+offset_bottom = 670.0
+texture = ExtResource("3_xtdw6")
+
+[node name="RightButton" parent="RoomGeneric" index="3"]
+visible = false
+
+[editable path="RoomGeneric"]
