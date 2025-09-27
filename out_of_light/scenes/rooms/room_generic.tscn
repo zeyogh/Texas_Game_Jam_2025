@@ -18,50 +18,50 @@ script = ExtResource("1_4oogr")
 
 [node name="FrontTexture" type="TextureRect" parent="."]
 layout_mode = 0
-offset_right = 1301.0
-offset_bottom = 694.0
+offset_right = 1942.0
+offset_bottom = 1093.0
 texture = SubResource("GradientTexture2D_03jwg")
 expand_mode = 1
 
 [node name="OppositeTexture" type="TextureRect" parent="."]
 visible = false
 layout_mode = 0
-offset_right = 1301.0
-offset_bottom = 694.0
+offset_right = 1932.0
+offset_bottom = 1093.0
 texture = SubResource("GradientTexture2D_03jwg")
 expand_mode = 1
 
 [node name="LeftButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 59.0
-offset_top = 370.0
-offset_right = 191.0
-offset_bottom = 431.0
+offset_left = 65.0
+offset_top = 458.0
+offset_right = 197.0
+offset_bottom = 519.0
 text = "left"
 
 [node name="RightButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 950.0
-offset_top = 390.0
-offset_right = 1062.0
-offset_bottom = 433.0
+offset_left = 1735.0
+offset_top = 519.0
+offset_right = 1847.0
+offset_bottom = 562.0
 text = "right"
 
 [node name="OppositeButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 355.0
-offset_top = 553.0
-offset_right = 541.0
-offset_bottom = 619.0
+offset_left = 905.0
+offset_top = 904.0
+offset_right = 1091.0
+offset_bottom = 970.0
 text = "opposite"
 
 [node name="FrontButton" type="Button" parent="."]
 visible = false
 layout_mode = 0
-offset_left = 626.0
-offset_top = 505.0
-offset_right = 862.0
-offset_bottom = 626.0
+offset_left = 624.0
+offset_top = 885.0
+offset_right = 860.0
+offset_bottom = 1006.0
 text = "front"
 
 [connection signal="pressed" from="LeftButton" to="." method="_on_left_button_pressed"]

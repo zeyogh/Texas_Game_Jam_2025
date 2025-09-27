@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cn1uiwv1oiqfu"]
 
 [ext_resource type="PackedScene" uid="uid://ct8tdujobt7uy" path="res://scenes/rooms/room_generic.tscn" id="1_vd6a3"]
-[ext_resource type="Texture2D" uid="uid://bifnecaig7xc3" path="res://pictures/stairs_3.jpg" id="2_iet60"]
+[ext_resource type="Texture2D" uid="uid://bcvoco8hgvguw" path="res://pictures/pictures_cartoon/stairs_3.jpg" id="2_iet60"]
 
 [node name="StairsUpper" type="Control"]
 layout_mode = 3
@@ -17,8 +17,8 @@ left_path = "uid://dya248rgdtcs6"
 right_path = "uid://dnxcgrjiwd8bv"
 
 [node name="FrontTexture" parent="RoomGeneric" index="0"]
-offset_right = 1159.0
-offset_bottom = 667.0
+offset_right = 1924.0
+offset_bottom = 1085.0
 texture = ExtResource("2_iet60")
 
 [node name="OppositeButton" parent="RoomGeneric" index="4"]
