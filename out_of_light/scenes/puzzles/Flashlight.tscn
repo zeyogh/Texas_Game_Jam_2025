@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3 uid="uid://swhiyoxhf6aw"]
+
+[ext_resource type="Script" uid="uid://b76rrfn4iw8s8" path="res://scenes/puzzles/Flashlight.gd" id="1_tm6dd"]
+[ext_resource type="Texture2D" uid="uid://cpjr5ng2fqrl4" path="res://resources/dummy/dummyFlashlight.png" id="2_tfrb2"]
+[ext_resource type="Texture2D" uid="uid://dgq26ibwe158l" path="res://resources/dummy/dummyBattery.png" id="3_0fhvd"]
+
+[node name="Flashlight" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_tm6dd")
+
+[node name="Flashlight" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 131.0
+offset_right = 348.0
+offset_bottom = 376.0
+texture = ExtResource("2_tfrb2")
+flip_h = true
+
+[node name="Battery1" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 475.0
+offset_top = 198.0
+offset_right = 570.0
+offset_bottom = 293.0
+rotation = 1.5707964
+texture_normal = ExtResource("3_0fhvd")
+
+[node name="Battery2" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 605.0
+offset_top = 198.0
+offset_right = 700.0
+offset_bottom = 293.0
+rotation = 1.5707964
+texture_normal = ExtResource("3_0fhvd")
+
+[connection signal="button_down" from="Battery1" to="." method="GrabBattery1"]
+[connection signal="pressed" from="Battery1" to="." method="FlipBattery1"]
+[connection signal="button_down" from="Battery2" to="." method="GrabBattery2"]
+[connection signal="pressed" from="Battery2" to="." method="FlipBattery2"]
