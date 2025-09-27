@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://c4htc2c63yutg"]
+[gd_scene load_steps=5 format=3 uid="uid://digyosc8mi370"]
 
 [ext_resource type="Script" uid="uid://bqgwto78ly05h" path="res://scenes/puzzles/Candles.gd" id="1_bvyt8"]
 [ext_resource type="Texture2D" uid="uid://dd375tsu3ouhh" path="res://resources/dummy/dummyMatch.png" id="2_364i8"]

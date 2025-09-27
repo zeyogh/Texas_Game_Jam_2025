@@ -12,7 +12,7 @@ var _matchIsLit : bool = false
 func GrabMatch() -> void:
 	if hasMatchbox and !_matchIsLit: _grabbingMatch = true
 
-func _enter_tree() -> void:
+func _ready() -> void:
 	if !hasMatchbox:
 		_match.visible = false
 		_matchbox.visible = false
@@ -29,8 +29,8 @@ func _process(delta: float) -> void:
 	if Input.is_action_pressed("interact"):
 		if _grabbingMatch and !_matchIsLit:
 			_match.global_position.x = clamp(get_global_mouse_position().x - _match.texture_normal.get_width()/2, _matchbox.global_position.x, _matchbox.global_position.x + _matchbox.texture.get_width())
-			print_debug(Input.get_last_mouse_screen_velocity().x)
-			if Input.get_last_mouse_screen_velocity().x >= 5000.0:
+			#print_debug(Input.get_last_mouse_screen_velocity().x)
+			if Input.get_last_mouse_screen_velocity().x >= 2500.0:
 				#_match.texture_normal = load("litMatch")
 				_matchIsLit = true
 	
