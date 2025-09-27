@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bq2edfwua4jq2"
-path="res://.godot/imported/bedroom_2.jpg-4fb9271af8f6816216d64be37a462be3.ctex"
+uid="uid://bxqoodx47e4lj"
+path="res://.godot/imported/dummyFuseBlown.jpg-b313c4d7a98dc5eef5a27db9eff14234.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pictures/pictures_watercolor/bedroom_2.jpg"
-dest_files=["res://.godot/imported/bedroom_2.jpg-4fb9271af8f6816216d64be37a462be3.ctex"]
+source_file="res://resources/dummy/dummyFuseBlown.jpg"
+dest_files=["res://.godot/imported/dummyFuseBlown.jpg-b313c4d7a98dc5eef5a27db9eff14234.ctex"]
 
 [params]
 
