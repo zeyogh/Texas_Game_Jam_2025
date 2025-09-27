@@ -21,6 +21,7 @@ PlayerController="*res://scenes/globals/player_controller.tscn"
 PostItController="*res://scenes/globals/post_it_controller.tscn"
 ProgressController="*res://scenes/globals/progress_controller.tscn"
 RoomsEnum="*res://enums/rooms_enum.gd"
+ProgressEnum="*res://enums/progress_enum.gd"
 
 [display]
 
@@ -38,4 +39,3 @@ interact={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
-

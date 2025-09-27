@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgajefsh23pr4"]
+
+[ext_resource type="Texture2D" uid="uid://usqlblfc7fjx" path="res://pictures/post_it_notes/post_it_note.png" id="1_y17do"]
+[ext_resource type="Texture2D" uid="uid://ccq5i2dheda3a" path="res://icon.svg" id="2_tllvw"]
+
+[node name="PostItNoteInside" type="TextureRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_y17do")
+
+[node name="Doodle" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 85.0
+offset_top = 869.0
+offset_right = 244.0
+offset_bottom = 1017.0
+texture = ExtResource("2_tllvw")
+
+[node name="Writing" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 143.0
+offset_top = 117.0
+offset_right = 1732.0
+offset_bottom = 1007.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 200
+text = "Test"

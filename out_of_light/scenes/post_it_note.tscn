@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://duqacud67lkoy"]
+
+[ext_resource type="Texture2D" uid="uid://cbusfhg34vgmw" path="res://pictures/post_it_notes/post_it_notes_1.png" id="1_sobm0"]
+[ext_resource type="Script" uid="uid://414gmoijm5po" path="res://scripts/post_it_note.gd" id="2_rofsy"]
+
+[node name="PostItNote" type="TextureButton"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 568.0
+offset_top = 145.0
+offset_right = -543.0
+offset_bottom = -187.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("1_sobm0")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("2_rofsy")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

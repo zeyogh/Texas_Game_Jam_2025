@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dn2dab3t2mtrc"
-path="res://.godot/imported/observation_deck_2.jpg-62ea7bf4434fce928c8c822ab06fcd5b.ctex"
+uid="uid://usqlblfc7fjx"
+path="res://.godot/imported/post_it_note.png-de084a31febbaeeec44ab03102c19160.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pictures/pictures_watercolor/observation_deck_2.jpg"
-dest_files=["res://.godot/imported/observation_deck_2.jpg-62ea7bf4434fce928c8c822ab06fcd5b.ctex"]
+source_file="res://pictures/post_it_notes/post_it_note.png"
+dest_files=["res://.godot/imported/post_it_note.png-de084a31febbaeeec44ab03102c19160.ctex"]
 
 [params]
 
