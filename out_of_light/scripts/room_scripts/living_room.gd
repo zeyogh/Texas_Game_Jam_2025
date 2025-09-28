@@ -1,10 +1,16 @@
 extends Control
 
+const brokenChandelierTexture : Texture2D = preload("res://resources/rooms/chandelierBroken.png")
+
 func _on_opposite_button_pressed() -> void:
 	$TVCabinetButton.visible = false
+	$Chandelier.visible = true
+	if ProgressController.current_stage == ProgressEnum.Progress.STAGE_5:
+		$Chandelier.texture = brokenChandelierTexture
 
 func _on_front_button_pressed() -> void:
 	$TVCabinetButton.visible = true
+	$Chandelier.visible = false
 
 func _on_tv_cabinet_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/rooms/TV_cabinet.tscn")

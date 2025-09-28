@@ -38,7 +38,7 @@ offset_right = -122.51587
 offset_bottom = -466.0
 scale = Vector2(0.5, 0.5)
 font_size = 120
-post_it_text = "Don't blow a fuse; tune to 156.8 MHz"
+post_it_text = "Don't blow a fuse; tune to 156.8 MHz."
 
 [node name="Socket" type="TextureRect" parent="."]
 visible = false

@@ -32,7 +32,9 @@ offset_right = 211.48413
 offset_bottom = -400.0
 scale = Vector2(0.5, 0.5)
 font_size = 120
-post_it_text = "Your smile lights up the room! Also, so does this breaker box. The labeled ones, at least"
+post_it_text = "Your smile lights up the room!
+
+Also, so does this breaker box. The labeled ones, at least"
 
 [node name="BreakerLatch" type="TextureRect" parent="."]
 layout_mode = 0

@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://digyosc8mi370"]
+[gd_scene load_steps=9 format=3 uid="uid://digyosc8mi370"]
 
 [ext_resource type="Script" uid="uid://bqgwto78ly05h" path="res://scenes/puzzles/Candles.gd" id="1_bvyt8"]
 [ext_resource type="Texture2D" uid="uid://ds4scnfliti0e" path="res://resources/puzzleTextures/matchbox.png" id="2_bvyt8"]
 [ext_resource type="Texture2D" uid="uid://db8dky4m8kwqu" path="res://pictures/minigame_backgrounds/cartoons/table.jpg" id="2_whk3c"]
+[ext_resource type="PackedScene" uid="uid://5urtho5gqmxt" path="res://scenes/post_it_note_unique.tscn" id="3_0s0dm"]
 [ext_resource type="Texture2D" uid="uid://dvabckk8ptoi8" path="res://resources/puzzleTextures/match.png" id="3_364i8"]
 [ext_resource type="Texture2D" uid="uid://biidlk2pubaf8" path="res://resources/puzzleTextures/rightArrow.png" id="5_364i8"]
 [ext_resource type="Texture2D" uid="uid://dirqjwgiu560h" path="res://resources/puzzleTextures/candlesLit.png" id="5_whk3c"]
@@ -18,7 +19,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_bvyt8")
-hasMatchbox = false
 
 [node name="Background" type="TextureRect" parent="."]
 z_index = -10
@@ -28,6 +28,19 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("2_whk3c")
 expand_mode = 1
+
+[node name="PostItNoteUnique" parent="." instance=ExtResource("3_0s0dm")]
+layout_mode = 1
+offset_left = 166.0
+offset_top = 87.0
+offset_right = -1137.5159
+offset_bottom = -423.0
+scale = Vector2(0.5, 0.5)
+font_size = 120
+post_it_text = "Jack be nimble
+Light the wick
+Strike a match
+Quick, quick, quick"
 
 [node name="Matchbox" type="TextureRect" parent="."]
 visible = false
