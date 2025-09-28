@@ -1,7 +1,7 @@
 class_name Candles
 extends Control
 
-@export var hasMatchbox : bool = PlayerController.has_matchbox
+var hasMatchbox : bool
 
 @onready var _match : TextureButton = $Match
 @onready var _matchbox : TextureRect = $Matchbox
@@ -18,7 +18,8 @@ func GrabMatch() -> void:
 	if hasMatchbox and !_matchIsLit: _grabbingMatch = true
 
 func _ready() -> void:
-	if ProgressController.current_stage != ProgressEnum.Progress.STAGE_1: return
+	hasMatchbox = PlayerController.has_matchbox
+	#if ProgressController.current_stage != ProgressEnum.Progress.STAGE_1: return
 	$Candle.texture_normal = load("res://resources/puzzleTextures/candles.png")
 	if hasMatchbox:
 		_match.visible = true

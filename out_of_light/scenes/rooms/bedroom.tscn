@@ -47,6 +47,7 @@ grow_vertical = 1
 texture_normal = ExtResource("4_10w8b")
 
 [node name="CandleButton" type="TextureButton" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 99.0
 offset_top = 647.0
