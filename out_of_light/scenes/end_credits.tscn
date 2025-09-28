@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://vcio71qgwptx"]
+[gd_scene load_steps=5 format=3 uid="uid://vcio71qgwptx"]
 
 [ext_resource type="Script" uid="uid://cgb5yax6fjndi" path="res://scenes/end_credits.gd" id="1_dhn2b"]
+[ext_resource type="FontFile" uid="uid://decr6cdxtwfle" path="res://fonts/Leander.ttf" id="2_325g6"]
 
 [sub_resource type="Gradient" id="Gradient_1s85s"]
 
@@ -28,6 +29,7 @@ offset_left = 629.0
 offset_top = 90.0
 offset_right = 1328.0
 offset_bottom = 330.0
+theme_override_fonts/normal_font = ExtResource("2_325g6")
 theme_override_font_sizes/bold_italics_font_size = 1
 theme_override_font_sizes/normal_font_size = 100
 text = "OUT OF LIGHT"
@@ -35,10 +37,12 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="By" type="RichTextLabel" parent="."]
+layout_mode = 0
 offset_left = 633.0
 offset_top = 269.0
 offset_right = 1332.0
 offset_bottom = 727.0
+theme_override_fonts/normal_font = ExtResource("2_325g6")
 theme_override_font_sizes/bold_italics_font_size = 1
 theme_override_font_sizes/normal_font_size = 64
 text = "By Tucker Nance and Zeynep Oghan"
@@ -46,10 +50,12 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="NoAI" type="RichTextLabel" parent="."]
+layout_mode = 0
 offset_left = 625.0
 offset_top = 606.0
 offset_right = 1324.0
 offset_bottom = 966.0
+theme_override_fonts/normal_font = ExtResource("2_325g6")
 theme_override_font_sizes/bold_italics_font_size = 1
 theme_override_font_sizes/normal_font_size = 64
 text = "No AI Was Used in the Creation of This Game"
@@ -58,10 +64,11 @@ vertical_alignment = 1
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 859.0
+offset_left = 843.0
 offset_top = 914.0
-offset_right = 1117.0
+offset_right = 1113.0
 offset_bottom = 990.0
+theme_override_fonts/font = ExtResource("2_325g6")
 theme_override_font_sizes/font_size = 36
 text = "Return to Title"
 
