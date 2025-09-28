@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://ce15xsvsvosw0"]
+[gd_scene load_steps=8 format=3 uid="uid://ce15xsvsvosw0"]
 
 [ext_resource type="PackedScene" uid="uid://ct8tdujobt7uy" path="res://scenes/rooms/room_generic.tscn" id="1_ndxsf"]
 [ext_resource type="Script" uid="uid://b3i8k5kjg27st" path="res://scripts/room_scripts/living_room.gd" id="1_oy7wu"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://brt0dxaq7sp4o" path="res://pictures/pictures_cartoon/living_room_2.jpg" id="3_j6grr"]
 [ext_resource type="Texture2D" uid="uid://2m143pegwuns" path="res://pictures/post_it_notes/post_it_notes_2.png" id="4_j6grr"]
 [ext_resource type="Texture2D" uid="uid://dxxjyra6jstll" path="res://pictures/post_it_notes/post_it_notes_4.png" id="5_qlgtg"]
+[ext_resource type="Texture2D" uid="uid://bxk0e63728p2m" path="res://resources/rooms/chandelier.png" id="7_5s50e"]
 
 [node name="LivingRoom" type="Control"]
 layout_mode = 3
@@ -65,6 +66,15 @@ offset_left = 1142.0
 offset_top = 260.0
 offset_right = 1497.0
 offset_bottom = 476.0
+
+[node name="Chandelier" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 522.0
+offset_top = 53.0
+offset_right = 922.0
+offset_bottom = 453.0
+texture = ExtResource("7_5s50e")
 
 [connection signal="pressed" from="RoomGeneric/OppositeButton" to="." method="_on_opposite_button_pressed"]
 [connection signal="pressed" from="RoomGeneric/FrontButton" to="." method="_on_front_button_pressed"]
