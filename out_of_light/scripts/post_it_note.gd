@@ -6,8 +6,10 @@ var inside = preload("res://scenes/post_it_note_inside.tscn")
 
 var post_it_text: String = ""
 
+var progress_stage = ProgressController.current_stage
+
 func _on_pressed() -> void:
-	if post_it_text.length() == 0:
+	if post_it_text.length() == 0 || progress_stage != ProgressController.current_stage:
 		var current_room = PlayerController.current_room
 		var room_as_string = ""
 		
@@ -54,6 +56,7 @@ func _on_pressed() -> void:
 			
 		var text = PostItController._call_post_it(room_as_string, phase_as_string)
 		post_it_text = text
+		progress_stage = ProgressController.current_stage
 		
 	var instance = inside.instantiate()
 	add_child(instance)
