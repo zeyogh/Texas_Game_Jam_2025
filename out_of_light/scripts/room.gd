@@ -19,11 +19,15 @@ func _on_right_button_pressed() -> void:
 func _on_opposite_button_pressed() -> void:
 	$FrontTexture.visible = false
 	$OppositeTexture.visible = true
+	$FrontPostItNote.visible = false
+	$BackPostItNote.visible = true
 	_set_visibility(false, false, false, true)
 
 func _on_front_button_pressed() -> void:
 	$FrontTexture.visible = true
 	$OppositeTexture.visible = false
+	$FrontPostItNote.visible = true
+	$BackPostItNote.visible = false
 	_set_visibility(true, true, true, false)
 
 func _set_visibility(left: bool, right: bool, opposite: bool, front: bool) -> void:

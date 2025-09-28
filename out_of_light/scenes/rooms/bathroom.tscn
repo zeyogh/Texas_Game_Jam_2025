@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://3crkmmykqfbe"]
+[gd_scene load_steps=4 format=3 uid="uid://3crkmmykqfbe"]
 
 [ext_resource type="PackedScene" uid="uid://ct8tdujobt7uy" path="res://scenes/rooms/room_generic.tscn" id="1_y5w4s"]
 [ext_resource type="Texture2D" uid="uid://b02rys1d1eq6i" path="res://pictures/pictures_cartoon/bathroom_1.jpg" id="2_e0elq"]
+[ext_resource type="Texture2D" uid="uid://dxxjyra6jstll" path="res://pictures/post_it_notes/post_it_notes_4.png" id="3_8pl6i"]
 
 [node name="Bathroom" type="Control"]
 layout_mode = 3
@@ -25,5 +26,23 @@ visible = false
 
 [node name="OppositeButton" parent="RoomGeneric" index="4"]
 visible = false
+
+[node name="FrontPostItNote" parent="RoomGeneric" index="6"]
+offset_left = 833.0
+offset_top = 317.0
+offset_right = -857.0
+offset_bottom = -550.0
+texture_normal = ExtResource("3_8pl6i")
+
+[node name="BackPostItNote" parent="RoomGeneric" index="7"]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 1170.0
+offset_top = 436.0
+offset_right = 1801.0
+offset_bottom = 889.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [editable path="RoomGeneric"]

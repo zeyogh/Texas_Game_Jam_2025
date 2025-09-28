@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://ct8tdujobt7uy"]
+[gd_scene load_steps=5 format=3 uid="uid://ct8tdujobt7uy"]
 
 [ext_resource type="Script" uid="uid://cvof66w30vq7f" path="res://scripts/room.gd" id="1_4oogr"]
+[ext_resource type="PackedScene" uid="uid://duqacud67lkoy" path="res://scenes/post_it_note.tscn" id="2_h62ai"]
 
 [sub_resource type="Gradient" id="Gradient_31uvf"]
 
@@ -63,6 +64,22 @@ offset_top = 885.0
 offset_right = 860.0
 offset_bottom = 1006.0
 text = "front"
+
+[node name="FrontPostItNote" parent="." instance=ExtResource("2_h62ai")]
+top_level = true
+layout_mode = 1
+offset_left = 340.0
+offset_top = 106.0
+offset_right = -771.0
+offset_bottom = -226.0
+
+[node name="BackPostItNote" parent="." instance=ExtResource("2_h62ai")]
+visible = false
+layout_mode = 1
+offset_left = 1020.0
+offset_top = 254.0
+offset_right = -91.0
+offset_bottom = -78.0
 
 [connection signal="pressed" from="LeftButton" to="." method="_on_left_button_pressed"]
 [connection signal="pressed" from="RightButton" to="." method="_on_right_button_pressed"]
