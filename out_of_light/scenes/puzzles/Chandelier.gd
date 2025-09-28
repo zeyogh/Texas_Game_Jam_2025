@@ -10,7 +10,7 @@ class BreakerSwitch:
 		links = l
 		startOn = startAsOn
 
-var _hasBreakerBoxKey : bool = false
+var _hasBreakerBoxKey : bool = PlayerController.has_key
 
 @onready var _breakerBox : GridContainer = $BreakerLatch/BreakerBox
 const _breakerTexture : Texture2D = preload("res://resources/puzzleTextures/trackSwitch.png")
@@ -51,6 +51,7 @@ func _openBreaker() -> void:
 	$BreakerDoor.texture_normal = load("res://resources/puzzleTextures/breakerDoorInner.png")
 	$BreakerDoor.flip_h = true
 	$BreakerLatch.visible = true
+	$BreakerDoor/BreakerLabels.visible = true
 	for idx : int in range(0, breakers.size()):
 		var button = TextureButton.new()
 		button.texture_normal = _breakerTexture
