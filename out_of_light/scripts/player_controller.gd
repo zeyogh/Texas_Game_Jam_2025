@@ -15,3 +15,5 @@ var has_key := false
 var has_fuse := false
 
 var has_flashlight := false
+
+var is_phone_powered := false

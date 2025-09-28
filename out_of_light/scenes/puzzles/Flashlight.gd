@@ -8,7 +8,7 @@ extends Control
 var grabbingBattery1 : bool = false
 var grabbingBattery2 : bool = false
 var isBlurry : bool = !PlayerController.has_glasses
-var hasBatteries : bool = false
+var hasBatteries : bool = !PlayerController.has_batteries
 
 func _ready() -> void:
 	if !hasBatteries:
@@ -20,6 +20,8 @@ func _ready() -> void:
 func LoadBlurred() -> void:
 	battery1.texture = load("res://resources/dummy/dummyBatteryBlurred.png")
 	battery2.texture = load("res://resources/dummy/dummyBatteryBlurred.png")
+	await get_tree().create_timer(5).timeout
+	get_tree().change_scene_to_file("res://scenes/rooms/living_room.tscn")
 
 func LoadClear() -> void:
 	battery1.texture = load("res://resources/dummy/dummyBattery.png")
@@ -58,7 +60,9 @@ func _process(_delta: float) -> void:
 	if !isBlurry and !battery1.visible and !battery2.visible:
 		if battery1.flip_v == battery2.flip_v:
 			PlayerController.has_flashlight = true
-			pass
+			await get_tree().create_timer(1).timeout
+			ProgressController.current_stage = ProgressEnum.STAGE_3
+			get_tree().change_scene_to_file("res://scenes/rooms/kitchen.tscn")
 		else:
 			battery1.visible = true
 			battery2.visible = true

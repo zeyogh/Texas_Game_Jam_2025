@@ -65,5 +65,6 @@ func _reloadLens() -> void :
 
 func StartLight() -> void :
 	#check the sequence of the lenses and do the outcome
-	print_debug("weewoo weewoo")
-	pass
+	await get_tree().create_timer(1).timeout
+	ProgressController.current_stage = ProgressEnum.OUTRO
+	get_tree().change_scene_to_file("res://scenes/rooms/observation_deck.tscn")

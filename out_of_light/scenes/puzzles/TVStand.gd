@@ -49,8 +49,9 @@ func _process(delta: float) -> void:
 		
 		if _grabbingDial and abs(_dial.position.x - 146) <= 10:
 			_grabbingDial = false
-			print_debug("Tuned in to emergency broadcasts")
-			#tune to tv emergeny broadcast station
+			await get_tree().create_timer(5).timeout
+			ProgressController.current_stage = ProgressEnum.STAGE_4
+			get_tree().change_scene_to_file("res://scenes/rooms/living_room.tscn")
 	
 	if !_tvPowerOn:
 		$TvScreen/Display.texture = _tvChannels[0]
