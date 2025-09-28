@@ -7,7 +7,7 @@ extends Control
 
 var grabbingBattery1 : bool = false
 var grabbingBattery2 : bool = false
-var isBlurry : bool = false
+var isBlurry : bool = !PlayerController.has_glasses
 
 #call from game manager when inventory does not contain reading glasses
 func LoadBlurred() -> void:

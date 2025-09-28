@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://ct8tdujobt7uy"]
 
-[ext_resource type="Script" uid="uid://cvof66w30vq7f" path="res://scripts/room.gd" id="1_4oogr"]
+[ext_resource type="Script" uid="uid://cvof66w30vq7f" path="res://scripts/room_scripts/room.gd" id="1_4oogr"]
 [ext_resource type="PackedScene" uid="uid://duqacud67lkoy" path="res://scenes/post_it_note.tscn" id="2_h62ai"]
 
 [sub_resource type="Gradient" id="Gradient_31uvf"]

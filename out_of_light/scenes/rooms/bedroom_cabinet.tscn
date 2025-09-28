@@ -1,0 +1,67 @@
+[gd_scene load_steps=7 format=3 uid="uid://glcgxrke3n0y"]
+
+[ext_resource type="Script" uid="uid://ntjy02vsnull" path="res://scripts/room_scripts/bedroom_cabinet.gd" id="1_lo5rk"]
+[ext_resource type="PackedScene" uid="uid://ct8tdujobt7uy" path="res://scenes/rooms/room_generic.tscn" id="2_3xjn7"]
+[ext_resource type="Texture2D" uid="uid://bv3fpf3jmvp0p" path="res://pictures/pictures_cartoon/bedroom_1.jpg" id="3_mytka"]
+[ext_resource type="Texture2D" uid="uid://cp63jm4gbtiqy" path="res://pictures/pictures_cartoon/bedroom_2.jpg" id="4_2on6a"]
+[ext_resource type="Texture2D" uid="uid://csvkvh1th1cbp" path="res://pictures/post_it_notes/post_it_notes_5.png" id="5_cyxdc"]
+[ext_resource type="Texture2D" uid="uid://c2d0ai5ve1awd" path="res://resources/puzzleTextures/glasses.jpg" id="6_84mvp"]
+
+[node name="BedroomCabinet" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lo5rk")
+
+[node name="RoomGeneric" parent="." instance=ExtResource("2_3xjn7")]
+layout_mode = 1
+left_path = "uid://bdechkmpm13jm"
+current_room = 1
+
+[node name="FrontTexture" parent="RoomGeneric" index="0"]
+texture = ExtResource("3_mytka")
+
+[node name="OppositeTexture" parent="RoomGeneric" index="1"]
+texture = ExtResource("4_2on6a")
+
+[node name="RightButton" parent="RoomGeneric" index="3"]
+visible = false
+
+[node name="OppositeButton" parent="RoomGeneric" index="4"]
+visible = false
+
+[node name="FrontPostItNote" parent="RoomGeneric" index="6"]
+visible = false
+offset_left = 424.0
+offset_top = 265.0
+offset_right = -1074.0
+offset_bottom = -425.0
+
+[node name="BackPostItNote" parent="RoomGeneric" index="7"]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 1595.0
+offset_top = 205.0
+offset_right = 1955.0
+offset_bottom = 528.0
+grow_horizontal = 1
+grow_vertical = 1
+texture_normal = ExtResource("5_cyxdc")
+
+[node name="GlassesButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 596.0
+offset_top = 236.0
+offset_right = 1332.0
+offset_bottom = 892.0
+texture_normal = ExtResource("6_84mvp")
+
+[connection signal="pressed" from="RoomGeneric/OppositeButton" to="." method="_on_opposite_button_pressed"]
+[connection signal="pressed" from="RoomGeneric/FrontButton" to="." method="_on_front_button_pressed"]
+[connection signal="pressed" from="GlassesButton" to="." method="_on_texture_button_pressed"]
+
+[editable path="RoomGeneric"]
