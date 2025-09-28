@@ -15,4 +15,5 @@ func _on_pressed() -> void:
 		instance.global_position = Vector2(450, 50)
 		instance.get_node("Writing").add_theme_font_size_override("normal_font_size", font_size)
 		instance.get_node("Writing").text = post_it_text
+		instance.z_index = 10
 		inside_opened = true

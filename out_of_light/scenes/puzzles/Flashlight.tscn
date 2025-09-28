@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://dap88jl7iuhn"]
+[gd_scene load_steps=8 format=3 uid="uid://dap88jl7iuhn"]
 
 [ext_resource type="Script" uid="uid://b76rrfn4iw8s8" path="res://scenes/puzzles/Flashlight.gd" id="1_tm6dd"]
 [ext_resource type="Texture2D" uid="uid://v6scrfakrlck" path="res://resources/puzzleTextures/flashlight.png" id="2_tfrb2"]
 [ext_resource type="Texture2D" uid="uid://cuy2y4obhihgv" path="res://resources/puzzleTextures/battery.png" id="3_0fhvd"]
+[ext_resource type="PackedScene" uid="uid://5urtho5gqmxt" path="res://scenes/post_it_note_unique.tscn" id="3_r87km"]
 [ext_resource type="Texture2D" uid="uid://biidlk2pubaf8" path="res://resources/puzzleTextures/rightArrow.png" id="4_0fhvd"]
 [ext_resource type="Texture2D" uid="uid://ca5g41btdtp5p" path="res://pictures/minigame_backgrounds/cartoons/wall.jpg" id="5_x6t7i"]
 
@@ -24,6 +25,16 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("5_x6t7i")
 expand_mode = 1
+
+[node name="PostItNoteUnique" parent="." instance=ExtResource("3_r87km")]
+layout_mode = 1
+offset_left = 1500.0
+offset_top = 54.0
+offset_right = 196.48413
+offset_bottom = -456.0
+scale = Vector2(0.5, 0.5)
+font_size = 120
+post_it_text = "Quite a shocking spectacle without your spectacles"
 
 [node name="Flashlight" type="TextureRect" parent="."]
 layout_mode = 0

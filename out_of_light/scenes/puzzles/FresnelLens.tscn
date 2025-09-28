@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://c72xudycrtjd3"]
+[gd_scene load_steps=25 format=3 uid="uid://c72xudycrtjd3"]
 
 [ext_resource type="Script" uid="uid://bxx4a8sv6552g" path="res://scenes/puzzles/FresnelLense.gd" id="1_1q46n"]
 [ext_resource type="Shader" uid="uid://bnjii8bbdfi2m" path="res://resources/shaders/color_tint.gdshader" id="2_6rvpc"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://biidlk2pubaf8" path="res://resources/puzzleTextures/rightArrow.png" id="2_wbo87"]
 [ext_resource type="Texture2D" uid="uid://6487bqh1w4qk" path="res://resources/puzzleTextures/FresnelLens.png" id="4_qoa56"]
 [ext_resource type="Texture2D" uid="uid://c623a7utejru6" path="res://resources/puzzleTextures/FresnelLight.png" id="5_wvhdc"]
+[ext_resource type="PackedScene" uid="uid://5urtho5gqmxt" path="res://scenes/post_it_note_unique.tscn" id="6_cgh6e"]
 [ext_resource type="Texture2D" uid="uid://boyagqrx50hjm" path="res://resources/puzzleTextures/trackSwitch.png" id="6_wvhdc"]
 [ext_resource type="Texture2D" uid="uid://ds3ashc8rma86" path="res://resources/puzzleTextures/grayButton.png" id="7_wbo87"]
 [ext_resource type="Texture2D" uid="uid://cd447vbhityhk" path="res://resources/puzzleTextures/whiteButton.png" id="8_cfixt"]
@@ -144,6 +145,16 @@ grow_vertical = 0
 size_flags_vertical = 4
 texture = ExtResource("5_wvhdc")
 expand_mode = 1
+
+[node name="PostItNoteUnique" parent="." instance=ExtResource("6_cgh6e")]
+layout_mode = 1
+offset_left = 1569.0
+offset_top = 435.0
+offset_right = 265.48413
+offset_bottom = -75.0
+scale = Vector2(0.5, 0.5)
+font_size = 120
+post_it_text = "Baker's Island:                    Al. WR 20s                         Flip to reset power."
 
 [node name="PrevButton" type="TextureButton" parent="."]
 layout_mode = 0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://jhaghxdi7w43"]
+[gd_scene load_steps=12 format=3 uid="uid://jhaghxdi7w43"]
 
 [ext_resource type="Script" uid="uid://brt80fm76dp72" path="res://scenes/puzzles/TVStand.gd" id="1_faym6"]
 [ext_resource type="Texture2D" uid="uid://bvls4ypjs2bve" path="res://resources/puzzleTextures/socket.png" id="2_2nwi8"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cqx27e1fgu6w7" path="res://resources/puzzleTextures/plug.png" id="6_2k10k"]
 [ext_resource type="Texture2D" uid="uid://cymacegij6d4r" path="res://resources/puzzleTextures/blownFuse.png" id="7_y5mfc"]
 [ext_resource type="Texture2D" uid="uid://biidlk2pubaf8" path="res://resources/puzzleTextures/rightArrow.png" id="8_f1m32"]
+[ext_resource type="PackedScene" uid="uid://5urtho5gqmxt" path="res://scenes/post_it_note_unique.tscn" id="10_2k10k"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_2k10k"]
 blend_mode = 3
@@ -28,6 +29,16 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("2_jpeyo")
 expand_mode = 1
+
+[node name="PostItNoteUnique" parent="." instance=ExtResource("10_2k10k")]
+layout_mode = 1
+offset_left = 1181.0
+offset_top = 44.0
+offset_right = -122.51587
+offset_bottom = -466.0
+scale = Vector2(0.5, 0.5)
+font_size = 120
+post_it_text = "Don't blow a fuse; tune to 156.8 MHz"
 
 [node name="Socket" type="TextureRect" parent="."]
 visible = false
