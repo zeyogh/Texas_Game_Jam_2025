@@ -8,18 +8,22 @@ extends Control
 var grabbingBattery1 : bool = false
 var grabbingBattery2 : bool = false
 var isBlurry : bool = !PlayerController.has_glasses
+var hasBatteries : bool = false
 
-#call from game manager when inventory does not contain reading glasses
+func _ready() -> void:
+	if !hasBatteries:
+		battery1.visible = false
+		battery2.visible = false
+	if isBlurry: LoadBlurred()
+	else: LoadClear()
+
 func LoadBlurred() -> void:
-	battery1.texture = "res://resources/dummy/dummyBatteryBlurred.png"
-	battery2.texture = "res://resources/dummy/dummyBatteryBlurred.png"
-	isBlurry = true
+	battery1.texture = load("res://resources/dummy/dummyBatteryBlurred.png")
+	battery2.texture = load("res://resources/dummy/dummyBatteryBlurred.png")
 
-#call from game manager when inventory contains reading glasses
 func LoadClear() -> void:
-	battery1.texture = "res://resources/dummy/dummyBattery.png"
-	battery2.texture = "res://resources/dummy/dummyBattery.png"
-	isBlurry = false
+	battery1.texture = load("res://resources/dummy/dummyBattery.png")
+	battery2.texture = load("res://resources/dummy/dummyBattery.png")
 
 func FlipBattery1() -> void:
 	if abs(battery1.position.x - 1340) < 15: battery1.flip_v = !battery1.flip_v
@@ -51,7 +55,7 @@ func _process(_delta: float) -> void:
 		grabbingBattery2 = false
 		
 	#do final puzzle check
-	if !battery1.visible and !battery2.visible:
+	if !isBlurry and !battery1.visible and !battery2.visible:
 		if battery1.flip_v == battery2.flip_v:
 			pass
 		else:
