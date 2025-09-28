@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqece78r4pwh4"]
+
+[ext_resource type="Script" uid="uid://25i5utv88gra" path="res://scenes/outro_cutscene.gd" id="1_taxb5"]
+[ext_resource type="VideoStream" uid="uid://6ls8rsrllx8p" path="res://videos/ending_cutscene.ogv" id="2_m832k"]
+
+[node name="OutroCutscene" type="Node2D"]
+script = ExtResource("1_taxb5")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
+offset_left = -967.0
+offset_top = -550.0
+offset_right = 972.0
+offset_bottom = 567.0
+ratio = 1.7778
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="AspectRatioContainer"]
+layout_mode = 2
+stream = ExtResource("2_m832k")
+autoplay = true
+expand = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 15.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

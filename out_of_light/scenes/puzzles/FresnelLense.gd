@@ -94,4 +94,4 @@ func StartLight() -> void :
 	ExitMinigame()
 
 func ExitMinigame() -> void:
-	get_tree().change_scene_to_packed(PlayerController.room_scenes[PlayerController.current_room])
+	get_tree().change_scene_to_file("res://scenes/outro_cutscene.tscn")
