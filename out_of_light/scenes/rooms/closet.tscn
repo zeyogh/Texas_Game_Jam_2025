@@ -1,8 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://dvxry36fvd858"]
+[gd_scene load_steps=8 format=3 uid="uid://qcydlda3aeyj"]
 
 [ext_resource type="PackedScene" uid="uid://ct8tdujobt7uy" path="res://scenes/rooms/room_generic.tscn" id="1_aya0h"]
 [ext_resource type="Script" uid="uid://n84y1obnvkvl" path="res://scenes/rooms/closet.gd" id="1_fk5th"]
-[ext_resource type="Texture2D" uid="uid://c37qpcfx20tws" path="res://pictures/pictures_cartoon/stairs_2.jpg" id="2_ny6em"]
+[ext_resource type="Texture2D" uid="uid://big4evw38bnoq" path="res://pictures/cabinets/cartoons/closet.jpg" id="3_wlvcd"]
 [ext_resource type="Texture2D" uid="uid://baquvs6lul36t" path="res://pictures/post_it_notes/post_it_notes_3.png" id="3_yni4a"]
 [ext_resource type="Texture2D" uid="uid://dvuf0mto1engu" path="res://resources/puzzleTextures/fuse.png" id="5_fk5th"]
 [ext_resource type="Texture2D" uid="uid://dgrqjagc6y12l" path="res://resources/puzzleTextures/phone.png" id="5_wlvcd"]
@@ -25,7 +25,7 @@ current_room = 5
 [node name="FrontTexture" parent="RoomGeneric" index="0"]
 offset_right = 1938.0
 offset_bottom = 1099.0
-texture = ExtResource("2_ny6em")
+texture = ExtResource("3_wlvcd")
 
 [node name="RightButton" parent="RoomGeneric" index="3"]
 visible = false
@@ -43,27 +43,31 @@ texture_normal = ExtResource("3_yni4a")
 
 [node name="PhoneButton" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 218.0
-offset_top = 369.0
-offset_right = 560.0
-offset_bottom = 652.0
+offset_left = 1589.0
+offset_top = 639.0
+offset_right = 1805.0
+offset_bottom = 818.0
 texture_normal = ExtResource("5_wlvcd")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="FuseButton" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 1151.0
-offset_top = 585.0
-offset_right = 1229.0
-offset_bottom = 722.0
+offset_left = 256.0
+offset_top = 121.0
+offset_right = 334.0
+offset_bottom = 258.0
 texture_normal = ExtResource("5_fk5th")
 
 [node name="BreakerButton" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 1256.0
-offset_top = 372.0
-offset_right = 1328.0
-offset_bottom = 444.0
+offset_left = 750.0
+offset_top = 90.0
+offset_right = 941.0
+offset_bottom = 494.0
 texture_normal = ExtResource("7_0drd6")
+ignore_texture_size = true
+stretch_mode = 0
 
 [connection signal="pressed" from="FuseButton" to="." method="_on_fuse_button_pressed"]
 [connection signal="pressed" from="BreakerButton" to="." method="_on_breaker_button_pressed"]

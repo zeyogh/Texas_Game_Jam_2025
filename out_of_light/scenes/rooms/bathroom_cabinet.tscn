@@ -1,8 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bbpd3w2akwvp3"]
+[gd_scene load_steps=6 format=3 uid="uid://v3l4qy4gxcxm"]
 
 [ext_resource type="Script" uid="uid://bn1fw1p6e4jj7" path="res://scripts/room_scripts/bathroom_cabinet.gd" id="1_uaajh"]
 [ext_resource type="PackedScene" uid="uid://ct8tdujobt7uy" path="res://scenes/rooms/room_generic.tscn" id="2_uaajh"]
-[ext_resource type="Texture2D" uid="uid://b02rys1d1eq6i" path="res://pictures/pictures_cartoon/bathroom_1.jpg" id="3_t6trc"]
+[ext_resource type="Texture2D" uid="uid://c84gwtyr7n2i" path="res://pictures/cabinets/cartoons/cabinet_1.jpg" id="3_uaajh"]
 [ext_resource type="Texture2D" uid="uid://dxxjyra6jstll" path="res://pictures/post_it_notes/post_it_notes_4.png" id="4_dlxke"]
 [ext_resource type="Texture2D" uid="uid://ddlqdtdsx7si6" path="res://resources/puzzleTextures/razor.png" id="5_uaajh"]
 
@@ -22,7 +22,7 @@ left_path = "uid://3crkmmykqfbe"
 [node name="FrontTexture" parent="RoomGeneric" index="0"]
 offset_right = 1931.0
 offset_bottom = 1092.0
-texture = ExtResource("3_t6trc")
+texture = ExtResource("3_uaajh")
 
 [node name="RightButton" parent="RoomGeneric" index="3"]
 visible = false
@@ -51,11 +51,13 @@ grow_vertical = 1
 
 [node name="RazorButton" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 1363.0
-offset_top = 624.0
-offset_right = 1660.0
-offset_bottom = 829.0
+offset_left = 665.0
+offset_top = 333.0
+offset_right = 1382.0
+offset_bottom = 828.0
 texture_normal = ExtResource("5_uaajh")
+ignore_texture_size = true
+stretch_mode = 0
 
 [connection signal="pressed" from="RazorButton" to="." method="_on_razor_button_pressed"]
 
