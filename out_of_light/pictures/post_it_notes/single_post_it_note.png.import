@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cucj1sew36trf"
-path="res://.godot/imported/titleScreenRain.png-1cd572c75d7b87886d7bec4d1b9af09a.ctex"
+uid="uid://vbgnnljxnxd1"
+path="res://.godot/imported/single_post_it_note.png-a4bfb6d414840314e390644ece2b9d3d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/titleScreenRain.png"
-dest_files=["res://.godot/imported/titleScreenRain.png-1cd572c75d7b87886d7bec4d1b9af09a.ctex"]
+source_file="res://pictures/post_it_notes/single_post_it_note.png"
+dest_files=["res://.godot/imported/single_post_it_note.png-a4bfb6d414840314e390644ece2b9d3d.ctex"]
 
 [params]
 

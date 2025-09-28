@@ -1,0 +1,69 @@
+[gd_scene load_steps=4 format=3 uid="uid://cj1pro33nivvj"]
+
+[ext_resource type="Script" uid="uid://ciltu2lbqd2v" path="res://scripts/description_scene.gd" id="1_kc653"]
+[ext_resource type="Texture2D" uid="uid://cucj1sew36trf" path="res://resources/titleScreenRain.png" id="2_1p8k8"]
+[ext_resource type="FontFile" uid="uid://decr6cdxtwfle" path="res://fonts/Leander.ttf" id="3_1thnq"]
+
+[node name="DescriptionScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kc653")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1928.0
+offset_bottom = 1090.0
+texture = ExtResource("2_1p8k8")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 1145.0
+offset_top = 149.0
+offset_right = 1844.0
+offset_bottom = 389.0
+theme_override_fonts/normal_font = ExtResource("3_1thnq")
+theme_override_font_sizes/bold_italics_font_size = 1
+theme_override_font_sizes/normal_font_size = 100
+text = "OUT OF LIGHT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1229.0
+offset_top = 394.0
+offset_right = 1784.0
+offset_bottom = 481.0
+theme_override_fonts/font = ExtResource("3_1thnq")
+theme_override_font_sizes/font_size = 36
+text = "Begin Emergency Maintenance"
+
+[node name="DescriptionText" type="RichTextLabel" parent="."]
+offset_left = 38.0
+offset_top = -66.0
+offset_right = 1016.0
+offset_bottom = 605.0
+theme_override_fonts/normal_font = ExtResource("3_1thnq")
+theme_override_font_sizes/bold_italics_font_size = 1
+theme_override_font_sizes/normal_font_size = 64
+text = "An old lighthouse keeper with an aging memory wakes up to the worst storm of the season. Use notes scattered throughout the building to recall his duties and bring functionality back to the lighthouse."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DescriptionText2" type="RichTextLabel" parent="."]
+offset_left = 94.0
+offset_top = 293.0
+offset_right = 965.0
+offset_bottom = 964.0
+theme_override_fonts/normal_font = ExtResource("3_1thnq")
+theme_override_font_sizes/bold_italics_font_size = 1
+theme_override_font_sizes/normal_font_size = 64
+text = "Even when something seems determined to keep the lights out."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

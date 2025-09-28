@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://jhaghxdi7w43"]
+[gd_scene load_steps=13 format=3 uid="uid://jhaghxdi7w43"]
 
 [ext_resource type="Script" uid="uid://brt80fm76dp72" path="res://scenes/puzzles/TVStand.gd" id="1_faym6"]
 [ext_resource type="Texture2D" uid="uid://bvls4ypjs2bve" path="res://resources/puzzleTextures/socket.png" id="2_2nwi8"]
 [ext_resource type="Texture2D" uid="uid://cihmjelvhb0ma" path="res://pictures/minigame_backgrounds/cartoons/bricks.jpg" id="2_jpeyo"]
 [ext_resource type="Texture2D" uid="uid://cuheu8sqfulp6" path="res://resources/puzzleTextures/tv.png" id="3_2nwi8"]
 [ext_resource type="Texture2D" uid="uid://ds3ashc8rma86" path="res://resources/puzzleTextures/grayButton.png" id="4_jpeyo"]
+[ext_resource type="Texture2D" uid="uid://vbgnnljxnxd1" path="res://pictures/post_it_notes/single_post_it_note.png" id="4_y5mfc"]
 [ext_resource type="Texture2D" uid="uid://bhq018quvnarn" path="res://resources/puzzleTextures/tvDisplayStatic.png" id="5_jpeyo"]
 [ext_resource type="Texture2D" uid="uid://cqx27e1fgu6w7" path="res://resources/puzzleTextures/plug.png" id="6_2k10k"]
 [ext_resource type="Texture2D" uid="uid://cymacegij6d4r" path="res://resources/puzzleTextures/blownFuse.png" id="7_y5mfc"]
@@ -32,11 +33,12 @@ expand_mode = 1
 
 [node name="PostItNoteUnique" parent="." instance=ExtResource("10_2k10k")]
 layout_mode = 1
-offset_left = 1181.0
-offset_top = 44.0
-offset_right = -122.51587
-offset_bottom = -466.0
+offset_left = 1362.0
+offset_top = 71.0
+offset_right = 58.0
+offset_bottom = -77.0
 scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("4_y5mfc")
 font_size = 120
 post_it_text = "Don't blow a fuse; tune to 156.8 MHz."
 

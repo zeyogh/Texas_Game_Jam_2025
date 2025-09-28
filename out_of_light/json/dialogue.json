@@ -115,7 +115,7 @@
 	"room": "Kitchen",
 	"progress": "stage_2",
 	"dialogue_array": {
-	  "p1": "Junior comes over 8/30 8 am breakfast",
+	  "p1": "Junior comes over 8/3O 8 am breakfast",
 	}
   },
   {
@@ -129,7 +129,7 @@
 	"room": "Kitchen",
 	"progress": "stage_4",
 	"dialogue_array": {
-	  "p1": "Junior comes over 8/30 8 am breakfast",
+	  "p1": "Junior comes over 8/3O 8 am breakfast",
 	}
   },
   {
@@ -248,35 +248,35 @@
 	"room": "StairsMiddle",
 	"progress": "intro",
 	"dialogue_array": {
-	  "p1": "Inquire into elevator permit 9/10 12 PM appointment",
+	  "p1": "Inquire into elevator permit 9/1O 12 PM appointment",
 	}
   },
   {
 	"room": "StairsMiddle",
 	"progress": "stage_1",
 	"dialogue_array": {
-	  "p1": "Inquire into elevator permit 9/10 12 PM appointment",
+	  "p1": "Inquire into elevator permit 9/1O 12 PM appointment",
 	}
   },
   {
 	"room": "StairsMiddle",
 	"progress": "stage_2",
 	"dialogue_array": {
-	  "p1": "Inquire into elevator permit 9/10 12 PM appointment",
+	  "p1": "Inquire into elevator permit 9/1O 12 PM appointment",
 	}
   },
   {
 	"room": "StairsMiddle",
 	"progress": "stage_3",
 	"dialogue_array": {
-	  "p1": "Inquire into elevator permit 9/10 12 PM appointment",
+	  "p1": "Inquire into elevator permit 9/1O 12 PM appointment",
 	}
   },
   {
 	"room": "StairsMiddle",
 	"progress": "stage_4",
 	"dialogue_array": {
-	  "p1": "Inquire into elevator permit 9/10 12 PM appointment",
+	  "p1": "Inquire into elevator permit 9/1O 12 PM appointment",
 	}
   },
   {
@@ -290,7 +290,7 @@
 	"room": "StairsMiddle",
 	"progress": "outro",
 	"dialogue_array": {
-	  "p1": "Inquire into elevator permit 9/10 12 PM appointment",
+	  "p1": "Inquire into elevator permit 9/1O 12 PM appointment",
 	}
   },
  {

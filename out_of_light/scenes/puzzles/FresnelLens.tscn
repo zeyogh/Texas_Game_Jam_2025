@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://c72xudycrtjd3"]
+[gd_scene load_steps=26 format=3 uid="uid://c72xudycrtjd3"]
 
 [ext_resource type="Script" uid="uid://bxx4a8sv6552g" path="res://scenes/puzzles/FresnelLense.gd" id="1_1q46n"]
 [ext_resource type="Shader" uid="uid://bnjii8bbdfi2m" path="res://resources/shaders/color_tint.gdshader" id="2_6rvpc"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://c623a7utejru6" path="res://resources/puzzleTextures/FresnelLight.png" id="5_wvhdc"]
 [ext_resource type="PackedScene" uid="uid://5urtho5gqmxt" path="res://scenes/post_it_note_unique.tscn" id="6_cgh6e"]
 [ext_resource type="Texture2D" uid="uid://boyagqrx50hjm" path="res://resources/puzzleTextures/trackSwitch.png" id="6_wvhdc"]
+[ext_resource type="Texture2D" uid="uid://vbgnnljxnxd1" path="res://pictures/post_it_notes/single_post_it_note.png" id="7_odjcu"]
 [ext_resource type="Texture2D" uid="uid://ds3ashc8rma86" path="res://resources/puzzleTextures/grayButton.png" id="7_wbo87"]
 [ext_resource type="Texture2D" uid="uid://cd447vbhityhk" path="res://resources/puzzleTextures/whiteButton.png" id="8_cfixt"]
 [ext_resource type="Texture2D" uid="uid://lbkrge8eomm3" path="res://resources/puzzleTextures/redButton.png" id="9_cgh6e"]
@@ -148,11 +149,12 @@ expand_mode = 1
 
 [node name="PostItNoteUnique" parent="." instance=ExtResource("6_cgh6e")]
 layout_mode = 1
-offset_left = 1569.0
-offset_top = 435.0
-offset_right = 265.48413
-offset_bottom = -75.0
+offset_left = 1550.0
+offset_top = 296.0
+offset_right = 246.0
+offset_bottom = -26.0
 scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("7_odjcu")
 font_size = 120
 post_it_text = "Baker's Island:
 Al. WR 2O s
@@ -161,11 +163,12 @@ Flip to activate."
 
 [node name="PostItNoteUnique2" parent="." instance=ExtResource("6_cgh6e")]
 layout_mode = 1
-offset_left = 165.0
-offset_top = 612.0
-offset_right = -1138.5159
-offset_bottom = 102.0
+offset_left = 122.0
+offset_top = 524.0
+offset_right = -1182.0
+offset_bottom = 228.0
 scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("7_odjcu")
 font_size = 120
 post_it_text = "Color me impressed.
 
@@ -196,13 +199,13 @@ texture_normal = ExtResource("2_wbo87")
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.252
-anchor_top = 0.72700006
+anchor_top = 0.727
 anchor_right = 0.252
-anchor_bottom = 0.72700006
-offset_left = -1.7954712
-offset_top = -4.402832
-offset_right = 141.20456
-offset_bottom = 225.59717
+anchor_bottom = 0.727
+offset_left = -1.79547
+offset_top = -4.40283
+offset_right = 141.205
+offset_bottom = 225.597
 grow_vertical = 2
 
 [node name="TrackLengthShort" type="TextureButton" parent="TrackLever"]
@@ -224,14 +227,14 @@ script = SubResource("GDScript_u0u4a")
 [node name="ColorButtons" type="HBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.38700002
+anchor_left = 0.387
 anchor_top = 0.763
-anchor_right = 0.38700002
+anchor_right = 0.387
 anchor_bottom = 0.763
-offset_left = 27.95996
-offset_top = 79.95996
-offset_right = 403.95996
-offset_bottom = 151.95996
+offset_left = 27.96
+offset_top = 79.96
+offset_right = 403.96
+offset_bottom = 151.96
 grow_horizontal = 2
 grow_vertical = 0
 
