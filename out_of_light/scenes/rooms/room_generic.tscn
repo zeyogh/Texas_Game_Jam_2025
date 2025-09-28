@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://ct8tdujobt7uy"]
+[gd_scene load_steps=7 format=3 uid="uid://ct8tdujobt7uy"]
 
 [ext_resource type="Script" uid="uid://cvof66w30vq7f" path="res://scripts/room_scripts/room.gd" id="1_4oogr"]
 [ext_resource type="PackedScene" uid="uid://duqacud67lkoy" path="res://scenes/post_it_note.tscn" id="2_h62ai"]
+[ext_resource type="Texture2D" uid="uid://biidlk2pubaf8" path="res://resources/puzzleTextures/rightArrow.png" id="2_s3bnt"]
+[ext_resource type="Texture2D" uid="uid://b0b0pql0n6q7x" path="res://resources/puzzleTextures/upArrow.png" id="3_xluy4"]
 
 [sub_resource type="Gradient" id="Gradient_31uvf"]
 
@@ -32,38 +34,40 @@ offset_bottom = 1093.0
 texture = SubResource("GradientTexture2D_03jwg")
 expand_mode = 1
 
-[node name="LeftButton" type="Button" parent="."]
+[node name="LeftButton" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 65.0
-offset_top = 458.0
-offset_right = 197.0
-offset_bottom = 519.0
-text = "left"
+offset_left = 83.0
+offset_top = 448.0
+offset_right = 205.0
+offset_bottom = 566.0
+texture_normal = ExtResource("2_s3bnt")
+flip_h = true
 
-[node name="RightButton" type="Button" parent="."]
+[node name="RightButton" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 1735.0
-offset_top = 519.0
-offset_right = 1847.0
-offset_bottom = 562.0
-text = "right"
+offset_left = 1731.0
+offset_top = 449.0
+offset_right = 1844.0
+offset_bottom = 555.0
+texture_normal = ExtResource("2_s3bnt")
 
-[node name="OppositeButton" type="Button" parent="."]
+[node name="OppositeButton" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 905.0
-offset_top = 904.0
-offset_right = 1091.0
-offset_bottom = 970.0
-text = "opposite"
+offset_left = 929.0
+offset_top = 914.0
+offset_right = 1062.0
+offset_bottom = 1017.0
+texture_normal = ExtResource("3_xluy4")
+flip_v = true
 
-[node name="FrontButton" type="Button" parent="."]
+[node name="FrontButton" type="TextureButton" parent="."]
 visible = false
 layout_mode = 0
-offset_left = 624.0
-offset_top = 885.0
-offset_right = 860.0
-offset_bottom = 1006.0
-text = "front"
+offset_left = 930.0
+offset_top = 914.0
+offset_right = 1043.0
+offset_bottom = 1035.0
+texture_normal = ExtResource("3_xluy4")
 
 [node name="FrontPostItNote" parent="." instance=ExtResource("2_h62ai")]
 top_level = true
