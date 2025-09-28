@@ -61,7 +61,7 @@ func _process(_delta: float) -> void:
 		if battery1.flip_v == battery2.flip_v:
 			PlayerController.has_flashlight = true
 			await get_tree().create_timer(1).timeout
-			ProgressController.current_stage = ProgressEnum.Progress.STAGE_3
+			ProgressController._change_current_stage(ProgressEnum.Progress.STAGE_3)
 			get_tree().change_scene_to_file("res://scenes/rooms/kitchen.tscn")
 		else:
 			battery1.visible = true

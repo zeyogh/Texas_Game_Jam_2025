@@ -50,7 +50,7 @@ func _process(delta: float) -> void:
 		if _grabbingDial and abs(_dial.position.x - 146) <= 10:
 			_grabbingDial = false
 			await get_tree().create_timer(5).timeout
-			ProgressController.current_stage = ProgressEnum.Progress.STAGE_4
+			ProgressController._change_current_stage(ProgressEnum.Progress.STAGE_4)
 			get_tree().change_scene_to_file("res://scenes/rooms/living_room.tscn")
 	
 	if !_tvPowerOn:
