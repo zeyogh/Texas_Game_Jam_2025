@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cq1ple123kp3"]
+[gd_scene load_steps=3 format=3 uid="uid://cq1ple123kp3"]
 
 [ext_resource type="Script" uid="uid://tn2cid5t56ik" path="res://scenes/puzzles/Chandelier.gd" id="1_4585y"]
+[ext_resource type="Texture2D" uid="uid://b46tmipacemxo" path="res://resources/dummy/dummyCandles.png" id="2_fhbta"]
 
 [node name="Chandelier" type="Control"]
 layout_mode = 3
@@ -11,10 +12,35 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_4585y")
 
-[node name="BreakerBox" type="GridContainer" parent="."]
+[node name="BreakerLatch" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 432.0
-offset_top = 136.0
-offset_right = 682.0
-offset_bottom = 886.0
+offset_left = 250.0
+offset_top = 55.0
+offset_right = 700.0
+offset_bottom = 1005.0
+texture = ExtResource("2_fhbta")
+expand_mode = 1
+
+[node name="BreakerBox" type="GridContainer" parent="BreakerLatch"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -125.0
+offset_top = -375.0
+offset_right = 125.0
+offset_bottom = 375.0
+grow_horizontal = 2
+grow_vertical = 2
 columns = 2
+
+[node name="BreakerDoor" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 700.0
+offset_top = 55.0
+offset_right = 1150.0
+offset_bottom = 1005.0
+
+[connection signal="button_down" from="BreakerDoor" to="." method="_openBreaker"]

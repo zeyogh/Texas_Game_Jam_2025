@@ -10,30 +10,46 @@ class BreakerSwitch:
 		links = l
 		startOn = startAsOn
 
-@onready var _breakerBox : GridContainer = $BreakerBox
+var _hasBreakerBoxKey : bool = false
+
+@onready var _breakerBox : GridContainer = $BreakerLatch/BreakerBox
 const _breakerTexture : Texture2D = preload("res://resources/puzzleTextures/trackSwitch.png")
 var breakers : Array[BreakerSwitch] = [
-	BreakerSwitch.new([1],true),
+	BreakerSwitch.new([1,3],true),
+	BreakerSwitch.new([0],true),
+	BreakerSwitch.new([3],false),
+	BreakerSwitch.new([0,2,6,8],false),
+	BreakerSwitch.new([5],true),
+	BreakerSwitch.new([0],true),
+	BreakerSwitch.new([7],true),
+	BreakerSwitch.new([6,17],false),
+	BreakerSwitch.new([10,11],true),
 	BreakerSwitch.new([],true),
-	BreakerSwitch.new([],true),
-	BreakerSwitch.new([],true),
-	BreakerSwitch.new([],true),
-	BreakerSwitch.new([],true),
-	BreakerSwitch.new([],true),
-	BreakerSwitch.new([],true),
-	BreakerSwitch.new([],true),
-	BreakerSwitch.new([],true),
-	BreakerSwitch.new([],true),
-	BreakerSwitch.new([],true),
-	BreakerSwitch.new([],true),
-	BreakerSwitch.new([],true),
-	BreakerSwitch.new([],true),
-	BreakerSwitch.new([],true),
-	BreakerSwitch.new([],true),
+	BreakerSwitch.new([8],true),
+	BreakerSwitch.new([12],true),
+	BreakerSwitch.new([10,3,14],true),
+	BreakerSwitch.new([14,16],true),
+	BreakerSwitch.new([15],true),
+	BreakerSwitch.new([14,13,8,3],true),
+	BreakerSwitch.new([],false),
 	BreakerSwitch.new([],true)
 ]
+var phone : int = 0
+var phoneIsPowered : bool = false
 
 func _ready() -> void:
+	if !_hasBreakerBoxKey:
+		$BreakerDoor.position = Vector2(250,55)
+		$BreakerDoor.texture = load("outerBreakerDoor")
+		$BreakerLatch.visible = false
+		return
+
+func _openBreaker() -> void:
+	if !_hasBreakerBoxKey: return
+	
+	$BreakerDoor.position = Vector2(700,55)
+	$BreakerDoor.texture = load("innerBreakerDoor")
+	$BreakerLatch.visible = true
 	for idx : int in range(0, breakers.size()):
 		var button = TextureButton.new()
 		button.texture_normal = _breakerTexture
@@ -48,14 +64,34 @@ func _toggleButton(idx : int):
 	for jdx in breakers[idx].links:
 		breakers[jdx].button.flip_h = !breakers[jdx].button.flip_h
 	
-	#_checkBreakers()
+	breakers[17].button.flip_h = true
+	
+	match idx:
+		3 when phone == 0:
+			phone = 1
+		0 when phone == 1:
+			phone = 2
+		16 when phone == 1:
+			phone = 3
+		7 when phone == 3:
+			phone = 4
+		7 when phone == 4:
+			phone = 5
+			for switch in breakers:
+				switch.button.flip_h = true
+			breakers[17].button.flip_h = false
+		17 when phone == 5:
+			phoneIsPowered = true
+	
+	_checkBreakers()
 
 func _checkBreakers() -> void:
 	for idx : int in range(0,breakers.size()):
-		if idx == 9 or idx == 10:
+		if idx == 1 or idx == 2 or idx == 6 or idx == 7 or idx == 9 or idx == 13 or idx == 16:
 			continue
 		elif !breakers[idx].button.flip_h:
-			break
+			return
 	
-	print_debug("all necessary breakers on")
-	#pass the minigame; if skipped breakers are also on, give extra credit
+	await get_tree().create_timer(1).timeout
+	#set player controller _phonePowered here
+	get_tree().change_scene_to_file("res://scenes/rooms/closet.tscn")
