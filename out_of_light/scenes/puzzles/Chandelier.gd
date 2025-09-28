@@ -95,7 +95,7 @@ func _checkBreakers() -> void:
 	
 	await get_tree().create_timer(1).timeout
 	PlayerController.is_phone_powered = phoneIsPowered
-	ProgressController.current_stage = ProgressEnum.Progress.STAGE_5
+	ProgressController._change_current_stage(ProgressEnum.Progress.STAGE_5)
 	ExitMinigame()
 
 func ExitMinigame() -> void:

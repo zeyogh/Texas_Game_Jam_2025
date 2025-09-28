@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://begnx00j0asra"]
 
 [ext_resource type="Script" uid="uid://wmvpi1ipye6s" path="res://scripts/intro_cutscene.gd" id="1_lvalt"]
-[ext_resource type="VideoStream" uid="uid://byc5afnpgbpkl" path="res://videos/old_man_wakeup.ogv" id="1_rlq26"]
+[ext_resource type="VideoStream" uid="uid://dlkr54lhnaqdj" path="res://videos/Intro_2.ogv" id="2_juow0"]
 
 [node name="IntroCutscene" type="Node2D"]
 script = ExtResource("1_lvalt")
@@ -17,12 +17,12 @@ ratio = 1.7778
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="AspectRatioContainer"]
 layout_mode = 2
-stream = ExtResource("1_rlq26")
+stream = ExtResource("2_juow0")
 autoplay = true
 expand = true
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 8.0
+wait_time = 15.0
 one_shot = true
 autostart = true
 

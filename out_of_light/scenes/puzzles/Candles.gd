@@ -53,7 +53,7 @@ func LightCandles() -> void:
 		_grabbingMatch = false
 		_match.global_position = Vector2(318, 744)
 		await get_tree().create_timer(1).timeout
-		ProgressController.current_stage = ProgressEnum.Progress.STAGE_2
+		ProgressController._change_current_stage(ProgressEnum.Progress.STAGE_2)
 		ExitMinigame()
 
 func ExitMinigame() -> void:

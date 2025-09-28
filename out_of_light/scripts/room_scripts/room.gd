@@ -8,6 +8,7 @@ extends Control
 @onready var right_visible: bool = $RightButton.visible
 
 func _ready() -> void:
+	$ButtonClickAudio.play()
 	PlayerController.current_room = current_room
 
 func _on_left_button_pressed() -> void:
@@ -17,6 +18,7 @@ func _on_right_button_pressed() -> void:
 	get_tree().change_scene_to_file(right_path)
 
 func _on_opposite_button_pressed() -> void:
+	$ButtonClickAudio.play()
 	$FrontTexture.visible = false
 	$OppositeTexture.visible = true
 	$FrontPostItNote.visible = false
@@ -24,6 +26,7 @@ func _on_opposite_button_pressed() -> void:
 	_set_visibility(false, false, false, true)
 
 func _on_front_button_pressed() -> void:
+	$ButtonClickAudio.play()
 	$FrontTexture.visible = true
 	$OppositeTexture.visible = false
 	$FrontPostItNote.visible = true

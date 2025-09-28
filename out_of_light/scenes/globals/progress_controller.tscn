@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://dx6c1knw7c7vr"]
+[gd_scene load_steps=3 format=3 uid="uid://dx6c1knw7c7vr"]
 
 [ext_resource type="Script" uid="uid://cijeernev4kyd" path="res://scripts/progress_controller.gd" id="1_gqfgk"]
+[ext_resource type="AudioStream" uid="uid://c7ib5f4s4sj2y" path="res://sfx/long-distant-foghorn-40915.mp3" id="2_kbopt"]
 
 [node name="ProgressController" type="Node2D"]
 script = ExtResource("1_gqfgk")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_kbopt")
