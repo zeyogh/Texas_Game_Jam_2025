@@ -51,14 +51,13 @@ texture_normal = ExtResource("5_xp7kf")
 
 [node name="KeyButton" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 540.0
-offset_top = 836.0
-offset_right = 616.0
-offset_bottom = 912.0
-rotation = 0.593412
+offset_left = 525.00006
+offset_top = 990.0
+offset_right = 730.00006
+offset_bottom = 1434.0
+rotation = 1.3404129
+scale = Vector2(0.33, 0.33)
 texture_normal = ExtResource("7_csna2")
-ignore_texture_size = true
-stretch_mode = 0
 
 [node name="LightButton" type="TextureButton" parent="."]
 layout_mode = 0
