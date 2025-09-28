@@ -38,15 +38,15 @@ func _on_pressed() -> void:
 			ProgressEnum.Progress.INTRO:
 				phase_as_string = "intro"
 			ProgressEnum.Progress.STAGE_1:
-				phase_as_string = "phase_1"
+				phase_as_string = "stage_1"
 			ProgressEnum.Progress.STAGE_2:
-				phase_as_string = "phase_2"
+				phase_as_string = "stage_2"
 			ProgressEnum.Progress.STAGE_3:
-				phase_as_string = "phase_3"
+				phase_as_string = "stage_3"
 			ProgressEnum.Progress.STAGE_4:
-				phase_as_string = "phase_4"
+				phase_as_string = "stage_4"
 			ProgressEnum.Progress.STAGE_5:
-				phase_as_string = "phase_5"
+				phase_as_string = "stage_5"
 			ProgressEnum.Progress.OUTRO:
 				phase_as_string = "outro"
 			_:
