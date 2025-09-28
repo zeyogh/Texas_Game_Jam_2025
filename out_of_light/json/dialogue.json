@@ -31,7 +31,7 @@
 	"room": "Bathroom",
 	"progress": "stage_4",
 	"dialogue_array": {
-	  "p1": "2 minutes brush, ABCs wash, 15 minutes trim",
+	  "p1": "The reflection in the mirror frightens me",
 	}
   },
   {
@@ -80,7 +80,7 @@
 	"room": "Bedroom",
 	"progress": "stage_4",
 	"dialogue_array": {
-	  "p1": "Breaker switches jammed, look at sometime (no rats)",
+	  "p1": "Breaker switches jammed, check maintenance",
 	}
   },
   {
@@ -108,14 +108,14 @@
 	"room": "Kitchen",
 	"progress": "stage_1",
 	"dialogue_array": {
-	  "p1": "Extra matches in first drawer on left, beer on second",
+	  "p1": "Extra matches in first drawer on right, beer on second",
 	}
   },
   {
 	"room": "Kitchen",
 	"progress": "stage_2",
 	"dialogue_array": {
-	  "p1": "Junior comes over 8/3O 8 am breakfast",
+	  "p1": "Ran out of juice",
 	}
   },
   {
@@ -150,14 +150,14 @@
 	"room": "LivingRoom",
 	"progress": "intro",
 	"dialogue_array": {
-	  "p1": "Clean up after carving or you'll get splinters",
+	  "p1": "Replace chandelier bulbs",
 	}
   },
   {
 	"room": "LivingRoom",
 	"progress": "stage_1",
 	"dialogue_array": {
-	  "p1": "Check kitchen for matches",
+	  "p1": "Chandelier bulbs need replacing",
 	}
   },
   {
@@ -178,7 +178,7 @@
 	"room": "LivingRoom",
 	"progress": "stage_4",
 	"dialogue_array": {
-	  "p1": "Leave keys here when going up to maintenance",
+	  "p1": "Leave keys here when going up to maintenance. Don't forget again!",
 	}
   },
   {
@@ -381,7 +381,7 @@
 	"room": "ObservationDeck",
 	"progress": "stage_5",
 	"dialogue_array": {
-	  "p1": "The sun is the best lightkeeper",
+	  "p1": "The sun is the best and worst of lightkeepers",
 	}
   },
   {

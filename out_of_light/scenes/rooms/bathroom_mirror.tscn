@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://clxu6wxsjthr2"]
+[gd_scene load_steps=9 format=3 uid="uid://clxu6wxsjthr2"]
 
 [ext_resource type="Script" uid="uid://cu7utg4bgwbh2" path="res://scenes/rooms/bathroom_mirror.gd" id="1_umdym"]
 [ext_resource type="PackedScene" uid="uid://ct8tdujobt7uy" path="res://scenes/rooms/room_generic.tscn" id="2_3i8lr"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bvcl6xv4hdkcl" path="res://resources/rooms/mirrorForward.png" id="5_owv28"]
 [ext_resource type="Texture2D" uid="uid://nys1c6emv7k0" path="res://resources/rooms/mirrorForwardReflection.png" id="6_g7aic"]
 [ext_resource type="Texture2D" uid="uid://bvv5dkuxvv7c4" path="res://pictures/reflection_1.png" id="6_nhrlh"]
+[ext_resource type="AudioStream" uid="uid://tc4kyavoydyl" path="res://sfx/spooky-sound-410562.mp3" id="8_nhrlh"]
 
 [node name="BathroomMirror" type="Control"]
 layout_mode = 3
@@ -109,6 +110,9 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("6_g7aic")
 expand_mode = 1
+
+[node name="JumpscareSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_nhrlh")
 
 [connection signal="pressed" from="MirrorButton" to="." method="_on_razor_button_pressed"]
 
