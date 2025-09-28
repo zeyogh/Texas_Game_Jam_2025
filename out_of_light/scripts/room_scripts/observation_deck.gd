@@ -19,4 +19,5 @@ func _on_key_button_pressed() -> void:
 	$KeyButton.queue_free()
 
 func _on_light_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/puzzles/FresnelLens.tscn")
+	if ProgressController.current_stage == ProgressEnum.Progress.STAGE_5:
+		get_tree().change_scene_to_file("res://scenes/puzzles/FresnelLens.tscn")

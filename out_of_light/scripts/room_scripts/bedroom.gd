@@ -14,7 +14,7 @@ func _on_front_button_pressed() -> void:
 		$CabinetButton.visible = true
 
 func _on_candle_button_pressed() -> void:
-	if PlayerController.has_matchbox:
+	if PlayerController.has_matchbox and ProgressController.current_stage == ProgressEnum.Progress.STAGE_1:
 		get_tree().change_scene_to_file("res://scenes/puzzles/Candles.tscn")
 
 func _on_cabinet_button_pressed() -> void:

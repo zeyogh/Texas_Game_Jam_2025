@@ -60,6 +60,7 @@ func _openBreaker() -> void:
 		breakers[idx].button = button
 
 func _toggleButton(idx : int):
+	if ProgressController.current_stage != ProgressEnum.Progress.STAGE_4: return
 	idx = clamp(idx, 0, _breakerBox.get_child_count())
 	breakers[idx].button.flip_h = !breakers[idx].button.flip_h
 	for jdx in breakers[idx].links:

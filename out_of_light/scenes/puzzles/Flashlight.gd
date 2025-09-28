@@ -18,14 +18,14 @@ func _ready() -> void:
 	else: LoadClear()
 
 func LoadBlurred() -> void:
-	battery1.texture_normal = load("res://resources/dummy/dummyBatteryBlurred.png")
-	battery2.texture_normal = load("res://resources/dummy/dummyBatteryBlurred.png")
+	battery1.texture_normal = load("res://resources/puzzleTextures/batteryBlurred.png")
+	battery2.texture_normal = load("res://resources/puzzleTextures/batteryBlurred.png")
 	await get_tree().create_timer(5).timeout
 	ExitMinigame()
 
 func LoadClear() -> void:
-	battery1.texture_normal = load("res://resources/dummy/dummyBattery.png")
-	battery2.texture_normal = load("res://resources/dummy/dummyBattery.png")
+	battery1.texture_normal = load("res://resources/puzzleTextures/battery.png")
+	battery2.texture_normal = load("res://resources/puzzleTextures/battery.png")
 
 func FlipBattery1() -> void:
 	if abs(battery1.position.x - 1340) < 15: battery1.flip_v = !battery1.flip_v
