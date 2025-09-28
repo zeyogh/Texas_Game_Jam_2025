@@ -37,6 +37,7 @@ font_size = 120
 post_it_text = "Quite a shocking spectacle without your spectacles."
 
 [node name="Flashlight" type="TextureRect" parent="."]
+z_index = 1
 layout_mode = 0
 offset_left = 32.0
 offset_top = 420.0

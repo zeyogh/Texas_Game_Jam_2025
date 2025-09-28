@@ -56,7 +56,7 @@ func _process(delta: float) -> void:
 		
 		if _grabbingDial and abs(_dial.position.x - 146) <= 10:
 			_grabbingDial = false
-			await get_tree().create_timer(5).timeout
+			await get_tree().create_timer(2.5).timeout
 			ProgressController._change_current_stage(ProgressEnum.Progress.STAGE_4)
 			ExitMinigame()
 	
