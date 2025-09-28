@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bv3fpf3jmvp0p" path="res://pictures/pictures_cartoon/bedroom_1.jpg" id="2_whf2s"]
 [ext_resource type="Texture2D" uid="uid://cp63jm4gbtiqy" path="res://pictures/pictures_cartoon/bedroom_2.jpg" id="3_10w8b"]
 [ext_resource type="Texture2D" uid="uid://csvkvh1th1cbp" path="res://pictures/post_it_notes/post_it_notes_5.png" id="4_10w8b"]
-[ext_resource type="Texture2D" uid="uid://cfhqrbfqd4jkv" path="res://resources/puzzleTextures/candles.png" id="6_u2o5o"]
+[ext_resource type="Texture2D" uid="uid://dirqjwgiu560h" path="res://resources/puzzleTextures/candlesLit.png" id="6_u2o5o"]
 
 [node name="Bedroom" type="Control"]
 layout_mode = 3
@@ -47,7 +47,6 @@ grow_vertical = 1
 texture_normal = ExtResource("4_10w8b")
 
 [node name="CandleButton" type="TextureButton" parent="."]
-visible = false
 layout_mode = 0
 offset_left = 99.0
 offset_top = 647.0

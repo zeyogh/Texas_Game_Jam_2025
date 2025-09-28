@@ -18,10 +18,9 @@ func GrabMatch() -> void:
 	if hasMatchbox and !_matchIsLit: _grabbingMatch = true
 
 func _ready() -> void:
-	if !hasMatchbox:
-		_match.visible = false
-		_matchbox.visible = false
-	else:
+	if ProgressController.current_stage != ProgressEnum.Progress.STAGE_1: return
+	$Candle.texture_normal = load("res://resources/puzzleTextures/candles.png")
+	if hasMatchbox:
 		_match.visible = true
 		_matchbox.visible = true
 

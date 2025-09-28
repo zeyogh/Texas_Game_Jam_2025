@@ -19,6 +19,13 @@ const _tvChannels : Array[Texture2D] = [
 	preload("res://resources/puzzleTextures/tvDisplayWeather.png")
 ]
 
+func _ready() -> void:
+	if ProgressController.current_stage == ProgressEnum.Progress.STAGE_3:
+		_plug.visible = true
+		$Plug/FuseButton.visible = true
+		$Socket.visible = true
+		_dial.global_position.x = 420
+
 func ReplaceFuse() -> void:
 	if hasPocketKnife and hasFuse:
 		$Plug/FuseButton.texture_normal = load("res://resources/puzzleTextures/fuse.png")

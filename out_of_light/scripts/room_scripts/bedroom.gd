@@ -1,5 +1,8 @@
 extends Control
 
+func _ready() -> void:
+	if ProgressController.current_stage == ProgressEnum.Progress.STAGE_1: $CandleButton.texture_normal = load("res://resources/puzzleTextures/candles.png")
+
 func _on_opposite_button_pressed() -> void:
 	$CandleButton.visible = true
 	if !PlayerController.has_glasses:
