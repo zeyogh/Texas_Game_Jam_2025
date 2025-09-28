@@ -95,5 +95,5 @@ func _checkBreakers() -> void:
 	
 	await get_tree().create_timer(1).timeout
 	PlayerController.is_phone_powered = phoneIsPowered
-	ProgressController.current_stage = ProgressEnum.STAGE_5
+	ProgressController.current_stage = ProgressEnum.Progress.STAGE_5
 	get_tree().change_scene_to_file("res://scenes/rooms/closet.tscn")

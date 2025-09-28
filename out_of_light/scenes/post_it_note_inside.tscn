@@ -24,13 +24,15 @@ texture = ExtResource("2_tllvw")
 
 [node name="Writing" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_left = 67.0
+offset_left = 47.0
 offset_top = 117.0
-offset_right = 1002.0
+offset_right = 943.0
 offset_bottom = 1007.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 100
+theme_override_font_sizes/normal_font_size = 82
+bbcode_enabled = true
 text = "Test"
+horizontal_alignment = 1
 
 [node name="CloseButton" type="TextureButton" parent="."]
 layout_mode = 0
