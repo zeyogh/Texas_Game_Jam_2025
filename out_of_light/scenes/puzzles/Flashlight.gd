@@ -21,7 +21,7 @@ func LoadBlurred() -> void:
 	battery1.texture_normal = load("res://resources/dummy/dummyBatteryBlurred.png")
 	battery2.texture_normal = load("res://resources/dummy/dummyBatteryBlurred.png")
 	await get_tree().create_timer(5).timeout
-	get_tree().change_scene_to_file("res://scenes/rooms/living_room.tscn")
+	ExitMinigame()
 
 func LoadClear() -> void:
 	battery1.texture_normal = load("res://resources/dummy/dummyBattery.png")
@@ -62,9 +62,12 @@ func _process(_delta: float) -> void:
 			PlayerController.has_flashlight = true
 			await get_tree().create_timer(1).timeout
 			ProgressController._change_current_stage(ProgressEnum.Progress.STAGE_3)
-			get_tree().change_scene_to_file("res://scenes/rooms/kitchen.tscn")
+			ExitMinigame()
 		else:
 			battery1.visible = true
 			battery2.visible = true
 			battery1.position.x = 475
 			battery2.position.x = 1720
+
+func ExitMinigame() -> void:
+	get_tree().change_scene_to_packed(PlayerController.room_scenes[PlayerController.current_room])

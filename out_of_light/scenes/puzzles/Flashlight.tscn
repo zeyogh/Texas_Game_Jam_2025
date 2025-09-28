@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://swhiyoxhf6aw"]
+[gd_scene load_steps=5 format=3 uid="uid://swhiyoxhf6aw"]
 
 [ext_resource type="Script" uid="uid://b76rrfn4iw8s8" path="res://scenes/puzzles/Flashlight.gd" id="1_tm6dd"]
 [ext_resource type="Texture2D" uid="uid://v6scrfakrlck" path="res://resources/puzzleTextures/flashlight.png" id="2_tfrb2"]
 [ext_resource type="Texture2D" uid="uid://cuy2y4obhihgv" path="res://resources/puzzleTextures/battery.png" id="3_0fhvd"]
+[ext_resource type="Texture2D" uid="uid://biidlk2pubaf8" path="res://resources/puzzleTextures/rightArrow.png" id="4_0fhvd"]
 
 [node name="Flashlight" type="Control"]
 layout_mode = 3
@@ -38,7 +39,19 @@ offset_bottom = 685.0
 rotation = 1.5707964
 texture_normal = ExtResource("3_0fhvd")
 
+[node name="ExitButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -106.0
+offset_right = 113.0
+grow_vertical = 0
+texture_normal = ExtResource("4_0fhvd")
+flip_h = true
+
 [connection signal="button_down" from="Battery1" to="." method="GrabBattery1"]
 [connection signal="pressed" from="Battery1" to="." method="FlipBattery1"]
 [connection signal="button_down" from="Battery2" to="." method="GrabBattery2"]
 [connection signal="pressed" from="Battery2" to="." method="FlipBattery2"]
+[connection signal="button_up" from="ExitButton" to="." method="ExitMinigame"]

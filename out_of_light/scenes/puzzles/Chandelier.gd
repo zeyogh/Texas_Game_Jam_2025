@@ -96,4 +96,7 @@ func _checkBreakers() -> void:
 	await get_tree().create_timer(1).timeout
 	PlayerController.is_phone_powered = phoneIsPowered
 	ProgressController._change_current_stage(ProgressEnum.Progress.STAGE_5)
-	get_tree().change_scene_to_file("res://scenes/rooms/closet.tscn")
+	ExitMinigame()
+
+func ExitMinigame() -> void:
+	get_tree().change_scene_to_packed(PlayerController.room_scenes[PlayerController.current_room])
