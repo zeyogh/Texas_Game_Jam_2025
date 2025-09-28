@@ -8,7 +8,8 @@ const room_scenes : Array[PackedScene] = [
 	preload("res://scenes/rooms/stairs_bottom.tscn"),
 	preload("res://scenes/rooms/stairs_middle.tscn"),
 	preload("res://scenes/rooms/stairs_upper.tscn"),
-	preload("res://scenes/rooms/observation_deck.tscn")
+	preload("res://scenes/rooms/observation_deck.tscn"),
+	preload("res://scenes/rooms/closet.tscn")
 ]
 
 var current_room := RoomsEnum.Rooms.BEDROOM
