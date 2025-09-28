@@ -1,12 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://qcydlda3aeyj"]
+[gd_scene load_steps=8 format=3 uid="uid://dvxry36fvd858"]
 
 [ext_resource type="PackedScene" uid="uid://ct8tdujobt7uy" path="res://scenes/rooms/room_generic.tscn" id="1_aya0h"]
 [ext_resource type="Script" uid="uid://n84y1obnvkvl" path="res://scenes/rooms/closet.gd" id="1_fk5th"]
 [ext_resource type="Texture2D" uid="uid://c37qpcfx20tws" path="res://pictures/pictures_cartoon/stairs_2.jpg" id="2_ny6em"]
 [ext_resource type="Texture2D" uid="uid://baquvs6lul36t" path="res://pictures/post_it_notes/post_it_notes_3.png" id="3_yni4a"]
-[ext_resource type="Texture2D" uid="uid://vfro8w0d46oj" path="res://resources/puzzleTextures/phone.jpg" id="4_yni4a"]
 [ext_resource type="Texture2D" uid="uid://dvuf0mto1engu" path="res://resources/puzzleTextures/fuse.png" id="5_fk5th"]
-[ext_resource type="Texture2D" uid="uid://lbkrge8eomm3" path="res://resources/puzzleTextures/redButton.png" id="7_wlvcd"]
+[ext_resource type="Texture2D" uid="uid://dgrqjagc6y12l" path="res://resources/puzzleTextures/phone.png" id="5_wlvcd"]
+[ext_resource type="Texture2D" uid="uid://ymt2ao0h78qc" path="res://resources/puzzleTextures/breakerDoorOuter.png" id="7_0drd6"]
 
 [node name="Closet" type="Control"]
 layout_mode = 3
@@ -45,9 +45,9 @@ texture_normal = ExtResource("3_yni4a")
 layout_mode = 0
 offset_left = 218.0
 offset_top = 369.0
-offset_right = 718.0
-offset_bottom = 838.0
-texture_normal = ExtResource("4_yni4a")
+offset_right = 560.0
+offset_bottom = 652.0
+texture_normal = ExtResource("5_wlvcd")
 
 [node name="FuseButton" type="TextureButton" parent="."]
 layout_mode = 0
@@ -63,7 +63,7 @@ offset_left = 1256.0
 offset_top = 372.0
 offset_right = 1328.0
 offset_bottom = 444.0
-texture_normal = ExtResource("7_wlvcd")
+texture_normal = ExtResource("7_0drd6")
 
 [connection signal="pressed" from="FuseButton" to="." method="_on_fuse_button_pressed"]
 [connection signal="pressed" from="BreakerButton" to="." method="_on_breaker_button_pressed"]

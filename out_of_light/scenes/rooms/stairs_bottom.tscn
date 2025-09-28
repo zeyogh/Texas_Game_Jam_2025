@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://ww3kl5xkl30f"]
+[gd_scene load_steps=6 format=3 uid="uid://ww3kl5xkl30f"]
 
 [ext_resource type="PackedScene" uid="uid://ct8tdujobt7uy" path="res://scenes/rooms/room_generic.tscn" id="1_ae8gs"]
-[ext_resource type="Script" uid="uid://dl3qs4if83gi3" path="res://scenes/rooms/stairs_bottom.gd" id="1_viuim"]
+[ext_resource type="Script" path="res://scenes/rooms/stairs_bottom.gd" id="1_viuim"]
 [ext_resource type="Texture2D" uid="uid://bq6f3eirdc657" path="res://pictures/pictures_cartoon/stairs_1.jpg" id="2_0a7o8"]
 [ext_resource type="Texture2D" uid="uid://dy81ntl8ad3iv" path="res://pictures/post_it_notes/post_it_notes_8.png" id="3_inuo3"]
+[ext_resource type="Texture2D" uid="uid://bnuaewlslkxt1" path="res://resources/rooms/closetDoor.png" id="5_tesis"]
 
 [node name="StairsBottom" type="Control"]
 layout_mode = 3
@@ -48,11 +49,14 @@ offset_bottom = -83.0
 texture_normal = ExtResource("3_inuo3")
 
 [node name="ClosetButton" type="TextureButton" parent="."]
-layout_mode = 0
-offset_left = 32.0
-offset_top = 393.0
-offset_right = 309.0
-offset_bottom = 1077.0
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -697.0
+offset_right = 368.0
+grow_vertical = 0
+texture_normal = ExtResource("5_tesis")
 
 [connection signal="pressed" from="ClosetButton" to="." method="_on_closet_button_pressed"]
 

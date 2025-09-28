@@ -1,11 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://glcgxrke3n0y"]
+[gd_scene load_steps=7 format=3 uid="uid://63mclgplw2kb"]
 
 [ext_resource type="Script" uid="uid://ntjy02vsnull" path="res://scripts/room_scripts/bedroom_cabinet.gd" id="1_lo5rk"]
 [ext_resource type="PackedScene" uid="uid://ct8tdujobt7uy" path="res://scenes/rooms/room_generic.tscn" id="2_3xjn7"]
 [ext_resource type="Texture2D" uid="uid://bv3fpf3jmvp0p" path="res://pictures/pictures_cartoon/bedroom_1.jpg" id="3_mytka"]
 [ext_resource type="Texture2D" uid="uid://cp63jm4gbtiqy" path="res://pictures/pictures_cartoon/bedroom_2.jpg" id="4_2on6a"]
 [ext_resource type="Texture2D" uid="uid://csvkvh1th1cbp" path="res://pictures/post_it_notes/post_it_notes_5.png" id="5_cyxdc"]
-[ext_resource type="Texture2D" uid="uid://c2d0ai5ve1awd" path="res://resources/puzzleTextures/glasses.jpg" id="6_84mvp"]
+[ext_resource type="Texture2D" uid="uid://chtl308tshtsv" path="res://resources/puzzleTextures/glasses.png" id="6_84mvp"]
 
 [node name="BedroomCabinet" type="Control"]
 layout_mode = 3
@@ -54,10 +54,10 @@ texture_normal = ExtResource("5_cyxdc")
 
 [node name="GlassesButton" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 596.0
-offset_top = 236.0
-offset_right = 1332.0
-offset_bottom = 892.0
+offset_left = 1487.0
+offset_top = 726.0
+offset_right = 1848.0
+offset_bottom = 925.0
 texture_normal = ExtResource("6_84mvp")
 
 [connection signal="pressed" from="RoomGeneric/OppositeButton" to="." method="_on_opposite_button_pressed"]
