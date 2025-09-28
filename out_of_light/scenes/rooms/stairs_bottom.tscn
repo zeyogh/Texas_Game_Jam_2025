@@ -25,6 +25,18 @@ offset_right = 1944.0
 offset_bottom = 1085.0
 texture = ExtResource("2_0a7o8")
 
+[node name="LeftButton" parent="RoomGeneric" index="2"]
+offset_left = 446.0
+offset_top = 984.0
+offset_right = 568.0
+offset_bottom = 1102.0
+
+[node name="RightButton" parent="RoomGeneric" index="3"]
+offset_left = 1343.0
+offset_top = 874.0
+offset_right = 1456.0
+offset_bottom = 980.0
+
 [node name="OppositeButton" parent="RoomGeneric" index="4"]
 visible = false
 
