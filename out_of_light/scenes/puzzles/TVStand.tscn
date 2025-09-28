@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://jhaghxdi7w43"]
+[gd_scene load_steps=8 format=3 uid="uid://b888lur18355n"]
 
 [ext_resource type="Script" uid="uid://brt80fm76dp72" path="res://scenes/puzzles/TVStand.gd" id="1_faym6"]
 [ext_resource type="Texture2D" uid="uid://bvls4ypjs2bve" path="res://resources/puzzleTextures/socket.png" id="2_2nwi8"]
@@ -14,8 +14,6 @@ anchors_preset = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 script = ExtResource("1_faym6")
-hasPocketKnife = true
-hasFuse = true
 
 [node name="Socket" type="TextureRect" parent="."]
 layout_mode = 0

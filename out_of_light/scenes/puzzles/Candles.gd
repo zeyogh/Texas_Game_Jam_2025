@@ -53,5 +53,5 @@ func LightCandles() -> void:
 		_grabbingMatch = false
 		_match.global_position = Vector2(318, 744)
 		await get_tree().create_timer(1).timeout
-		ProgressController.current_stage = ProgressEnum.STAGE_2
+		ProgressController.current_stage = ProgressEnum.Progress.STAGE_2
 		get_tree().change_scene_to_file("res://scenes/rooms/bedroom.tscn")

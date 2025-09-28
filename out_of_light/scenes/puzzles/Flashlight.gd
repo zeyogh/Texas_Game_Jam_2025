@@ -18,14 +18,14 @@ func _ready() -> void:
 	else: LoadClear()
 
 func LoadBlurred() -> void:
-	battery1.texture = load("res://resources/dummy/dummyBatteryBlurred.png")
-	battery2.texture = load("res://resources/dummy/dummyBatteryBlurred.png")
+	battery1.texture_normal = load("res://resources/dummy/dummyBatteryBlurred.png")
+	battery2.texture_normal = load("res://resources/dummy/dummyBatteryBlurred.png")
 	await get_tree().create_timer(5).timeout
 	get_tree().change_scene_to_file("res://scenes/rooms/living_room.tscn")
 
 func LoadClear() -> void:
-	battery1.texture = load("res://resources/dummy/dummyBattery.png")
-	battery2.texture = load("res://resources/dummy/dummyBattery.png")
+	battery1.texture_normal = load("res://resources/dummy/dummyBattery.png")
+	battery2.texture_normal = load("res://resources/dummy/dummyBattery.png")
 
 func FlipBattery1() -> void:
 	if abs(battery1.position.x - 1340) < 15: battery1.flip_v = !battery1.flip_v
@@ -61,7 +61,7 @@ func _process(_delta: float) -> void:
 		if battery1.flip_v == battery2.flip_v:
 			PlayerController.has_flashlight = true
 			await get_tree().create_timer(1).timeout
-			ProgressController.current_stage = ProgressEnum.STAGE_3
+			ProgressController.current_stage = ProgressEnum.Progress.STAGE_3
 			get_tree().change_scene_to_file("res://scenes/rooms/kitchen.tscn")
 		else:
 			battery1.visible = true
