@@ -9,6 +9,11 @@ extends Control
 var _grabbingMatch : bool = false
 var _matchIsLit : bool = false
 
+const matchTextures : Array[Texture2D] = [
+	preload("res://resources/puzzleTextures/match.png"),
+	preload("res://resources/puzzleTextures/matchLit.png")
+]
+
 func GrabMatch() -> void:
 	if hasMatchbox and !_matchIsLit: _grabbingMatch = true
 
@@ -28,23 +33,25 @@ func GiveMatchbox() -> void:
 func _process(delta: float) -> void:
 	if Input.is_action_pressed("interact"):
 		if _grabbingMatch and !_matchIsLit:
-			_match.global_position.x = clamp(get_global_mouse_position().x - _match.texture_normal.get_width()/2, _matchbox.global_position.x, _matchbox.global_position.x + _matchbox.texture.get_width())
-			#print_debug(Input.get_last_mouse_screen_velocity().x)
-			if Input.get_last_mouse_screen_velocity().x >= 2500.0:
-				#_match.texture_normal = load("litMatch")
+			_match.global_position.x = clamp(get_global_mouse_position().x - _match.texture_normal.get_width()/2, 300, 600)
+			if Input.get_last_mouse_screen_velocity().x >= 3000.0:
+				_match.texture_normal = matchTextures[1]
 				_matchIsLit = true
 	
 	if _matchIsLit:
-		_match.global_position = get_global_mouse_position() - _match.texture_normal.get_size()
+		print_debug(get_global_mouse_position())
+		print_debug(_match.texture_normal.get_size())
+		_match.global_position = Vector2(get_global_mouse_position().x - 97, get_global_mouse_position().y - 128)
 	elif Input.is_action_just_released("interact"):
 		_grabbingMatch = false
-		_match.global_position = Vector2(170, 230)
+		_match.global_position = Vector2(318, 744)
 
 func LightCandles() -> void:
 	if _matchIsLit: 
-		#$Candle.texture_normal = load("litCandles")
+		$Candle.texture_normal = load("res://resources/puzzleTextures/candlesLit.png")
 		_matchIsLit = false
+		_match.texture_normal = matchTextures[0]
 		_grabbingMatch = false
-		_match.global_position = Vector2(170, 230)
+		_match.global_position = Vector2(318, 744)
 		print_debug("Candles are lit!")
 		#end the minigame

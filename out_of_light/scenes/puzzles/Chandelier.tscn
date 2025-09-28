@@ -24,5 +24,8 @@ columns = 2
 layout_mode = 2
 toggle_mode = false
 
+[node name="TextureButton" type="TextureButton" parent="BreakerBox"]
+layout_mode = 2
+
 [connection signal="button_up" from="BreakerBox/BreakerSwitch" to="." method="_toggleTest"]
 [connection signal="button_up" from="BreakerBox/BreakerSwitch" to="BreakerBox/BreakerSwitch" method="_toggleBreaker"]
