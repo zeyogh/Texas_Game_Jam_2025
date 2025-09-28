@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://dnxcgrjiwd8bv"]
+[gd_scene load_steps=6 format=3 uid="uid://dnxcgrjiwd8bv"]
 
 [ext_resource type="PackedScene" uid="uid://ct8tdujobt7uy" path="res://scenes/rooms/room_generic.tscn" id="1_1tr8l"]
 [ext_resource type="Texture2D" uid="uid://7ey13laqusk8" path="res://pictures/pictures_cartoon/obversation_deck_1.png" id="2_xjxii"]
 [ext_resource type="Texture2D" uid="uid://c7pj12r86pv86" path="res://pictures/pictures_cartoon/observation_deck_2.jpg" id="3_xtdw6"]
+[ext_resource type="Texture2D" uid="uid://b0l5hi6iy1fbg" path="res://pictures/post_it_notes/post_it_notes_6.png" id="4_xtdw6"]
+[ext_resource type="Texture2D" uid="uid://baquvs6lul36t" path="res://pictures/post_it_notes/post_it_notes_3.png" id="5_xp7kf"]
 
 [node name="ObservationDeck" type="Control"]
 layout_mode = 3
@@ -29,5 +31,19 @@ texture = ExtResource("3_xtdw6")
 
 [node name="RightButton" parent="RoomGeneric" index="3"]
 visible = false
+
+[node name="FrontPostItNote" parent="RoomGeneric" index="6"]
+offset_left = 393.0
+offset_top = 238.0
+offset_right = -1087.0
+offset_bottom = -435.0
+texture_normal = ExtResource("4_xtdw6")
+
+[node name="BackPostItNote" parent="RoomGeneric" index="7"]
+offset_left = 953.0
+offset_top = 24.0
+offset_right = -480.0
+offset_bottom = -606.0
+texture_normal = ExtResource("5_xp7kf")
 
 [editable path="RoomGeneric"]

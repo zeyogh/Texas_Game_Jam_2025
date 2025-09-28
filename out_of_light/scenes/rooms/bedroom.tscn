@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bdechkmpm13jm"]
+[gd_scene load_steps=5 format=3 uid="uid://bdechkmpm13jm"]
 
 [ext_resource type="PackedScene" uid="uid://ct8tdujobt7uy" path="res://scenes/rooms/room_generic.tscn" id="1_cwplf"]
 [ext_resource type="Texture2D" uid="uid://bv3fpf3jmvp0p" path="res://pictures/pictures_cartoon/bedroom_1.jpg" id="2_whf2s"]
 [ext_resource type="Texture2D" uid="uid://cp63jm4gbtiqy" path="res://pictures/pictures_cartoon/bedroom_2.jpg" id="3_10w8b"]
+[ext_resource type="Texture2D" uid="uid://csvkvh1th1cbp" path="res://pictures/post_it_notes/post_it_notes_5.png" id="4_10w8b"]
 
 [node name="Bedroom" type="Control"]
 layout_mode = 3
@@ -19,15 +20,27 @@ right_path = "uid://ce15xsvsvosw0"
 current_room = 1
 
 [node name="FrontTexture" parent="RoomGeneric" index="0"]
-offset_right = 1931.0
-offset_bottom = 1092.0
 texture = ExtResource("2_whf2s")
 
 [node name="OppositeTexture" parent="RoomGeneric" index="1"]
-offset_left = -4.0
-offset_top = -8.0
-offset_right = 1933.0
-offset_bottom = 1092.0
 texture = ExtResource("3_10w8b")
+
+[node name="FrontPostItNote" parent="RoomGeneric" index="6"]
+offset_left = 424.0
+offset_top = 265.0
+offset_right = -1074.0
+offset_bottom = -425.0
+
+[node name="BackPostItNote" parent="RoomGeneric" index="7"]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 1595.0
+offset_top = 205.0
+offset_right = 1955.0
+offset_bottom = 528.0
+grow_horizontal = 1
+grow_vertical = 1
+texture_normal = ExtResource("4_10w8b")
 
 [editable path="RoomGeneric"]

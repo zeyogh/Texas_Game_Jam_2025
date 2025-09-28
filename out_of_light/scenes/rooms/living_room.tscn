@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://ce15xsvsvosw0"]
+[gd_scene load_steps=6 format=3 uid="uid://ce15xsvsvosw0"]
 
 [ext_resource type="PackedScene" uid="uid://ct8tdujobt7uy" path="res://scenes/rooms/room_generic.tscn" id="1_ndxsf"]
 [ext_resource type="Texture2D" uid="uid://dqjfdkma87aqd" path="res://pictures/pictures_cartoon/living_room_1.jpg" id="2_fbuym"]
 [ext_resource type="Texture2D" uid="uid://brt0dxaq7sp4o" path="res://pictures/pictures_cartoon/living_room_2.jpg" id="3_j6grr"]
+[ext_resource type="Texture2D" uid="uid://2m143pegwuns" path="res://pictures/post_it_notes/post_it_notes_2.png" id="4_j6grr"]
+[ext_resource type="Texture2D" uid="uid://dxxjyra6jstll" path="res://pictures/post_it_notes/post_it_notes_4.png" id="5_qlgtg"]
 
 [node name="LivingRoom" type="Control"]
 layout_mode = 3
@@ -28,5 +30,24 @@ offset_top = -1.0
 offset_right = 1935.0
 offset_bottom = 1095.0
 texture = ExtResource("3_j6grr")
+
+[node name="FrontPostItNote" parent="RoomGeneric" index="6"]
+offset_left = 484.0
+offset_top = 94.0
+offset_right = -1047.0
+offset_bottom = -626.0
+texture_normal = ExtResource("4_j6grr")
+
+[node name="BackPostItNote" parent="RoomGeneric" index="7"]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 1283.0
+offset_top = 413.0
+offset_right = 1403.0
+offset_bottom = 565.0
+grow_horizontal = 1
+grow_vertical = 1
+texture_normal = ExtResource("5_qlgtg")
 
 [editable path="RoomGeneric"]

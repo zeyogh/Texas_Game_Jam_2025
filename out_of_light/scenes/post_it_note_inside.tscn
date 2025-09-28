@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://dgajefsh23pr4"]
+[gd_scene load_steps=4 format=3 uid="uid://dgajefsh23pr4"]
 
 [ext_resource type="Texture2D" uid="uid://usqlblfc7fjx" path="res://pictures/post_it_notes/post_it_note.png" id="1_y17do"]
+[ext_resource type="Script" uid="uid://dq5vne8v2swjl" path="res://scripts/post_it_note_inside.gd" id="2_oim4c"]
 [ext_resource type="Texture2D" uid="uid://ccq5i2dheda3a" path="res://icon.svg" id="2_tllvw"]
 
 [node name="PostItNoteInside" type="TextureRect"]
@@ -10,6 +11,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_y17do")
+script = ExtResource("2_oim4c")
 
 [node name="Doodle" type="TextureRect" parent="."]
 visible = false
@@ -22,10 +24,17 @@ texture = ExtResource("2_tllvw")
 
 [node name="Writing" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_left = 143.0
+offset_left = 67.0
 offset_top = 117.0
-offset_right = 1732.0
+offset_right = 1002.0
 offset_bottom = 1007.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 200
+theme_override_font_sizes/normal_font_size = 100
 text = "Test"
+
+[node name="CloseButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 1928.0
+offset_bottom = 1089.0
+
+[connection signal="pressed" from="CloseButton" to="." method="_on_close_button_pressed"]

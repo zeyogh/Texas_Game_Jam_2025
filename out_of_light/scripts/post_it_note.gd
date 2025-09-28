@@ -22,7 +22,7 @@ func _on_pressed() -> void:
 			RoomsEnum.Rooms.LIVING_ROOM:
 				room_as_string = "LivingRoom"
 			RoomsEnum.Rooms.STAIRS_BOTTOM:
-				room_as_string = "StairsBottom"
+				room_as_string = "StairsLower"
 			RoomsEnum.Rooms.STAIRS_MIDDLE:
 				room_as_string = "StairsMiddle"
 			RoomsEnum.Rooms.STAIRS_UPPER:
@@ -54,4 +54,6 @@ func _on_pressed() -> void:
 		post_it_text = text
 		
 	var instance = inside.instantiate()
+	add_child(instance)
+	instance.global_position = Vector2(450, 50)
 	instance.get_node("Writing").text = post_it_text
