@@ -1,5 +1,10 @@
 extends Control
 
+func _ready() -> void:
+	ProgressController.entered_bedroom = true
+	if ProgressController._can_leave_intro():
+		ProgressController.current_stage = ProgressEnum.Progress.STAGE_1
+
 func _on_opposite_button_pressed() -> void:
 	$CandleButton.visible = true
 	if !PlayerController.has_glasses:

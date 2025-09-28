@@ -3,6 +3,9 @@ extends Control
 func _ready() -> void:
 	if PlayerController.has_flashlight:
 		$FlashlightButton.visible = false
+	ProgressController.entered_kitchen = true
+	if ProgressController._can_leave_intro():
+		ProgressController.current_stage = ProgressEnum.Progress.STAGE_1
 
 func _on_opposite_button_pressed() -> void:
 	$CabinetButton.visible = true
