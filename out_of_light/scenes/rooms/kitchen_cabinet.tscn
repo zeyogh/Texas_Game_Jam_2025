@@ -1,0 +1,59 @@
+[gd_scene load_steps=5 format=3 uid="uid://cv07fffn5v7rd"]
+
+[ext_resource type="PackedScene" uid="uid://ct8tdujobt7uy" path="res://scenes/rooms/room_generic.tscn" id="2_v1lai"]
+[ext_resource type="Texture2D" uid="uid://dajg4un5lsk24" path="res://pictures/pictures_cartoon/kitchen_1.jpg" id="3_efowb"]
+[ext_resource type="Texture2D" uid="uid://b5cxhefxqf6t6" path="res://pictures/pictures_cartoon/kitchen_2.jpg" id="4_smrx7"]
+[ext_resource type="Texture2D" uid="uid://b0l5hi6iy1fbg" path="res://pictures/post_it_notes/post_it_notes_6.png" id="5_cim2v"]
+
+[node name="KitchenCabinet" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RoomGeneric" parent="." instance=ExtResource("2_v1lai")]
+layout_mode = 1
+left_path = "uid://dnblgihnphpwh"
+current_room = 2
+
+[node name="FrontTexture" parent="RoomGeneric" index="0"]
+offset_right = 1933.0
+offset_bottom = 1100.0
+texture = ExtResource("3_efowb")
+
+[node name="OppositeTexture" parent="RoomGeneric" index="1"]
+offset_right = 1929.0
+offset_bottom = 1086.0
+texture = ExtResource("4_smrx7")
+
+[node name="RightButton" parent="RoomGeneric" index="3"]
+visible = false
+
+[node name="OppositeButton" parent="RoomGeneric" index="4"]
+visible = false
+
+[node name="FrontPostItNote" parent="RoomGeneric" index="6"]
+visible = false
+offset_left = 92.0
+offset_top = 524.0
+offset_right = -1609.0
+offset_bottom = -353.0
+
+[node name="BackPostItNote" parent="RoomGeneric" index="7"]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 435.0
+offset_top = 785.0
+offset_right = 684.0
+offset_bottom = 1098.0
+grow_horizontal = 1
+grow_vertical = 1
+texture_normal = ExtResource("5_cim2v")
+
+[connection signal="pressed" from="RoomGeneric/OppositeButton" to="." method="_on_opposite_button_pressed"]
+[connection signal="pressed" from="RoomGeneric/FrontButton" to="." method="_on_front_button_pressed"]
+
+[editable path="RoomGeneric"]

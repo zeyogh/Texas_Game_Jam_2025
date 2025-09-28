@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://bdechkmpm13jm"]
+[gd_scene load_steps=7 format=3 uid="uid://bdechkmpm13jm"]
 
 [ext_resource type="PackedScene" uid="uid://ct8tdujobt7uy" path="res://scenes/rooms/room_generic.tscn" id="1_cwplf"]
+[ext_resource type="Script" uid="uid://cwg7ucisishbd" path="res://scenes/rooms/bedroom.gd" id="1_khs6t"]
 [ext_resource type="Texture2D" uid="uid://bv3fpf3jmvp0p" path="res://pictures/pictures_cartoon/bedroom_1.jpg" id="2_whf2s"]
 [ext_resource type="Texture2D" uid="uid://cp63jm4gbtiqy" path="res://pictures/pictures_cartoon/bedroom_2.jpg" id="3_10w8b"]
 [ext_resource type="Texture2D" uid="uid://csvkvh1th1cbp" path="res://pictures/post_it_notes/post_it_notes_5.png" id="4_10w8b"]
+[ext_resource type="Texture2D" uid="uid://cfhqrbfqd4jkv" path="res://resources/puzzleTextures/candles.png" id="6_u2o5o"]
 
 [node name="Bedroom" type="Control"]
 layout_mode = 3
@@ -12,6 +14,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_khs6t")
 
 [node name="RoomGeneric" parent="." instance=ExtResource("1_cwplf")]
 layout_mode = 1
@@ -42,5 +45,20 @@ offset_bottom = 528.0
 grow_horizontal = 1
 grow_vertical = 1
 texture_normal = ExtResource("4_10w8b")
+
+[node name="CandleButton" type="TextureButton" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 99.0
+offset_top = 647.0
+offset_right = 435.0
+offset_bottom = 983.0
+texture_normal = ExtResource("6_u2o5o")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="pressed" from="RoomGeneric/OppositeButton" to="." method="_on_opposite_button_pressed"]
+[connection signal="pressed" from="RoomGeneric/FrontButton" to="." method="_on_front_button_pressed"]
+[connection signal="pressed" from="CandleButton" to="." method="_on_candle_button_pressed"]
 
 [editable path="RoomGeneric"]
