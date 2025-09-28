@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cq1ple123kp3"]
+[gd_scene load_steps=6 format=3 uid="uid://cq1ple123kp3"]
 
 [ext_resource type="Script" uid="uid://tn2cid5t56ik" path="res://scenes/puzzles/Chandelier.gd" id="1_4585y"]
 [ext_resource type="Texture2D" uid="uid://bx55cficej8kh" path="res://resources/puzzleTextures/breakerDoorInner.png" id="2_fhbta"]
+[ext_resource type="Texture2D" uid="uid://ca5g41btdtp5p" path="res://pictures/minigame_backgrounds/cartoons/wall.jpg" id="2_ltxlm"]
 [ext_resource type="Texture2D" uid="uid://biidlk2pubaf8" path="res://resources/puzzleTextures/rightArrow.png" id="3_bj4h1"]
 [ext_resource type="Texture2D" uid="uid://dt5ll4jbnwnol" path="res://resources/puzzleTextures/breakerLabels.png" id="3_y2xtu"]
 
@@ -13,6 +14,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_4585y")
+
+[node name="Background" type="TextureRect" parent="."]
+z_index = -10
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_ltxlm")
+expand_mode = 1
 
 [node name="BreakerLatch" type="TextureRect" parent="."]
 layout_mode = 0

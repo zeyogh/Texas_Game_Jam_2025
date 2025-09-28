@@ -1,7 +1,8 @@
-[gd_scene load_steps=22 format=3 uid="uid://c72xudycrtjd3"]
+[gd_scene load_steps=24 format=3 uid="uid://c72xudycrtjd3"]
 
 [ext_resource type="Script" uid="uid://bxx4a8sv6552g" path="res://scenes/puzzles/FresnelLense.gd" id="1_1q46n"]
 [ext_resource type="Shader" uid="uid://bnjii8bbdfi2m" path="res://resources/shaders/color_tint.gdshader" id="2_6rvpc"]
+[ext_resource type="Texture2D" uid="uid://c7pj12r86pv86" path="res://pictures/pictures_cartoon/observation_deck_2.jpg" id="2_cfixt"]
 [ext_resource type="Texture2D" uid="uid://biidlk2pubaf8" path="res://resources/puzzleTextures/rightArrow.png" id="2_wbo87"]
 [ext_resource type="Texture2D" uid="uid://6487bqh1w4qk" path="res://resources/puzzleTextures/FresnelLens.png" id="4_qoa56"]
 [ext_resource type="Texture2D" uid="uid://c623a7utejru6" path="res://resources/puzzleTextures/FresnelLight.png" id="5_wvhdc"]
@@ -12,6 +13,9 @@
 [ext_resource type="Texture2D" uid="uid://ddi42jqcqpeyx" path="res://resources/puzzleTextures/yellowButton.png" id="10_odjcu"]
 [ext_resource type="Texture2D" uid="uid://dr4i0lcrv3rgj" path="res://resources/puzzleTextures/greenButton.png" id="11_qqskf"]
 [ext_resource type="Texture2D" uid="uid://b1ja0oiuesyqv" path="res://resources/puzzleTextures/onOffSwitch.png" id="12_wbo87"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_cgh6e"]
+blend_mode = 3
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_mfucn"]
 shader = ExtResource("2_6rvpc")
@@ -98,6 +102,15 @@ anchors_preset = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 script = ExtResource("1_1q46n")
+
+[node name="Background" type="TextureRect" parent="."]
+z_index = -10
+material = SubResource("CanvasItemMaterial_cgh6e")
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_cfixt")
+expand_mode = 1
 
 [node name="Light" type="TextureRect" parent="."]
 layout_mode = 1
