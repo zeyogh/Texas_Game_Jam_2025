@@ -11,3 +11,5 @@ var has_glasses := false
 var has_razor := false
 
 var has_key := false
+
+var has_fuse := false

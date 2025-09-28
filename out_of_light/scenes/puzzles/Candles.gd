@@ -1,7 +1,7 @@
 class_name Candles
 extends Control
 
-@export var hasMatchbox : bool = false
+@export var hasMatchbox : bool = PlayerController.has_matchbox
 
 @onready var _match : TextureButton = $Match
 @onready var _matchbox : TextureRect = $Matchbox

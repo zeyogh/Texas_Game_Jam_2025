@@ -1,8 +1,8 @@
 class_name TVStand
 extends Control
 
-@export var hasPocketKnife : bool = false
-@export var hasFuse : bool = false
+@export var hasPocketKnife : bool = PlayerController.has_razor
+@export var hasFuse : bool = PlayerController.has_fuse
 
 @onready var _plug : TextureButton = $Plug
 @onready var _dial : TextureButton = $TvScreen/ChannelDial
