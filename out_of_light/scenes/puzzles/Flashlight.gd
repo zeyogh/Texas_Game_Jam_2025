@@ -28,12 +28,14 @@ func LoadClear() -> void:
 	battery2.texture_normal = load("res://resources/puzzleTextures/battery.png")
 
 func FlipBattery1() -> void:
-	if abs(battery1.position.x - 1340) < 15: battery1.flip_v = !battery1.flip_v
+	if abs(battery1.position.x - 1340) < 15:
+		battery1.flip_v = !battery1.flip_v
 func FlipBattery2() -> void:
 	if abs(battery2.position.x - 1720) < 15: battery2.flip_v = !battery2.flip_v
 
 func GrabBattery1() -> void:
-	if !isBlurry: grabbingBattery1 = true
+	if !isBlurry: 
+		grabbingBattery1 = true
 func GrabBattery2() -> void:
 	if !isBlurry and !battery1.visible: grabbingBattery2 = true
 

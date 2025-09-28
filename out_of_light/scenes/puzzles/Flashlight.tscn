@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://swhiyoxhf6aw"]
+[gd_scene load_steps=7 format=3 uid="uid://dap88jl7iuhn"]
 
 [ext_resource type="Script" uid="uid://b76rrfn4iw8s8" path="res://scenes/puzzles/Flashlight.gd" id="1_tm6dd"]
 [ext_resource type="Texture2D" uid="uid://v6scrfakrlck" path="res://resources/puzzleTextures/flashlight.png" id="2_tfrb2"]
@@ -16,6 +16,15 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 script = ExtResource("1_tm6dd")
 
+[node name="Background" type="TextureRect" parent="."]
+z_index = -10
+material = SubResource("CanvasItemMaterial_r87km")
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("5_x6t7i")
+expand_mode = 1
+
 [node name="Flashlight" type="TextureRect" parent="."]
 layout_mode = 0
 offset_left = 32.0
@@ -31,7 +40,7 @@ offset_left = 1340.0
 offset_top = 400.0
 offset_right = 1625.0
 offset_bottom = 685.0
-rotation = 1.5707964
+rotation = 1.5708
 texture_normal = ExtResource("3_0fhvd")
 
 [node name="Battery2" type="TextureButton" parent="."]
@@ -40,7 +49,7 @@ offset_left = 1720.0
 offset_top = 400.0
 offset_right = 2005.0
 offset_bottom = 685.0
-rotation = 1.5707964
+rotation = 1.5708
 texture_normal = ExtResource("3_0fhvd")
 
 [node name="ExitButton" type="TextureButton" parent="."]
@@ -53,15 +62,6 @@ offset_right = 113.0
 grow_vertical = 0
 texture_normal = ExtResource("4_0fhvd")
 flip_h = true
-
-[node name="Background" type="TextureRect" parent="."]
-z_index = -10
-material = SubResource("CanvasItemMaterial_r87km")
-layout_mode = 0
-offset_right = 1920.0
-offset_bottom = 1080.0
-texture = ExtResource("5_x6t7i")
-expand_mode = 1
 
 [connection signal="button_down" from="Battery1" to="." method="GrabBattery1"]
 [connection signal="pressed" from="Battery1" to="." method="FlipBattery1"]

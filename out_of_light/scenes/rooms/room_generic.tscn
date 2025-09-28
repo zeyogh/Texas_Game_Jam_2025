@@ -69,6 +69,7 @@ offset_top = 914.0
 offset_right = 1043.0
 offset_bottom = 1035.0
 texture_normal = ExtResource("3_xluy4")
+flip_v = true
 
 [node name="FrontPostItNote" parent="." instance=ExtResource("2_h62ai")]
 top_level = true

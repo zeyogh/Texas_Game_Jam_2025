@@ -1,0 +1,68 @@
+[gd_scene load_steps=4 format=3 uid="uid://vcio71qgwptx"]
+
+[ext_resource type="Script" uid="uid://cgb5yax6fjndi" path="res://scenes/end_credits.gd" id="1_dhn2b"]
+
+[sub_resource type="Gradient" id="Gradient_1s85s"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_v6p8y"]
+gradient = SubResource("Gradient_1s85s")
+
+[node name="EndCredits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dhn2b")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1928.0
+offset_bottom = 1090.0
+texture = SubResource("GradientTexture2D_v6p8y")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 629.0
+offset_top = 90.0
+offset_right = 1328.0
+offset_bottom = 330.0
+theme_override_font_sizes/bold_italics_font_size = 1
+theme_override_font_sizes/normal_font_size = 100
+text = "OUT OF LIGHT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="By" type="RichTextLabel" parent="."]
+offset_left = 633.0
+offset_top = 269.0
+offset_right = 1332.0
+offset_bottom = 727.0
+theme_override_font_sizes/bold_italics_font_size = 1
+theme_override_font_sizes/normal_font_size = 64
+text = "By Tucker Nance and Zeynep Oghan"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NoAI" type="RichTextLabel" parent="."]
+offset_left = 625.0
+offset_top = 606.0
+offset_right = 1324.0
+offset_bottom = 966.0
+theme_override_font_sizes/bold_italics_font_size = 1
+theme_override_font_sizes/normal_font_size = 64
+text = "No AI Was Used in the Creation of This Game"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 859.0
+offset_top = 914.0
+offset_right = 1117.0
+offset_bottom = 990.0
+theme_override_font_sizes/font_size = 36
+text = "Return to Title"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
