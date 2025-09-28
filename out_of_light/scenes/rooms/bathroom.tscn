@@ -54,6 +54,14 @@ offset_top = 819.0
 offset_right = 1629.0
 offset_bottom = 1036.0
 
+[node name="MirrorButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 462.0
+offset_right = 193.0
+offset_bottom = 1089.0
+
 [connection signal="pressed" from="CabinetButton" to="." method="_on_cabinet_button_pressed"]
+[connection signal="pressed" from="MirrorButton" to="." method="_on_mirror_button_pressed"]
 
 [editable path="RoomGeneric"]

@@ -1,0 +1,60 @@
+[gd_scene load_steps=5 format=3 uid="uid://clxu6wxsjthr2"]
+
+[ext_resource type="Script" uid="uid://cu7utg4bgwbh2" path="res://scenes/rooms/bathroom_mirror.gd" id="1_umdym"]
+[ext_resource type="PackedScene" uid="uid://ct8tdujobt7uy" path="res://scenes/rooms/room_generic.tscn" id="2_3i8lr"]
+[ext_resource type="Texture2D" uid="uid://b02rys1d1eq6i" path="res://pictures/pictures_cartoon/bathroom_1.jpg" id="3_owv28"]
+[ext_resource type="Texture2D" uid="uid://dxxjyra6jstll" path="res://pictures/post_it_notes/post_it_notes_4.png" id="4_g7aic"]
+
+[node name="BathroomMirror" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_umdym")
+
+[node name="RoomGeneric" parent="." instance=ExtResource("2_3i8lr")]
+layout_mode = 1
+left_path = "uid://3crkmmykqfbe"
+
+[node name="FrontTexture" parent="RoomGeneric" index="0"]
+offset_right = 1931.0
+offset_bottom = 1092.0
+texture = ExtResource("3_owv28")
+
+[node name="RightButton" parent="RoomGeneric" index="3"]
+visible = false
+
+[node name="OppositeButton" parent="RoomGeneric" index="4"]
+visible = false
+
+[node name="FrontPostItNote" parent="RoomGeneric" index="6"]
+visible = false
+offset_left = 833.0
+offset_top = 317.0
+offset_right = -857.0
+offset_bottom = -550.0
+texture_normal = ExtResource("4_g7aic")
+
+[node name="BackPostItNote" parent="RoomGeneric" index="7"]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 1170.0
+offset_top = 436.0
+offset_right = 1801.0
+offset_bottom = 889.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="MirrorButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 638.0
+offset_top = 11.0
+offset_right = 1321.0
+offset_bottom = 1035.0
+
+[connection signal="pressed" from="MirrorButton" to="." method="_on_razor_button_pressed"]
+
+[editable path="RoomGeneric"]

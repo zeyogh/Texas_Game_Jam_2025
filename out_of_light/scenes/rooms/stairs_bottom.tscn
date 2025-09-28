@@ -49,8 +49,10 @@ texture_normal = ExtResource("3_inuo3")
 
 [node name="ClosetButton" type="TextureButton" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 32.0
+offset_top = 393.0
+offset_right = 309.0
+offset_bottom = 1077.0
 
 [connection signal="pressed" from="ClosetButton" to="." method="_on_closet_button_pressed"]
 

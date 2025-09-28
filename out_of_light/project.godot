@@ -22,6 +22,7 @@ PostItController="*res://scenes/globals/post_it_controller.tscn"
 ProgressController="*res://scenes/globals/progress_controller.tscn"
 RoomsEnum="*res://enums/rooms_enum.gd"
 ProgressEnum="*res://enums/progress_enum.gd"
+SoundEffectsController="*res://scenes/sound_effects_controller.tscn"
 
 [display]
 

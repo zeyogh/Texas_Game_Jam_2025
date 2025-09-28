@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://da3ckffwyissf"]
+
+[ext_resource type="Script" uid="uid://c3m2xngveqmrq" path="res://scripts/sound_effects_controller.gd" id="1_vydbl"]
+[ext_resource type="AudioStream" uid="uid://dchh8sf6n8lf" path="res://sfx/Beach Waves-SoundBible.com-1024681188.mp3" id="2_kdm8i"]
+[ext_resource type="AudioStream" uid="uid://cat0xud37imyi" path="res://sfx/Rain_Inside_House-Mark_DiAngelo-323934112.mp3" id="3_6dirw"]
+[ext_resource type="AudioStream" uid="uid://bejnf3x3qvoi0" path="res://sfx/Thunder_HD-Mark_DiAngelo-587966950.mp3" id="4_hhc3e"]
+
+[node name="SoundEffectsController" type="Node2D"]
+script = ExtResource("1_vydbl")
+
+[node name="WaveSounds" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_kdm8i")
+autoplay = true
+
+[node name="RainSounds" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_6dirw")
+autoplay = true
+
+[node name="ThunderSounds" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_hhc3e")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 20.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
