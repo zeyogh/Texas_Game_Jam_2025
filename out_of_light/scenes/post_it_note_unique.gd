@@ -4,7 +4,7 @@ extends TextureButton
 
 var inside = preload("res://scenes/post_it_note_inside.tscn")
 
-@export var post_it_text: String = ""
+@export_multiline var post_it_text: String = ""
 
 var inside_opened := false
 
