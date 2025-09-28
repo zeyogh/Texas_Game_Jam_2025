@@ -40,7 +40,7 @@ var phoneIsPowered : bool = false
 func _ready() -> void:
 	if !_hasBreakerBoxKey:
 		$BreakerDoor.position = Vector2(250,55)
-		$BreakerDoor.texture = load("outerBreakerDoor")
+		$BreakerDoor.texture_normal = load("res://resources/puzzleTextures/breakerDoorOuter.png")
 		$BreakerLatch.visible = false
 		return
 
@@ -48,7 +48,8 @@ func _openBreaker() -> void:
 	if !_hasBreakerBoxKey: return
 	
 	$BreakerDoor.position = Vector2(700,55)
-	$BreakerDoor.texture = load("innerBreakerDoor")
+	$BreakerDoor.texture_normal = load("res://resources/puzzleTextures/breakerDoorInner.png")
+	$BreakerDoor.flip_h = true
 	$BreakerLatch.visible = true
 	for idx : int in range(0, breakers.size()):
 		var button = TextureButton.new()

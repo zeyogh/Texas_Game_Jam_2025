@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vfro8w0d46oj"
-path="res://.godot/imported/phone.jpg-61193eb2470c113af5f0932371b06bed.ctex"
+uid="uid://chtl308tshtsv"
+path="res://.godot/imported/glasses.png-a865b53fe8788f1cc2fd78ca94f55658.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/puzzleTextures/phone.jpg"
-dest_files=["res://.godot/imported/phone.jpg-61193eb2470c113af5f0932371b06bed.ctex"]
+source_file="res://resources/puzzleTextures/glasses.png"
+dest_files=["res://.godot/imported/glasses.png-a865b53fe8788f1cc2fd78ca94f55658.ctex"]
 
 [params]
 
