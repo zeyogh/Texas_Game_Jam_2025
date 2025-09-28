@@ -24,3 +24,4 @@ func _change_current_stage(stage: ProgressEnum.Progress) -> void:
 
 func _on_current_stage_changed():
 	$AudioStreamPlayer.play()
+	GoalController._display_next_text()

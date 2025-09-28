@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqbq8dtq0eq5v"]
+
+[ext_resource type="FontFile" uid="uid://decr6cdxtwfle" path="res://fonts/Leander.ttf" id="1_tgojn"]
+[ext_resource type="Script" uid="uid://rrk7g7ig8w5" path="res://scripts/goal_controller.gd" id="1_ubbhv"]
+
+[node name="GoalController" type="Control"]
+z_index = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ubbhv")
+
+[node name="CurrentGoal" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 53.0
+offset_right = 1957.0
+offset_bottom = 647.0
+theme_override_fonts/normal_font = ExtResource("1_tgojn")
+theme_override_font_sizes/normal_font_size = 56
