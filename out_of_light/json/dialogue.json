@@ -24,7 +24,7 @@
 	"room": "Bathroom",
 	"progress": "stage_3",
 	"dialogue_array": {
-	  "p1": "2 minutes brush, ABCs wash, 15 minutes trim",
+	  "p1": "Shave eventually...don't try to freehand it!!!",
 	}
   },
   {
@@ -38,7 +38,7 @@
 	"room": "Bathroom",
 	"progress": "stage_5",
 	"dialogue_array": {
-	  "p1": "When's the last time you held your granddaughter without shaking?",
+	  "p1": "When's the last time your hands were steady?",
 	}
   },
   {
@@ -66,7 +66,7 @@
 	"room": "Bedroom",
 	"progress": "stage_2",
 	"dialogue_array": {
-	  "p1": "Don't forget new perscription 8/28 - spare LHD",
+	  "p1": "New perscription lenses 8/28- spare LH Drawer",
 	}
   },
   {
@@ -178,7 +178,7 @@
 	"room": "LivingRoom",
 	"progress": "stage_4",
 	"dialogue_array": {
-	  "p1": "Oil chandelier - sounding a BIT rickety",
+	  "p1": "Leave keys here when going up to maintenance",
 	}
   },
   {
@@ -220,14 +220,14 @@
 	"room": "StairsLower",
 	"progress": "stage_3",
 	"dialogue_array": {
-	  "p1": "DO NOT SKIP MAINTENANCE. IF YOU'RE NOT SURE YOU DID IT GO UP AND CHECK.",
+	  "p1": "In case of outage, check closet for fuses",
 	}
   },
   {
 	"room": "StairsLower",
 	"progress": "stage_4",
 	"dialogue_array": {
-	  "p1": "Leave keys downstairs I hate getting them",
+	  "p1": "FOR EMERGENCIES USE BREAKER IN MAINTENANCE CLOSET",
 	}
   },
   {
@@ -297,35 +297,35 @@
 	"room": "StairsUpper",
 	"progress": "intro",
 	"dialogue_array": {
-	  "p1": "And he lighted upon the place, and tarried there all night, because the sun was set; and he took one of the stones of the place, and put it under his head, and lay down in that place to sleep. ",
+	  "p1": "\"And he lighted upon the place, and tarried there all night, because the sun was set; and he took one of the stones of the place, and put it under his head, and lay down in that place to sleep.\"",
 	}
   },
   {
 	"room": "StairsUpper",
 	"progress": "stage_1",
 	"dialogue_array": {
-	  "p1": "And he lighted upon the place, and tarried there all night, because the sun was set; and he took one of the stones of the place, and put it under his head, and lay down in that place to sleep. ",
+	  "p1": "\"And he lighted upon the place, and tarried there all night, because the sun was set; and he took one of the stones of the place, and put it under his head, and lay down in that place to sleep.\"",
 	}
   },
   {
 	"room": "StairsUpper",
 	"progress": "stage_2",
 	"dialogue_array": {
-	  "p1": "And he lighted upon the place, and tarried there all night, because the sun was set; and he took one of the stones of the place, and put it under his head, and lay down in that place to sleep. ",
+	  "p1": "\"And he lighted upon the place, and tarried there all night, because the sun was set; and he took one of the stones of the place, and put it under his head, and lay down in that place to sleep.\"",
 	}
   },
   {
 	"room": "StairsUpper",
 	"progress": "stage_3",
 	"dialogue_array": {
-	  "p1": "And he lighted upon the place, and tarried there all night, because the sun was set; and he took one of the stones of the place, and put it under his head, and lay down in that place to sleep. ",
+	  "p1": "\"And he lighted upon the place, and tarried there all night, because the sun was set; and he took one of the stones of the place, and put it under his head, and lay down in that place to sleep.\n",
 	}
   },
   {
 	"room": "StairsUpper",
 	"progress": "stage_4",
 	"dialogue_array": {
-	  "p1": "And he lighted upon the place, and tarried there all night, because the sun was set; and he took one of the stones of the place, and put it under his head, and lay down in that place to sleep. ",
+	  "p1": "\"And he lighted upon the place, and tarried there all night, because the sun was set; and he took one of the stones of the place, and put it under his head, and lay down in that place to sleep.\n",
 	}
   },
   {
@@ -339,7 +339,7 @@
 	"room": "StairsUpper",
 	"progress": "outro",
 	"dialogue_array": {
-	  "p1": "And he lighted upon the place, and tarried there all night, because the sun was set; and he took one of the stones of the place, and put it under his head, and lay down in that place to sleep. And he dreamed, and behold a ladder set up on the earth, and the top of it reached to heaven",
+	  "p1": "\"And he lighted upon the place, and tarried there all night, because the sun was set; and he took one of the stones of the place, and put it under his head, and lay down in that place to sleep. And he dreamed, and behold a ladder set up on the earth, and the top of it reached to heaven\"",
 	}
   },
  {
