@@ -1,15 +1,16 @@
 class_name BreakerSwitch
 extends TextureButton
 
-var linkedSwitches : Array[int]
+@export var linkedSwitches : Array[int]
 signal toggledOff(linked : Array[int])
 
 func _init(links : Array[int]) -> void:
 	linkedSwitches = links
+	button_up.connect(_toggleBreaker)
 
-func _turnBreakerOn() -> void:
-	print_debug(button_pressed)
-	if !button_pressed:
+func _toggleBreaker() -> void:
+	print_debug("toggle")
+	if !flip_h:
 		flip_h = true
 		toggledOff.emit(linkedSwitches)
 	else:

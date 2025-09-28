@@ -1,34 +1,8 @@
 class_name Chandelier
 extends Control
 
-var breakers : Array[BreakerSwitch] = [
-	BreakerSwitch.new([0]),
-	BreakerSwitch.new([0]),
-	BreakerSwitch.new([0]),
-	BreakerSwitch.new([0]),
-	BreakerSwitch.new([0]),
-	BreakerSwitch.new([0]),
-	BreakerSwitch.new([0]),
-	BreakerSwitch.new([0]),
-	BreakerSwitch.new([0]),
-	BreakerSwitch.new([0]),
-	BreakerSwitch.new([0]),
-	BreakerSwitch.new([0]),
-	BreakerSwitch.new([0]),
-	BreakerSwitch.new([0]),
-	BreakerSwitch.new([0]),
-	BreakerSwitch.new([0]),
-	BreakerSwitch.new([0]),
-	BreakerSwitch.new([0])
-]
-
 @onready var _breakerBox : GridContainer = $BreakerBox
-
-func _ready() -> void:
-	for breaker : BreakerSwitch in breakers:
-		_breakerBox.add_child(breaker)
-		print_debug(_breakerBox)
-	
+@onready var breakers : Array[Node] = _breakerBox.get_children()
 
 func toggleLinksOff(links : Array[int]) -> void:
 	for idx : int in links:
@@ -41,8 +15,11 @@ func _checkBreakers() -> void:
 	for idx : int in range(0,breakers.size()):
 		if idx == 9 or idx == 10:
 			continue
-		elif !breakers[idx].button_pressed:
+		elif !breakers[idx].flip_h:
 			break
 	
 	print_debug("all necessary breakers on")
 	#pass the minigame; if skipped breakers are also on, give extra credit
+
+func _toggleTest() -> void:
+	print_debug("goggle")

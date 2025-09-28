@@ -14,11 +14,15 @@ script = ExtResource("1_4585y")
 
 [node name="BreakerBox" type="GridContainer" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 432.0
+offset_top = 136.0
+offset_right = 682.0
+offset_bottom = 886.0
 columns = 2
 
 [node name="BreakerSwitch" parent="BreakerBox" instance=ExtResource("2_fhbta")]
 layout_mode = 2
+toggle_mode = false
 
-[connection signal="button_up" from="BreakerBox/BreakerSwitch" to="BreakerBox/BreakerSwitch" method="_turnBreakerOn"]
+[connection signal="button_up" from="BreakerBox/BreakerSwitch" to="." method="_toggleTest"]
+[connection signal="button_up" from="BreakerBox/BreakerSwitch" to="BreakerBox/BreakerSwitch" method="_toggleBreaker"]
