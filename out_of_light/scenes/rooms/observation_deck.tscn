@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dnxcgrjiwd8bv"]
+[gd_scene load_steps=11 format=3 uid="uid://dnxcgrjiwd8bv"]
 
 [ext_resource type="PackedScene" uid="uid://ct8tdujobt7uy" path="res://scenes/rooms/room_generic.tscn" id="1_1tr8l"]
 [ext_resource type="Script" uid="uid://d0iurm5m5cl6c" path="res://scripts/room_scripts/observation_deck.gd" id="1_rvjcv"]
@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://baquvs6lul36t" path="res://pictures/post_it_notes/post_it_notes_3.png" id="5_xp7kf"]
 [ext_resource type="Texture2D" uid="uid://df4kwtrcj7m8j" path="res://resources/puzzleTextures/key.png" id="7_csna2"]
 [ext_resource type="AudioStream" uid="uid://du1w6o06u4ltf" path="res://sfx/click-345983.mp3" id="8_1r8uv"]
+[ext_resource type="Texture2D" uid="uid://bl2hls7qnwpl2" path="res://pictures/post_it_notes/single_post_it_empty.png" id="9_04sfp"]
+[ext_resource type="Texture2D" uid="uid://k7im5051koqq" path="res://pictures/post_it_notes/signals.png" id="10_6amyd"]
 
 [node name="ObservationDeck" type="Control"]
 layout_mode = 3
@@ -69,6 +71,25 @@ offset_bottom = 820.0
 
 [node name="GrabAudio" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_1r8uv")
+
+[node name="SignalsPostIt" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 798.0
+offset_top = -151.0
+offset_right = 1549.0
+offset_bottom = 760.0
+texture = ExtResource("9_04sfp")
+expand_mode = 1
+
+[node name="Signals" type="TextureRect" parent="SignalsPostIt"]
+layout_mode = 0
+offset_left = 199.0
+offset_top = 181.0
+offset_right = 593.0
+offset_bottom = 684.0
+texture = ExtResource("10_6amyd")
+expand_mode = 1
 
 [connection signal="pressed" from="RoomGeneric/OppositeButton" to="." method="_on_opposite_button_pressed"]
 [connection signal="pressed" from="RoomGeneric/FrontButton" to="." method="_on_front_button_pressed"]
