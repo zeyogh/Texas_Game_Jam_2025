@@ -14,5 +14,3 @@ grow_vertical = 2
 toggle_mode = true
 texture_normal = ExtResource("1_ybrtp")
 script = ExtResource("2_757iy")
-
-[connection signal="button_up" from="." to="." method="_toggleOn"]
