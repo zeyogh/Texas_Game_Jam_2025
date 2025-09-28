@@ -25,6 +25,7 @@ func _ready() -> void:
 		_match.visible = true
 		_matchbox.visible = true
 
+#call when entering scene with matchbox
 func GiveMatchbox() -> void:
 	hasMatchbox = true
 	_match.visible = true
@@ -39,8 +40,6 @@ func _process(delta: float) -> void:
 				_matchIsLit = true
 	
 	if _matchIsLit:
-		print_debug(get_global_mouse_position())
-		print_debug(_match.texture_normal.get_size())
 		_match.global_position = Vector2(get_global_mouse_position().x - 97, get_global_mouse_position().y - 128)
 	elif Input.is_action_just_released("interact"):
 		_grabbingMatch = false
@@ -53,5 +52,5 @@ func LightCandles() -> void:
 		_match.texture_normal = matchTextures[0]
 		_grabbingMatch = false
 		_match.global_position = Vector2(318, 744)
-		print_debug("Candles are lit!")
-		#end the minigame
+		await get_tree().create_timer(1).timeout
+		get_tree().change_scene_to_file("res://scenes/rooms/bedroom.tscn")
