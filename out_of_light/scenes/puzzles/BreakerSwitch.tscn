@@ -1,7 +1,26 @@
 [gd_scene load_steps=3 format=3 uid="uid://cydr83whuxj0r"]
 
 [ext_resource type="Texture2D" uid="uid://boyagqrx50hjm" path="res://resources/puzzleTextures/trackSwitch.png" id="1_ybrtp"]
-[ext_resource type="Script" uid="uid://deoa5wnvck7im" path="res://scenes/puzzles/BreakerSwitch.gd" id="2_757iy"]
+
+[sub_resource type="GDScript" id="GDScript_66fox"]
+script/source = "class_name BreakerSwitch
+extends TextureButton
+
+@export var linkedSwitches : Array[int]
+signal toggledOff(linked : Array[int])
+
+func _init(links : Array[int]) -> void:
+	linkedSwitches = links
+	button_up.connect(_toggleBreaker)
+
+func _toggleBreaker() -> void:
+	print_debug(\"toggle\")
+	if !flip_h:
+		flip_h = true
+		toggledOff.emit(linkedSwitches)
+	else:
+		flip_h = false
+"
 
 [node name="BreakerSwitch" type="TextureButton"]
 anchors_preset = 15
@@ -13,4 +32,4 @@ grow_horizontal = 2
 grow_vertical = 2
 toggle_mode = true
 texture_normal = ExtResource("1_ybrtp")
-script = ExtResource("2_757iy")
+script = SubResource("GDScript_66fox")
