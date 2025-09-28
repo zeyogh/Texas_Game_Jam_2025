@@ -1,0 +1,61 @@
+[gd_scene load_steps=7 format=3 uid="uid://qcydlda3aeyj"]
+
+[ext_resource type="PackedScene" uid="uid://ct8tdujobt7uy" path="res://scenes/rooms/room_generic.tscn" id="1_aya0h"]
+[ext_resource type="Script" uid="uid://n84y1obnvkvl" path="res://scenes/rooms/closet.gd" id="1_fk5th"]
+[ext_resource type="Texture2D" uid="uid://c37qpcfx20tws" path="res://pictures/pictures_cartoon/stairs_2.jpg" id="2_ny6em"]
+[ext_resource type="Texture2D" uid="uid://baquvs6lul36t" path="res://pictures/post_it_notes/post_it_notes_3.png" id="3_yni4a"]
+[ext_resource type="Texture2D" uid="uid://vfro8w0d46oj" path="res://resources/puzzleTextures/phone.jpg" id="4_yni4a"]
+[ext_resource type="Texture2D" uid="uid://dvuf0mto1engu" path="res://resources/puzzleTextures/fuse.png" id="5_fk5th"]
+
+[node name="Closet" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fk5th")
+
+[node name="RoomGeneric" parent="." instance=ExtResource("1_aya0h")]
+layout_mode = 1
+left_path = "uid://ww3kl5xkl30f"
+current_room = 5
+
+[node name="FrontTexture" parent="RoomGeneric" index="0"]
+offset_right = 1938.0
+offset_bottom = 1099.0
+texture = ExtResource("2_ny6em")
+
+[node name="RightButton" parent="RoomGeneric" index="3"]
+visible = false
+
+[node name="OppositeButton" parent="RoomGeneric" index="4"]
+visible = false
+
+[node name="FrontPostItNote" parent="RoomGeneric" index="6"]
+visible = false
+offset_left = 1297.0
+offset_top = 347.0
+offset_right = -274.0
+offset_bottom = -410.0
+texture_normal = ExtResource("3_yni4a")
+
+[node name="PhoneButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 218.0
+offset_top = 369.0
+offset_right = 718.0
+offset_bottom = 838.0
+texture_normal = ExtResource("4_yni4a")
+
+[node name="FuseButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1151.0
+offset_top = 585.0
+offset_right = 1229.0
+offset_bottom = 722.0
+texture_normal = ExtResource("5_fk5th")
+
+[connection signal="pressed" from="FuseButton" to="." method="_on_fuse_button_pressed"]
+
+[editable path="RoomGeneric"]
