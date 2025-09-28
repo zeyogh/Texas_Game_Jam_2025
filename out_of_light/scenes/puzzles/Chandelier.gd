@@ -49,6 +49,7 @@ func _openBreaker() -> void:
 	$BreakerDoor.flip_h = true
 	$BreakerLatch.visible = true
 	$BreakerDoor/BreakerLabels.visible = true
+	if _breakerBox.get_child_count() > 0: return
 	for idx : int in range(0, breakers.size()):
 		var button = TextureButton.new()
 		button.texture_normal = _breakerTexture

@@ -1,6 +1,7 @@
 extends TextureButton
 
 @export var font_size = 82
+@export var inside_position : Vector2
 
 var inside = preload("res://scenes/post_it_note_inside.tscn")
 
@@ -12,7 +13,7 @@ func _on_pressed() -> void:
 	if !inside_opened:
 		var instance = inside.instantiate()
 		add_child(instance)
-		instance.global_position = Vector2(450, 50)
+		instance.global_position = Vector2(450, 50) if inside_position == Vector2.ZERO else inside_position
 		instance.get_node("Writing").add_theme_font_size_override("normal_font_size", font_size)
 		instance.get_node("Writing").text = post_it_text
 		instance.z_index = 10

@@ -28,16 +28,17 @@ expand_mode = 1
 
 [node name="PostItNoteUnique" parent="." instance=ExtResource("3_3ktcn")]
 layout_mode = 1
-offset_left = 1444.0
-offset_top = 110.0
-offset_right = 282.0
-offset_bottom = 172.0
+offset_left = 1524.0
+offset_top = 118.0
+offset_right = 158.0
+offset_bottom = -328.46533
 scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("4_waar4")
 font_size = 120
+inside_position = Vector2(1200, 500)
 post_it_text = "Your smile lights up the room!
 
-Also, so does this breaker box. The labeled ones, at least"
+Also, so does this breaker box. Or, well, it lights up the labeled ones."
 
 [node name="BreakerLatch" type="TextureRect" parent="."]
 layout_mode = 0

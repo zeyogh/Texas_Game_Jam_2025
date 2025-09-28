@@ -29,10 +29,10 @@ expand_mode = 1
 
 [node name="PostItNoteUnique" parent="." instance=ExtResource("3_r87km")]
 layout_mode = 1
-offset_left = 1471.0
-offset_top = 1.0
-offset_right = 221.0
-offset_bottom = -255.0
+offset_left = 1536.0
+offset_top = 54.0
+offset_right = 120.0
+offset_bottom = -406.1552
 scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("4_t1k2n")
 font_size = 120
