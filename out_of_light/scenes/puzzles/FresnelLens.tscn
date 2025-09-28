@@ -29,7 +29,7 @@ resource_name = "ShortButton"
 script/source = "extends TextureButton
 
 func _on_button_down() -> void:
-	flip_h = !flip_h
+	flip_h = true
 	$\"../TrackLengthMed\".flip_h = false
 	$\"../TrackLengthLong\".flip_h = false
 	$\"../..\".SetTrackLength(1)
@@ -40,7 +40,7 @@ resource_name = "MedButton"
 script/source = "extends TextureButton
 
 func _on_button_down() -> void:
-	flip_h = !flip_h
+	flip_h = true
 	$\"../TrackLengthShort\".flip_h = false
 	$\"../TrackLengthLong\".flip_h = false
 	$\"../..\".SetTrackLength(2)
@@ -51,7 +51,7 @@ resource_name = "LongButton"
 script/source = "extends TextureButton
 
 func _on_button_down() -> void:
-	flip_h = !flip_h
+	flip_h = true
 	$\"../TrackLengthShort\".flip_h = false
 	$\"../TrackLengthMed\".flip_h = false
 	$\"../..\".SetTrackLength(3)
@@ -154,7 +154,24 @@ offset_right = 265.48413
 offset_bottom = -75.0
 scale = Vector2(0.5, 0.5)
 font_size = 120
-post_it_text = "Baker's Island:                    Al. WR 20s                         Flip to reset power."
+post_it_text = "Baker's Island:
+Al. WR 2O s
+
+Flip to activate."
+
+[node name="PostItNoteUnique2" parent="." instance=ExtResource("6_cgh6e")]
+layout_mode = 1
+offset_left = 165.0
+offset_top = 612.0
+offset_right = -1138.5159
+offset_bottom = 102.0
+scale = Vector2(0.5, 0.5)
+font_size = 120
+post_it_text = "Color me impressed.
+
+Short - five seconds
+Med - ten seconds
+Long - twenty seconds"
 
 [node name="PrevButton" type="TextureButton" parent="."]
 layout_mode = 0

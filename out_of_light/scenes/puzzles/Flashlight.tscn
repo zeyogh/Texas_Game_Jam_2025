@@ -34,7 +34,7 @@ offset_right = 196.48413
 offset_bottom = -456.0
 scale = Vector2(0.5, 0.5)
 font_size = 120
-post_it_text = "Quite a shocking spectacle without your spectacles"
+post_it_text = "Quite a shocking spectacle without your spectacles."
 
 [node name="Flashlight" type="TextureRect" parent="."]
 layout_mode = 0

@@ -37,11 +37,9 @@ var phone : int = 0
 var phoneIsPowered : bool = false
 
 func _ready() -> void:
-	if !_hasBreakerBoxKey:
-		$BreakerDoor.position = Vector2(250,55)
-		$BreakerDoor.texture_normal = load("res://resources/puzzleTextures/breakerDoorOuter.png")
-		$BreakerLatch.visible = false
-		return
+	$BreakerDoor.position = Vector2(250,55)
+	$BreakerDoor.texture_normal = load("res://resources/puzzleTextures/breakerDoorOuter.png")
+	$BreakerLatch.visible = false
 
 func _openBreaker() -> void:
 	if !_hasBreakerBoxKey: return
@@ -84,6 +82,8 @@ func _toggleButton(idx : int):
 			breakers[17].button.flip_h = false
 		17 when phone == 5:
 			phoneIsPowered = true
+		_:
+			phone = 0
 	
 	_checkBreakers()
 
