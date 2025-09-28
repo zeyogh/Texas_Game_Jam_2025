@@ -59,8 +59,16 @@ offset_top = 475.0
 offset_right = 1629.0
 offset_bottom = 802.0
 
+[node name="TVButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1142.0
+offset_top = 260.0
+offset_right = 1497.0
+offset_bottom = 476.0
+
 [connection signal="pressed" from="RoomGeneric/OppositeButton" to="." method="_on_opposite_button_pressed"]
 [connection signal="pressed" from="RoomGeneric/FrontButton" to="." method="_on_front_button_pressed"]
 [connection signal="pressed" from="TVCabinetButton" to="." method="_on_tv_cabinet_button_pressed"]
+[connection signal="pressed" from="TVButton" to="." method="_on_tv_button_pressed"]
 
 [editable path="RoomGeneric"]

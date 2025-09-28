@@ -8,3 +8,6 @@ func _on_front_button_pressed() -> void:
 
 func _on_tv_cabinet_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/rooms/TV_cabinet.tscn")
+
+func _on_tv_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/puzzles/TVStand.tscn")

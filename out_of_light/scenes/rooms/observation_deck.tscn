@@ -59,8 +59,16 @@ texture_normal = ExtResource("7_csna2")
 ignore_texture_size = true
 stretch_mode = 0
 
+[node name="LightButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 896.0
+offset_top = 365.0
+offset_right = 1922.0
+offset_bottom = 820.0
+
 [connection signal="pressed" from="RoomGeneric/OppositeButton" to="." method="_on_opposite_button_pressed"]
 [connection signal="pressed" from="RoomGeneric/FrontButton" to="." method="_on_front_button_pressed"]
 [connection signal="pressed" from="KeyButton" to="." method="_on_key_button_pressed"]
+[connection signal="pressed" from="LightButton" to="." method="_on_light_button_pressed"]
 
 [editable path="RoomGeneric"]

@@ -57,6 +57,7 @@ func _process(_delta: float) -> void:
 	#do final puzzle check
 	if !isBlurry and !battery1.visible and !battery2.visible:
 		if battery1.flip_v == battery2.flip_v:
+			PlayerController.has_flashlight = true
 			pass
 		else:
 			battery1.visible = true

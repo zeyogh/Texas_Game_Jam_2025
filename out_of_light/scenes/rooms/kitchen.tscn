@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dnblgihnphpwh"]
+[gd_scene load_steps=7 format=3 uid="uid://dnblgihnphpwh"]
 
 [ext_resource type="PackedScene" uid="uid://ct8tdujobt7uy" path="res://scenes/rooms/room_generic.tscn" id="1_3w07q"]
 [ext_resource type="Script" uid="uid://ckhgciyxtamrr" path="res://scripts/room_scripts/kitchen.gd" id="1_jtubd"]
 [ext_resource type="Texture2D" uid="uid://dajg4un5lsk24" path="res://pictures/pictures_cartoon/kitchen_1.jpg" id="2_sqdrw"]
 [ext_resource type="Texture2D" uid="uid://b5cxhefxqf6t6" path="res://pictures/pictures_cartoon/kitchen_2.jpg" id="3_2812u"]
 [ext_resource type="Texture2D" uid="uid://b0l5hi6iy1fbg" path="res://pictures/post_it_notes/post_it_notes_6.png" id="4_2812u"]
+[ext_resource type="Texture2D" uid="uid://v6scrfakrlck" path="res://resources/puzzleTextures/flashlight.png" id="6_njvo0"]
 
 [node name="Kitchen" type="Control"]
 layout_mode = 3
@@ -57,8 +58,19 @@ offset_top = 765.0
 offset_right = 1861.0
 offset_bottom = 1047.0
 
+[node name="FlashlightButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 723.0
+offset_top = 782.0
+offset_right = 985.0
+offset_bottom = 851.0
+texture_normal = ExtResource("6_njvo0")
+ignore_texture_size = true
+stretch_mode = 0
+
 [connection signal="pressed" from="RoomGeneric/OppositeButton" to="." method="_on_opposite_button_pressed"]
 [connection signal="pressed" from="RoomGeneric/FrontButton" to="." method="_on_front_button_pressed"]
 [connection signal="pressed" from="CabinetButton" to="." method="_on_cabinet_button_pressed"]
+[connection signal="pressed" from="FlashlightButton" to="." method="_on_flashlight_button_pressed"]
 
 [editable path="RoomGeneric"]
