@@ -51,7 +51,7 @@ func _process(delta: float) -> void:
 			_grabbingDial = false
 			await get_tree().create_timer(5).timeout
 			ProgressController.current_stage = ProgressEnum.Progress.STAGE_4
-			get_tree().change_scene_to_file("res://scenes/rooms/living_room.tscn")
+			ExitMinigame()
 	
 	if !_tvPowerOn:
 		$TvScreen/Display.texture = _tvChannels[0]
@@ -60,3 +60,5 @@ func _process(delta: float) -> void:
 	else:
 		$TvScreen/Display.texture = _tvChannels[1]
 	
+func ExitMinigame() -> void:
+	get_tree().change_scene_to_packed(PlayerController.room_scenes[PlayerController.current_room])

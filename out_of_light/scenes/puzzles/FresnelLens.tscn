@@ -173,13 +173,11 @@ script = SubResource("GDScript_wvhdc")
 [node name="TrackLengthMed" type="TextureButton" parent="TrackLever"]
 layout_mode = 2
 texture_normal = ExtResource("6_wvhdc")
-flip_h = true
 script = SubResource("GDScript_mrysr")
 
 [node name="TrackLengthLong" type="TextureButton" parent="TrackLever"]
 layout_mode = 2
 texture_normal = ExtResource("6_wvhdc")
-flip_h = true
 script = SubResource("GDScript_u0u4a")
 
 [node name="ColorButtons" type="HBoxContainer" parent="."]
@@ -234,6 +232,17 @@ grow_horizontal = 0
 grow_vertical = 0
 texture_normal = ExtResource("12_wbo87")
 
+[node name="ExitButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -106.0
+offset_right = 113.0
+grow_vertical = 0
+texture_normal = ExtResource("2_wbo87")
+flip_h = true
+
 [connection signal="button_up" from="PrevButton" to="." method="PrevLens"]
 [connection signal="button_up" from="NextButton" to="." method="NextLens"]
 [connection signal="button_down" from="TrackLever/TrackLengthShort" to="TrackLever/TrackLengthShort" method="_on_button_down"]
@@ -245,3 +254,4 @@ texture_normal = ExtResource("12_wbo87")
 [connection signal="button_down" from="ColorButtons/YellowButton" to="ColorButtons/YellowButton" method="_on_button_down"]
 [connection signal="button_down" from="ColorButtons/GreenButton" to="ColorButtons/GreenButton" method="_on_button_down"]
 [connection signal="button_up" from="StartLightButton" to="." method="StartLight"]
+[connection signal="button_up" from="ExitButton" to="." method="ExitMinigame"]

@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://digyosc8mi370"]
+[gd_scene load_steps=6 format=3 uid="uid://digyosc8mi370"]
 
 [ext_resource type="Script" uid="uid://bqgwto78ly05h" path="res://scenes/puzzles/Candles.gd" id="1_bvyt8"]
 [ext_resource type="Texture2D" uid="uid://ds4scnfliti0e" path="res://resources/puzzleTextures/matchbox.png" id="2_bvyt8"]
 [ext_resource type="Texture2D" uid="uid://dvabckk8ptoi8" path="res://resources/puzzleTextures/match.png" id="3_364i8"]
 [ext_resource type="Texture2D" uid="uid://cfhqrbfqd4jkv" path="res://resources/puzzleTextures/candles.png" id="4_whk3c"]
+[ext_resource type="Texture2D" uid="uid://biidlk2pubaf8" path="res://resources/puzzleTextures/rightArrow.png" id="5_364i8"]
 
 [node name="Candles" type="Control"]
 layout_mode = 3
@@ -13,7 +14,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_bvyt8")
-hasMatchbox = true
+hasMatchbox = false
 
 [node name="Matchbox" type="TextureRect" parent="."]
 layout_mode = 0
@@ -40,5 +41,17 @@ offset_right = 1745.0
 offset_bottom = 745.0
 texture_normal = ExtResource("4_whk3c")
 
+[node name="ExitButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -106.0
+offset_right = 113.0
+grow_vertical = 0
+texture_normal = ExtResource("5_364i8")
+flip_h = true
+
 [connection signal="button_down" from="Match" to="." method="GrabMatch"]
 [connection signal="button_down" from="Candle" to="." method="LightCandles"]
+[connection signal="button_up" from="ExitButton" to="." method="ExitMinigame"]

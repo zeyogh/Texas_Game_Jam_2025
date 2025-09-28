@@ -28,6 +28,9 @@ var _activeLensIdx : int = 0
 @onready var _activeLens : FresnelLens = _lenses[_activeLensIdx]
 @onready var _lensTexture : TextureRect = $LensTexture
 
+func _ready() -> void:
+	SetColor(LensColor.BLACK)
+
 func SetColor(NewColor : LensColor) -> void :
 	_activeLens.color = NewColor
 	var mat : ShaderMaterial = _lensTexture.material
@@ -65,6 +68,30 @@ func _reloadLens() -> void :
 
 func StartLight() -> void :
 	#check the sequence of the lenses and do the outcome
+	var _nextLight := [LensColor.BLACK, LensColor.WHITE, LensColor.RED]
+	var _isEmergency := false
+	for _sequence in range(0,4):
+		var color = _lenses[_sequence].color
+		var track = _lenses[_sequence].trackLength
+		if _nextLight.has(color):
+			if color == LensColor.BLACK and track == 1:
+				_nextLight = [LensColor.WHITE]
+				_isEmergency = true
+			elif color == LensColor.RED and track == 3:
+				_nextLight = [LensColor.WHITE]
+			elif color == LensColor.WHITE and track != 1:
+				if track == 2:
+					_nextLight = [LensColor.BLACK]
+				elif track == 3 and !_isEmergency:
+					_nextLight = [LensColor.RED]
+				else: return
+			else: return
+		else: return
+	
 	await get_tree().create_timer(1).timeout
-	ProgressController.current_stage = ProgressEnum.Progress.OUTRO
-	get_tree().change_scene_to_file("res://scenes/rooms/observation_deck.tscn")
+	ProgressController._change_current_stage(ProgressEnum.Progress.OUTRO)
+	PlayerController.i_love_my_son = _isEmergency
+	ExitMinigame()
+
+func ExitMinigame() -> void:
+	get_tree().change_scene_to_packed(PlayerController.room_scenes[PlayerController.current_room])

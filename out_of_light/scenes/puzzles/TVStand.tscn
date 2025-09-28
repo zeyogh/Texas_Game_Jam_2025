@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b888lur18355n"]
+[gd_scene load_steps=9 format=3 uid="uid://jhaghxdi7w43"]
 
 [ext_resource type="Script" uid="uid://brt80fm76dp72" path="res://scenes/puzzles/TVStand.gd" id="1_faym6"]
 [ext_resource type="Texture2D" uid="uid://bvls4ypjs2bve" path="res://resources/puzzleTextures/socket.png" id="2_2nwi8"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://blvag422o86s1" path="res://resources/puzzleTextures/tvDisplayWeather.png" id="5_f1m32"]
 [ext_resource type="Texture2D" uid="uid://cqx27e1fgu6w7" path="res://resources/puzzleTextures/plug.png" id="6_2k10k"]
 [ext_resource type="Texture2D" uid="uid://cymacegij6d4r" path="res://resources/puzzleTextures/blownFuse.png" id="7_y5mfc"]
+[ext_resource type="Texture2D" uid="uid://biidlk2pubaf8" path="res://resources/puzzleTextures/rightArrow.png" id="8_f1m32"]
 
 [node name="TvStand" type="Control"]
 layout_mode = 3
@@ -64,6 +65,18 @@ offset_right = 228.0
 offset_bottom = 304.0
 texture_normal = ExtResource("7_y5mfc")
 
+[node name="ExitButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -106.0
+offset_right = 113.0
+grow_vertical = 0
+texture_normal = ExtResource("8_f1m32")
+flip_h = true
+
 [connection signal="button_down" from="TvScreen/ChannelDial" to="." method="GrabDial"]
 [connection signal="button_down" from="Plug" to="." method="GrabPlug"]
 [connection signal="button_up" from="Plug/FuseButton" to="." method="ReplaceFuse"]
+[connection signal="button_up" from="ExitButton" to="." method="ExitMinigame"]
