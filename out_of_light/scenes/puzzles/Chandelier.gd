@@ -10,8 +10,7 @@ class BreakerSwitch:
 		links = l
 		startOn = startAsOn
 
-var _hasBreakerBoxKey : bool = PlayerController.has_key
-
+@onready var _hasBreakerBoxKey : bool = PlayerController.has_key
 @onready var _breakerBox : GridContainer = $BreakerLatch/BreakerBox
 const _breakerTexture : Texture2D = preload("res://resources/puzzleTextures/trackSwitch.png")
 var breakers : Array[BreakerSwitch] = [

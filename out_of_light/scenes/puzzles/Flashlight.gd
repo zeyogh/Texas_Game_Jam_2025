@@ -8,7 +8,7 @@ extends Control
 var grabbingBattery1 : bool = false
 var grabbingBattery2 : bool = false
 var isBlurry : bool = !PlayerController.has_glasses
-var hasBatteries : bool = !PlayerController.has_batteries
+@onready var hasBatteries : bool = PlayerController.has_batteries
 
 func _ready() -> void:
 	if !hasBatteries:
