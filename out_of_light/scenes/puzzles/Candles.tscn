@@ -13,21 +13,23 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_bvyt8")
+hasMatchbox = true
 
 [node name="Matchbox" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 147.0
-offset_top = 423.0
-offset_right = 776.0
-offset_bottom = 715.0
+offset_left = 153.0
+offset_top = 537.0
+offset_right = 782.0
+offset_bottom = 829.0
 texture = ExtResource("2_bvyt8")
 
 [node name="Match" type="TextureButton" parent="."]
+z_index = 1
 layout_mode = 0
-offset_left = 369.0
-offset_top = 641.0
-offset_right = 563.0
-offset_bottom = 898.0
+offset_left = 318.0
+offset_top = 744.0
+offset_right = 512.0
+offset_bottom = 1001.0
 texture_normal = ExtResource("3_364i8")
 
 [node name="Candle" type="TextureButton" parent="."]
