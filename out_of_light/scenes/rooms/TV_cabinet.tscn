@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://wwyxg243saiw"]
+[gd_scene load_steps=9 format=3 uid="uid://wwyxg243saiw"]
 
 [ext_resource type="PackedScene" uid="uid://ct8tdujobt7uy" path="res://scenes/rooms/room_generic.tscn" id="1_haup8"]
 [ext_resource type="Script" uid="uid://c3qvrocp3ovb8" path="res://scripts/room_scripts/tv_cabinet.gd" id="1_mr7e2"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://2m143pegwuns" path="res://pictures/post_it_notes/post_it_notes_2.png" id="4_biosx"]
 [ext_resource type="Texture2D" uid="uid://dxxjyra6jstll" path="res://pictures/post_it_notes/post_it_notes_4.png" id="5_1wift"]
 [ext_resource type="Texture2D" uid="uid://cuy2y4obhihgv" path="res://resources/puzzleTextures/battery.png" id="6_icsy0"]
+[ext_resource type="AudioStream" uid="uid://du1w6o06u4ltf" path="res://sfx/click-345983.mp3" id="8_biosx"]
 
 [node name="TVCabinet" type="Control"]
 layout_mode = 3
@@ -66,6 +67,9 @@ offset_top = 476.0
 offset_right = 1536.0
 offset_bottom = 761.0
 texture_normal = ExtResource("6_icsy0")
+
+[node name="GrabAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_biosx")
 
 [connection signal="pressed" from="BatteriesButton" to="." method="_on_batteries_button_pressed"]
 

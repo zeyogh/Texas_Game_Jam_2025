@@ -6,4 +6,5 @@ func _ready() -> void:
 
 func _on_batteries_button_pressed() -> void:
 	PlayerController.has_batteries = true
+	$GrabAudio.play()
 	$BatteriesButton.queue_free()

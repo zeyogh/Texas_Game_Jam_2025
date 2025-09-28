@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dnxcgrjiwd8bv"]
+[gd_scene load_steps=9 format=3 uid="uid://dnxcgrjiwd8bv"]
 
 [ext_resource type="PackedScene" uid="uid://ct8tdujobt7uy" path="res://scenes/rooms/room_generic.tscn" id="1_1tr8l"]
 [ext_resource type="Script" uid="uid://d0iurm5m5cl6c" path="res://scripts/room_scripts/observation_deck.gd" id="1_rvjcv"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b0l5hi6iy1fbg" path="res://pictures/post_it_notes/post_it_notes_6.png" id="4_xtdw6"]
 [ext_resource type="Texture2D" uid="uid://baquvs6lul36t" path="res://pictures/post_it_notes/post_it_notes_3.png" id="5_xp7kf"]
 [ext_resource type="Texture2D" uid="uid://df4kwtrcj7m8j" path="res://resources/puzzleTextures/key.png" id="7_csna2"]
+[ext_resource type="AudioStream" uid="uid://du1w6o06u4ltf" path="res://sfx/click-345983.mp3" id="8_1r8uv"]
 
 [node name="ObservationDeck" type="Control"]
 layout_mode = 3
@@ -65,6 +66,9 @@ offset_left = 896.0
 offset_top = 365.0
 offset_right = 1910.0
 offset_bottom = 820.0
+
+[node name="GrabAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_1r8uv")
 
 [connection signal="pressed" from="RoomGeneric/OppositeButton" to="." method="_on_opposite_button_pressed"]
 [connection signal="pressed" from="RoomGeneric/FrontButton" to="." method="_on_front_button_pressed"]

@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://v3l4qy4gxcxm"]
+[gd_scene load_steps=7 format=3 uid="uid://v3l4qy4gxcxm"]
 
 [ext_resource type="Script" uid="uid://bn1fw1p6e4jj7" path="res://scripts/room_scripts/bathroom_cabinet.gd" id="1_uaajh"]
 [ext_resource type="PackedScene" uid="uid://ct8tdujobt7uy" path="res://scenes/rooms/room_generic.tscn" id="2_uaajh"]
 [ext_resource type="Texture2D" uid="uid://c84gwtyr7n2i" path="res://pictures/cabinets/cartoons/cabinet_1.jpg" id="3_uaajh"]
 [ext_resource type="Texture2D" uid="uid://dxxjyra6jstll" path="res://pictures/post_it_notes/post_it_notes_4.png" id="4_dlxke"]
 [ext_resource type="Texture2D" uid="uid://ddlqdtdsx7si6" path="res://resources/puzzleTextures/razor.png" id="5_uaajh"]
+[ext_resource type="AudioStream" uid="uid://du1w6o06u4ltf" path="res://sfx/click-345983.mp3" id="6_t6trc"]
 
 [node name="BathroomCabinet" type="Control"]
 layout_mode = 3
@@ -58,6 +59,9 @@ offset_bottom = 828.0
 texture_normal = ExtResource("5_uaajh")
 ignore_texture_size = true
 stretch_mode = 0
+
+[node name="GrabAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_t6trc")
 
 [connection signal="pressed" from="RazorButton" to="." method="_on_razor_button_pressed"]
 

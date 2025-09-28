@@ -6,4 +6,5 @@ func _ready() -> void:
 
 func _on_razor_button_pressed() -> void:
 	PlayerController.has_razor = true
+	$GrabAudio.play()
 	$RazorButton.queue_free()

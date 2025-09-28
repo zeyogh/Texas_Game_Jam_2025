@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cv07fffn5v7rd"]
+[gd_scene load_steps=8 format=3 uid="uid://cv07fffn5v7rd"]
 
 [ext_resource type="Script" uid="uid://dj7x1s4lhc5gj" path="res://scripts/room_scripts/kitchen_cabinet.gd" id="1_ld0jq"]
 [ext_resource type="PackedScene" uid="uid://ct8tdujobt7uy" path="res://scenes/rooms/room_generic.tscn" id="2_v1lai"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b5cxhefxqf6t6" path="res://pictures/pictures_cartoon/kitchen_2.jpg" id="4_smrx7"]
 [ext_resource type="Texture2D" uid="uid://b0l5hi6iy1fbg" path="res://pictures/post_it_notes/post_it_notes_6.png" id="5_cim2v"]
 [ext_resource type="Texture2D" uid="uid://ds4scnfliti0e" path="res://resources/puzzleTextures/matchbox.png" id="6_v1lai"]
+[ext_resource type="AudioStream" uid="uid://du1w6o06u4ltf" path="res://sfx/click-345983.mp3" id="7_efowb"]
 
 [node name="KitchenCabinet" type="Control"]
 layout_mode = 3
@@ -65,6 +66,9 @@ offset_bottom = 570.0
 texture_normal = ExtResource("6_v1lai")
 ignore_texture_size = true
 stretch_mode = 0
+
+[node name="GrabAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_efowb")
 
 [connection signal="pressed" from="RoomGeneric/OppositeButton" to="." method="_on_opposite_button_pressed"]
 [connection signal="pressed" from="RoomGeneric/FrontButton" to="." method="_on_front_button_pressed"]

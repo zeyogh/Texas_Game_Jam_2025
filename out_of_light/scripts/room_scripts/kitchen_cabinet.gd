@@ -6,4 +6,5 @@ func _ready() -> void:
 
 func _on_matchbox_button_pressed() -> void:
 	PlayerController.has_matchbox = true
+	$GrabAudio.play()
 	$MatchboxButton.queue_free()

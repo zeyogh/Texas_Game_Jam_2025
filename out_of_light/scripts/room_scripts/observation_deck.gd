@@ -16,6 +16,7 @@ func _on_front_button_pressed() -> void:
 
 func _on_key_button_pressed() -> void:
 	PlayerController.has_key = true
+	$GrabAudio.play()
 	$KeyButton.queue_free()
 
 func _on_light_button_pressed() -> void:

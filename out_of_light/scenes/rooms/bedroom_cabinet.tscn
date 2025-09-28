@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://glcgxrke3n0y"]
+[gd_scene load_steps=8 format=3 uid="uid://glcgxrke3n0y"]
 
 [ext_resource type="Script" uid="uid://ntjy02vsnull" path="res://scripts/room_scripts/bedroom_cabinet.gd" id="1_lo5rk"]
 [ext_resource type="PackedScene" uid="uid://ct8tdujobt7uy" path="res://scenes/rooms/room_generic.tscn" id="2_3xjn7"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cp63jm4gbtiqy" path="res://pictures/pictures_cartoon/bedroom_2.jpg" id="4_2on6a"]
 [ext_resource type="Texture2D" uid="uid://csvkvh1th1cbp" path="res://pictures/post_it_notes/post_it_notes_5.png" id="5_cyxdc"]
 [ext_resource type="Texture2D" uid="uid://chtl308tshtsv" path="res://resources/puzzleTextures/glasses.png" id="6_84mvp"]
+[ext_resource type="AudioStream" uid="uid://du1w6o06u4ltf" path="res://sfx/click-345983.mp3" id="7_3xjn7"]
 
 [node name="BedroomCabinet" type="Control"]
 layout_mode = 3
@@ -61,6 +62,9 @@ offset_bottom = 804.0
 texture_normal = ExtResource("6_84mvp")
 ignore_texture_size = true
 stretch_mode = 0
+
+[node name="GrabAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_3xjn7")
 
 [connection signal="pressed" from="RoomGeneric/OppositeButton" to="." method="_on_opposite_button_pressed"]
 [connection signal="pressed" from="RoomGeneric/FrontButton" to="." method="_on_front_button_pressed"]

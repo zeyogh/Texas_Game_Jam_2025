@@ -6,6 +6,7 @@ func _ready() -> void:
 
 func _on_fuse_button_pressed() -> void:
 	PlayerController.has_fuse = true
+	$GrabAudio.play()
 	$FuseButton.queue_free()
 
 func _on_breaker_button_pressed() -> void:

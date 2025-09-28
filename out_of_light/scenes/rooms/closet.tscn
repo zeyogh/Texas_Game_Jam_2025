@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://qcydlda3aeyj"]
+[gd_scene load_steps=9 format=3 uid="uid://qcydlda3aeyj"]
 
 [ext_resource type="PackedScene" uid="uid://ct8tdujobt7uy" path="res://scenes/rooms/room_generic.tscn" id="1_aya0h"]
 [ext_resource type="Script" uid="uid://n84y1obnvkvl" path="res://scenes/rooms/closet.gd" id="1_fk5th"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dvuf0mto1engu" path="res://resources/puzzleTextures/fuse.png" id="5_fk5th"]
 [ext_resource type="Texture2D" uid="uid://dgrqjagc6y12l" path="res://resources/puzzleTextures/phone.png" id="5_wlvcd"]
 [ext_resource type="Texture2D" uid="uid://ymt2ao0h78qc" path="res://resources/puzzleTextures/breakerDoorOuter.png" id="7_0drd6"]
+[ext_resource type="AudioStream" uid="uid://du1w6o06u4ltf" path="res://sfx/click-345983.mp3" id="8_0drd6"]
 
 [node name="Closet" type="Control"]
 layout_mode = 3
@@ -68,6 +69,9 @@ offset_bottom = 494.0
 texture_normal = ExtResource("7_0drd6")
 ignore_texture_size = true
 stretch_mode = 0
+
+[node name="GrabAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_0drd6")
 
 [connection signal="pressed" from="FuseButton" to="." method="_on_fuse_button_pressed"]
 [connection signal="pressed" from="BreakerButton" to="." method="_on_breaker_button_pressed"]
