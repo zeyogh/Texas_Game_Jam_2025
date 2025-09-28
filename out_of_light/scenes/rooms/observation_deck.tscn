@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://dnxcgrjiwd8bv"]
+[gd_scene load_steps=8 format=3 uid="uid://dnxcgrjiwd8bv"]
 
 [ext_resource type="PackedScene" uid="uid://ct8tdujobt7uy" path="res://scenes/rooms/room_generic.tscn" id="1_1tr8l"]
+[ext_resource type="Script" uid="uid://d0iurm5m5cl6c" path="res://scripts/room_scripts/observation_deck.gd" id="1_rvjcv"]
 [ext_resource type="Texture2D" uid="uid://7ey13laqusk8" path="res://pictures/pictures_cartoon/obversation_deck_1.png" id="2_xjxii"]
 [ext_resource type="Texture2D" uid="uid://c7pj12r86pv86" path="res://pictures/pictures_cartoon/observation_deck_2.jpg" id="3_xtdw6"]
 [ext_resource type="Texture2D" uid="uid://b0l5hi6iy1fbg" path="res://pictures/post_it_notes/post_it_notes_6.png" id="4_xtdw6"]
 [ext_resource type="Texture2D" uid="uid://baquvs6lul36t" path="res://pictures/post_it_notes/post_it_notes_3.png" id="5_xp7kf"]
+[ext_resource type="Texture2D" uid="uid://c3ktv8upyshog" path="res://resources/puzzleTextures/key.jpg" id="7_csna2"]
 
 [node name="ObservationDeck" type="Control"]
 layout_mode = 3
@@ -13,6 +15,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_rvjcv")
 
 [node name="RoomGeneric" parent="." instance=ExtResource("1_1tr8l")]
 layout_mode = 1
@@ -45,5 +48,19 @@ offset_top = 24.0
 offset_right = -480.0
 offset_bottom = -606.0
 texture_normal = ExtResource("5_xp7kf")
+
+[node name="KeyButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 595.0
+offset_top = 804.0
+offset_right = 914.0
+offset_bottom = 1123.0
+texture_normal = ExtResource("7_csna2")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="pressed" from="RoomGeneric/OppositeButton" to="." method="_on_opposite_button_pressed"]
+[connection signal="pressed" from="RoomGeneric/FrontButton" to="." method="_on_front_button_pressed"]
+[connection signal="pressed" from="KeyButton" to="." method="_on_key_button_pressed"]
 
 [editable path="RoomGeneric"]

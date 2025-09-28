@@ -1,0 +1,72 @@
+[gd_scene load_steps=8 format=3 uid="uid://wwyxg243saiw"]
+
+[ext_resource type="PackedScene" uid="uid://ct8tdujobt7uy" path="res://scenes/rooms/room_generic.tscn" id="1_haup8"]
+[ext_resource type="Script" uid="uid://c3qvrocp3ovb8" path="res://scripts/room_scripts/tv_cabinet.gd" id="1_mr7e2"]
+[ext_resource type="Texture2D" uid="uid://dqjfdkma87aqd" path="res://pictures/pictures_cartoon/living_room_1.jpg" id="2_icsy0"]
+[ext_resource type="Texture2D" uid="uid://brt0dxaq7sp4o" path="res://pictures/pictures_cartoon/living_room_2.jpg" id="3_mr7e2"]
+[ext_resource type="Texture2D" uid="uid://2m143pegwuns" path="res://pictures/post_it_notes/post_it_notes_2.png" id="4_biosx"]
+[ext_resource type="Texture2D" uid="uid://dxxjyra6jstll" path="res://pictures/post_it_notes/post_it_notes_4.png" id="5_1wift"]
+[ext_resource type="Texture2D" uid="uid://cuy2y4obhihgv" path="res://resources/puzzleTextures/battery.png" id="6_icsy0"]
+
+[node name="TVCabinet" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mr7e2")
+
+[node name="RoomGeneric" parent="." instance=ExtResource("1_haup8")]
+layout_mode = 1
+left_path = "uid://ce15xsvsvosw0"
+current_room = 3
+
+[node name="FrontTexture" parent="RoomGeneric" index="0"]
+offset_right = 1941.0
+offset_bottom = 1094.0
+texture = ExtResource("2_icsy0")
+
+[node name="OppositeTexture" parent="RoomGeneric" index="1"]
+offset_top = -1.0
+offset_right = 1935.0
+offset_bottom = 1095.0
+texture = ExtResource("3_mr7e2")
+
+[node name="RightButton" parent="RoomGeneric" index="3"]
+visible = false
+
+[node name="OppositeButton" parent="RoomGeneric" index="4"]
+visible = false
+
+[node name="FrontPostItNote" parent="RoomGeneric" index="6"]
+visible = false
+offset_left = 484.0
+offset_top = 94.0
+offset_right = -1047.0
+offset_bottom = -626.0
+texture_normal = ExtResource("4_biosx")
+
+[node name="BackPostItNote" parent="RoomGeneric" index="7"]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 1283.0
+offset_top = 413.0
+offset_right = 1403.0
+offset_bottom = 565.0
+grow_horizontal = 1
+grow_vertical = 1
+texture_normal = ExtResource("5_1wift")
+
+[node name="BatteriesButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 923.0
+offset_top = 499.0
+offset_right = 1208.0
+offset_bottom = 784.0
+texture_normal = ExtResource("6_icsy0")
+
+[connection signal="pressed" from="BatteriesButton" to="." method="_on_batteries_button_pressed"]
+
+[editable path="RoomGeneric"]

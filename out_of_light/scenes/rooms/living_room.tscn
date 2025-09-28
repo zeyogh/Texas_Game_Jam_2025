@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://ce15xsvsvosw0"]
+[gd_scene load_steps=7 format=3 uid="uid://ce15xsvsvosw0"]
 
 [ext_resource type="PackedScene" uid="uid://ct8tdujobt7uy" path="res://scenes/rooms/room_generic.tscn" id="1_ndxsf"]
+[ext_resource type="Script" uid="uid://b3i8k5kjg27st" path="res://scripts/room_scripts/living_room.gd" id="1_oy7wu"]
 [ext_resource type="Texture2D" uid="uid://dqjfdkma87aqd" path="res://pictures/pictures_cartoon/living_room_1.jpg" id="2_fbuym"]
 [ext_resource type="Texture2D" uid="uid://brt0dxaq7sp4o" path="res://pictures/pictures_cartoon/living_room_2.jpg" id="3_j6grr"]
 [ext_resource type="Texture2D" uid="uid://2m143pegwuns" path="res://pictures/post_it_notes/post_it_notes_2.png" id="4_j6grr"]
@@ -13,6 +14,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_oy7wu")
 
 [node name="RoomGeneric" parent="." instance=ExtResource("1_ndxsf")]
 layout_mode = 1
@@ -49,5 +51,16 @@ offset_bottom = 565.0
 grow_horizontal = 1
 grow_vertical = 1
 texture_normal = ExtResource("5_qlgtg")
+
+[node name="TVCabinetButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1042.0
+offset_top = 475.0
+offset_right = 1629.0
+offset_bottom = 802.0
+
+[connection signal="pressed" from="RoomGeneric/OppositeButton" to="." method="_on_opposite_button_pressed"]
+[connection signal="pressed" from="RoomGeneric/FrontButton" to="." method="_on_front_button_pressed"]
+[connection signal="pressed" from="TVCabinetButton" to="." method="_on_tv_cabinet_button_pressed"]
 
 [editable path="RoomGeneric"]

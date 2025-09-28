@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://cv07fffn5v7rd"]
+[gd_scene load_steps=7 format=3 uid="uid://cv07fffn5v7rd"]
 
+[ext_resource type="Script" uid="uid://dj7x1s4lhc5gj" path="res://scripts/room_scripts/kitchen_cabinet.gd" id="1_ld0jq"]
 [ext_resource type="PackedScene" uid="uid://ct8tdujobt7uy" path="res://scenes/rooms/room_generic.tscn" id="2_v1lai"]
 [ext_resource type="Texture2D" uid="uid://dajg4un5lsk24" path="res://pictures/pictures_cartoon/kitchen_1.jpg" id="3_efowb"]
 [ext_resource type="Texture2D" uid="uid://b5cxhefxqf6t6" path="res://pictures/pictures_cartoon/kitchen_2.jpg" id="4_smrx7"]
 [ext_resource type="Texture2D" uid="uid://b0l5hi6iy1fbg" path="res://pictures/post_it_notes/post_it_notes_6.png" id="5_cim2v"]
+[ext_resource type="Texture2D" uid="uid://ds4scnfliti0e" path="res://resources/puzzleTextures/matchbox.png" id="6_v1lai"]
 
 [node name="KitchenCabinet" type="Control"]
 layout_mode = 3
@@ -12,6 +14,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ld0jq")
 
 [node name="RoomGeneric" parent="." instance=ExtResource("2_v1lai")]
 layout_mode = 1
@@ -53,7 +56,16 @@ grow_horizontal = 1
 grow_vertical = 1
 texture_normal = ExtResource("5_cim2v")
 
+[node name="MatchboxButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 682.0
+offset_top = 498.0
+offset_right = 1311.0
+offset_bottom = 790.0
+texture_normal = ExtResource("6_v1lai")
+
 [connection signal="pressed" from="RoomGeneric/OppositeButton" to="." method="_on_opposite_button_pressed"]
 [connection signal="pressed" from="RoomGeneric/FrontButton" to="." method="_on_front_button_pressed"]
+[connection signal="pressed" from="MatchboxButton" to="." method="_on_matchbox_button_pressed"]
 
 [editable path="RoomGeneric"]

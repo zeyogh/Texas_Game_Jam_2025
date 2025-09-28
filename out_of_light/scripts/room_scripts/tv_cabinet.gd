@@ -1,0 +1,9 @@
+extends Control
+
+func _ready() -> void:
+	if PlayerController.has_batteries:
+		$BatteriesButton.visible = false
+
+func _on_batteries_button_pressed() -> void:
+	PlayerController.has_batteries = true
+	$BatteriesButton.queue_free()
