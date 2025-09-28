@@ -18,7 +18,7 @@ script = ExtResource("1_uaajh")
 
 [node name="RoomGeneric" parent="." instance=ExtResource("2_uaajh")]
 layout_mode = 1
-left_path = "uid://3crkmmykqfbe"
+left_path = "uid://clxu6wxsjthr2"
 
 [node name="FrontTexture" parent="RoomGeneric" index="0"]
 offset_right = 1931.0

@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://clxu6wxsjthr2"]
+[gd_scene load_steps=8 format=3 uid="uid://clxu6wxsjthr2"]
 
 [ext_resource type="Script" uid="uid://cu7utg4bgwbh2" path="res://scenes/rooms/bathroom_mirror.gd" id="1_umdym"]
 [ext_resource type="PackedScene" uid="uid://ct8tdujobt7uy" path="res://scenes/rooms/room_generic.tscn" id="2_3i8lr"]
+[ext_resource type="Texture2D" uid="uid://ca5g41btdtp5p" path="res://pictures/minigame_backgrounds/cartoons/wall.jpg" id="3_g7aic"]
 [ext_resource type="Texture2D" uid="uid://dxxjyra6jstll" path="res://pictures/post_it_notes/post_it_notes_4.png" id="4_g7aic"]
 [ext_resource type="Texture2D" uid="uid://bvcl6xv4hdkcl" path="res://resources/rooms/mirrorForward.png" id="5_owv28"]
 [ext_resource type="Texture2D" uid="uid://nys1c6emv7k0" path="res://resources/rooms/mirrorForwardReflection.png" id="6_g7aic"]
+[ext_resource type="Texture2D" uid="uid://bvv5dkuxvv7c4" path="res://pictures/reflection_1.png" id="6_nhrlh"]
 
 [node name="BathroomMirror" type="Control"]
 layout_mode = 3
@@ -18,13 +20,12 @@ script = ExtResource("1_umdym")
 [node name="RoomGeneric" parent="." instance=ExtResource("2_3i8lr")]
 layout_mode = 1
 left_path = "uid://3crkmmykqfbe"
+right_path = "uid://v3l4qy4gxcxm"
 
 [node name="FrontTexture" parent="RoomGeneric" index="0"]
 offset_right = 1931.0
 offset_bottom = 1092.0
-
-[node name="RightButton" parent="RoomGeneric" index="3"]
-visible = false
+texture = ExtResource("3_g7aic")
 
 [node name="OppositeButton" parent="RoomGeneric" index="4"]
 visible = false
@@ -59,10 +60,12 @@ anchor_bottom = 0.5
 offset_left = -483.0
 offset_top = -540.0
 offset_right = 483.0
-offset_bottom = 540.0
+offset_bottom = 1424.0
 grow_horizontal = 2
 grow_vertical = 2
 texture_normal = ExtResource("5_owv28")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="Reflection" type="TextureRect" parent="MirrorButton"]
 z_index = -1
@@ -80,6 +83,16 @@ grow_horizontal = 2
 grow_vertical = 2
 expand_mode = 1
 
+[node name="Person" type="TextureRect" parent="MirrorButton"]
+z_index = -1
+layout_mode = 0
+offset_left = 103.0
+offset_top = 116.0
+offset_right = 870.0
+offset_bottom = 1126.0
+texture = ExtResource("6_nhrlh")
+expand_mode = 1
+
 [node name="MirrorBack" type="TextureRect" parent="MirrorButton"]
 z_index = -2
 layout_mode = 1
@@ -89,12 +102,13 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -483.0
-offset_top = -540.0
+offset_top = -963.0
 offset_right = 483.0
-offset_bottom = 540.0
+offset_bottom = 994.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("6_g7aic")
+expand_mode = 1
 
 [connection signal="pressed" from="MirrorButton" to="." method="_on_razor_button_pressed"]
 

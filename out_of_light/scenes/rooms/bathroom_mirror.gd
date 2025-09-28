@@ -1,11 +1,9 @@
 extends Control
 
+static var can_play_jumpscare := true
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+	if PlayerController.has_razor and can_play_jumpscare:
+		$MirrorButton/Person.texture = load("res://pictures/reflection_2.png")
+		can_play_jumpscare = false
+		

@@ -57,9 +57,9 @@ grow_vertical = 1
 [node name="CabinetButton" type="TextureButton" parent="."]
 layout_mode = 0
 offset_left = 1402.0
-offset_top = 819.0
-offset_right = 1629.0
-offset_bottom = 1036.0
+offset_top = 279.0
+offset_right = 1902.0
+offset_bottom = 926.0
 
 [node name="MirrorButton" type="TextureButton" parent="."]
 layout_mode = 0
