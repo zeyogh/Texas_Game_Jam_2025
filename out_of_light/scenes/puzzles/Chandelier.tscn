@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cq1ple123kp3"]
+[gd_scene load_steps=8 format=3 uid="uid://cq1ple123kp3"]
 
 [ext_resource type="Script" uid="uid://tn2cid5t56ik" path="res://scenes/puzzles/Chandelier.gd" id="1_4585y"]
 [ext_resource type="Texture2D" uid="uid://bx55cficej8kh" path="res://resources/puzzleTextures/breakerDoorInner.png" id="2_fhbta"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://5urtho5gqmxt" path="res://scenes/post_it_note_unique.tscn" id="3_3ktcn"]
 [ext_resource type="Texture2D" uid="uid://biidlk2pubaf8" path="res://resources/puzzleTextures/rightArrow.png" id="3_bj4h1"]
 [ext_resource type="Texture2D" uid="uid://dt5ll4jbnwnol" path="res://resources/puzzleTextures/breakerLabels.png" id="3_y2xtu"]
+[ext_resource type="AudioStream" uid="uid://utxos4wqheca" path="res://sfx/broken-glass-40016.mp3" id="7_o4vxx"]
 
 [node name="Chandelier" type="Control"]
 layout_mode = 3
@@ -28,7 +29,7 @@ expand_mode = 1
 layout_mode = 1
 offset_left = 1515.0
 offset_top = 110.0
-offset_right = 211.48413
+offset_right = 211.484
 offset_bottom = -400.0
 scale = Vector2(0.5, 0.5)
 font_size = 120
@@ -95,6 +96,9 @@ offset_right = 113.0
 grow_vertical = 0
 texture_normal = ExtResource("3_bj4h1")
 flip_h = true
+
+[node name="BreakChandelierSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_o4vxx")
 
 [connection signal="button_down" from="BreakerDoor" to="." method="_openBreaker"]
 [connection signal="button_up" from="ExitButton" to="." method="ExitMinigame"]

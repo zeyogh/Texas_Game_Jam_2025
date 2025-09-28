@@ -94,6 +94,7 @@ func _checkBreakers() -> void:
 		elif !breakers[idx].button.flip_h:
 			return
 	
+	$BreakChandelierSound.play()
 	await get_tree().create_timer(1).timeout
 	PlayerController.is_phone_powered = phoneIsPowered
 	ProgressController._change_current_stage(ProgressEnum.Progress.STAGE_5)
