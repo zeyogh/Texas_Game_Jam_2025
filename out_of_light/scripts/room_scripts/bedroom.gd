@@ -18,7 +18,7 @@ func _on_candle_button_pressed() -> void:
 		get_tree().change_scene_to_file("res://scenes/puzzles/Candles.tscn")
 
 func _on_cabinet_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/rooms/bathroom_mirror.tscn")
+	get_tree().change_scene_to_file("res://scenes/rooms/bedroom_cabinet.tscn")
 
 func _on_front_post_it_note_pressed() -> void:
 	ProgressController.entered_bedroom = true
