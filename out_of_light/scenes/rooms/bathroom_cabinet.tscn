@@ -1,10 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://v3l4qy4gxcxm"]
+[gd_scene load_steps=6 format=3 uid="uid://bbpd3w2akwvp3"]
 
 [ext_resource type="Script" uid="uid://bn1fw1p6e4jj7" path="res://scripts/room_scripts/bathroom_cabinet.gd" id="1_uaajh"]
 [ext_resource type="PackedScene" uid="uid://ct8tdujobt7uy" path="res://scenes/rooms/room_generic.tscn" id="2_uaajh"]
 [ext_resource type="Texture2D" uid="uid://b02rys1d1eq6i" path="res://pictures/pictures_cartoon/bathroom_1.jpg" id="3_t6trc"]
 [ext_resource type="Texture2D" uid="uid://dxxjyra6jstll" path="res://pictures/post_it_notes/post_it_notes_4.png" id="4_dlxke"]
-[ext_resource type="Texture2D" uid="uid://d3cjhl38gasg5" path="res://resources/puzzleTextures/razor.jpg" id="5_t6trc"]
+[ext_resource type="Texture2D" uid="uid://ddlqdtdsx7si6" path="res://resources/puzzleTextures/razor.png" id="5_uaajh"]
 
 [node name="BathroomCabinet" type="Control"]
 layout_mode = 3
@@ -51,11 +51,11 @@ grow_vertical = 1
 
 [node name="RazorButton" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 638.0
-offset_top = 11.0
-offset_right = 1321.0
-offset_bottom = 1035.0
-texture_normal = ExtResource("5_t6trc")
+offset_left = 1363.0
+offset_top = 624.0
+offset_right = 1660.0
+offset_bottom = 829.0
+texture_normal = ExtResource("5_uaajh")
 
 [connection signal="pressed" from="RazorButton" to="." method="_on_razor_button_pressed"]
 
