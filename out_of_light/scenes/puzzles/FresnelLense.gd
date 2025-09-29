@@ -94,4 +94,5 @@ func StartLight() -> void :
 	ExitMinigame()
 
 func ExitMinigame() -> void:
-	get_tree().change_scene_to_file("res://scenes/outro_cutscene.tscn")
+	if ProgressController.current_stage == ProgressEnum.Progress.OUTRO: get_tree().change_scene_to_file("res://scenes/outro_cutscene.tscn")
+	else: get_tree().change_scene_to_packed(PlayerController.room_scenes[PlayerController.current_room])
