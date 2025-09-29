@@ -5,10 +5,12 @@ const brokenChandelierTexture : Texture2D = preload("res://resources/rooms/chand
 func _on_opposite_button_pressed() -> void:
 	$TVCabinetButton.visible = false
 	$Chandelier.visible = true
+	$TVButton.visible = false
 	if ProgressController.current_stage == ProgressEnum.Progress.STAGE_5:
 		$Chandelier.texture = brokenChandelierTexture
 
 func _on_front_button_pressed() -> void:
+	$TVButton.visible = true
 	$TVCabinetButton.visible = true
 	$Chandelier.visible = false
 
